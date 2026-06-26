@@ -108,6 +108,32 @@ _FSD_FILES = [
 ]
 
 
+@app.function(image=image, volumes={VOL: vol}, secrets=[hf_secret], timeout=2 * 60 * 60)
+def upload_audio_hf(repo: str = "elliottash/soundmatch-sr"):
+    """Upload the generated synthetic twins from the volume straight to the HF dataset."""
+    import os
+    from huggingface_hub import HfApi
+    api = HfApi(token=os.environ.get("HF_TOKEN") or os.environ.get("HUGGING_FACE_HUB_TOKEN"))
+    api.upload_folder(
+        repo_id=repo, repo_type="dataset", folder_path=f"{VOL}/synth", path_in_repo="audio",
+        allow_patterns=["sao_pairs/**", "el_pairs/**", "demo/**"],
+        commit_message="add generated synthetic twins (Stable Audio audio-init + ElevenLabs)")
+    print("uploaded audio to", repo)
+
+
+@app.function(image=data_image, volumes={VOL: vol}, timeout=60 * 60)
+def pack_audio():
+    """Tar the generated audio into one file (modal volume get of deep dirs is buggy)."""
+    import subprocess
+    synth = f"{VOL}/synth"
+    out = f"{synth}/soundmatch_audio.tar.gz"
+    dirs = [d for d in ("sao_pairs", "el_pairs", "demo") if pathlib.Path(synth, d).exists()]
+    subprocess.run(["tar", "czf", out, "-C", synth] + dirs, check=True)
+    vol.commit()
+    sz = pathlib.Path(out).stat().st_size / 1e9
+    print(f"packed {dirs} -> {out} ({sz:.2f} GB)")
+
+
 @app.function(image=data_image, volumes={VOL: vol}, timeout=3 * 60 * 60)
 def fsd50k_stage():
     """Download FSD50K (24.7 GB multipart zips), reassemble + unzip onto the volume."""

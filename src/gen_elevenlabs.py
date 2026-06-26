@@ -25,7 +25,8 @@ _API = "https://api.elevenlabs.io/v1/sound-generation"
 def _key():
     if os.environ.get("ELEVENLABS_API_KEY"):
         return os.environ["ELEVENLABS_API_KEY"]
-    for env in (Path.cwd() / ".env",):
+    for env in (Path.cwd() / ".env"
+                ):
         if env.exists():
             for line in env.read_text().splitlines():
                 if line.startswith("ELEVENLABS_API_KEY"):
