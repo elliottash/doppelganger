@@ -1,0 +1,21 @@
+# Core (evaluation + diagnostics run on these alone -- no GPU needed)
+numpy>=1.24
+scikit-learn>=1.3
+soundfile>=0.12
+librosa>=0.10
+
+# Encoders
+torch>=2.1
+transformers>=4.44          # CLAP (ClapModel / ClapProcessor)
+laion-clap>=1.1.6           # music/speech/audioset CLAP checkpoints (optional)
+panns-inference>=0.1.1      # CNN14 supervised baseline (optional)
+# BEATs / M2D / AudioMAE are loaded from their upstream repos -- see src/encoders.py
+
+# Synthetic generation (optional; only needed to build the synth domain yourself)
+stable-audio-tools>=0.0.16  # Stable Audio Open 1.0
+
+# Indexing at scale (optional; evaluate.py uses brute-force numpy by default, fine up to ~100k)
+faiss-cpu>=1.7.4
+
+# Dev
+pytest>=7.4

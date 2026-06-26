@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+data/raw/
+data/embeddings/
+data/synth/
+*.npz
+*.aux
+*.bbl
+*.blg
+*.out
+*.log
+.env
