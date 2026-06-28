@@ -87,17 +87,28 @@ twin-fidelity levels, collapsing only when the twin is independent of its source
 reusable transform that adjusts any new clip's embedding.
 
 \section{Related Work}
-\paragraph{Audio-representation benchmarks.} HEAR~\citep{turian2022hear} and related suites evaluate
-frozen embeddings across classification, retrieval, and clustering, but treat all audio as one
-domain; none tests invariance to \emph{how} a sound was produced. \paragraph{Synthetic-audio
-detection.} Deepfake-environmental-audio detectors built on DCASE-T7 pursue the mirror objective
-(exploit the gap); I remove it, and reproduce detection as a controlled \emph{sensitive} head.
-\paragraph{Domain adaptation and invariance.} I draw on Proxy-A-distance~\citep{bendavid2010theory},
-domain-adversarial training~\citep{ganin2015dann}, Deep CORAL~\citep{sun2016coral}, supervised
-contrastive learning~\citep{khosla2020supcon}, and IRM~\citep{arjovsky2019irm}. My generalizing
-objective is instance-level in the sense of instance discrimination~\citep{wu2018instance}, and my
-negative result---that class-level supervision does not transfer the invariance---is a
-domain-generalization phenomenon.
+\paragraph{Audio-representation benchmarks.} HEAR~\citep{turian2022hear} and the recent massive
+embedding benchmarks MSEB~\citep{heigold2026mseb} and MAEB~\citep{elassadi2026maeb} evaluate frozen
+embeddings across classification, retrieval, and clustering, but treat all audio as one domain;
+none tests invariance to \emph{how} a sound was produced. The encoders I benchmark---CLAP
+(\citealp{wu2023clap}; \citealp{elizalde2023clap}), PANNs~\citep{kong2020panns},
+AST~\citep{gong2021ast}, and the SSL families BEATs~\citep{chen2023beats},
+M2D~\citep{niizumi2024m2d}, AudioMAE~\citep{huang2022audiomae}---are evaluated frozen.
+\paragraph{Synthetic-audio detection.} Deepfake-environmental-audio detection is built on exactly
+the DCASE-T7 corpus~\citep{ouajdi2024deepfake} and benchmarked in EnvSDD~\citep{yin2025envsdd}; this
+pursues the mirror objective (exploit the gap). I remove it, and reproduce detection as a
+controlled \emph{sensitive} head. \paragraph{Text-to-audio generators.} The synthetic domain comes
+from modern generators---Stable Audio Open~\citep{evans2024stableaudioopen} and its predecessor
+\citep{evans2024stableaudio}, AudioGen~\citep{kreuk2023audiogen},
+AudioLDM~\citep{liu2023audioldm}---whose realism is typically scored by Fr\'echet Audio
+Distance~\citep{kilgour2019fad}; my sensitive head offers a complementary, paired realness axis.
+\paragraph{Domain adaptation and contrastive learning.} I draw on
+Proxy-A-distance~\citep{bendavid2010theory}, domain-adversarial training~\citep{ganin2015dann},
+Deep CORAL~\citep{sun2016coral}, supervised contrastive learning~\citep{khosla2020supcon}, and
+IRM~\citep{arjovsky2019irm}. My generalizing objective is instance-level in the sense of instance
+discrimination~\citep{wu2018instance} and contrastive representation learning
+(\citealp{chen2020simclr}; \citealp{radford2021clip}); the negative result---that class-level
+supervision does not transfer the invariance---is a domain-generalization phenomenon.
 
 \section{The SoundMatch-SR Benchmark}
 \label{sec:bench}
@@ -244,8 +255,9 @@ identity is not. \textbf{Limitations}: category clustering does not transfer to 
 (train per target taxonomy); twins are Stable-Audio audio-init at one operating point per corpus;
 frozen-embedding heads cannot recover information the backbone discarded; instance pairing requires
 audio-conditioned generation. SSL encoders (BEATs~\citep{chen2023beats}, AudioMAE~\citep{huang2022audiomae})
-are provided as activatable loaders. \textbf{Future work}: domain-relevant corpora (e.g.\ game and
-film SFX) and using the sensitive head as a realness metric for generative-audio evaluation.
+are provided as activatable loaders. \textbf{Future work}: broader real sources (e.g.\
+VGGSound~\citep{chen2020vggsound}) and domain-relevant corpora (game and film SFX), and using the
+sensitive head as a realness metric for generative-audio evaluation.
 
 \section*{Reproducibility and release}
 Code (MIT), DCASE and UCS manifests, the CLAP-verification, the generation recipe (event, prompt,
