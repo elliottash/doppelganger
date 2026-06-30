@@ -1,21 +1,31 @@
-"""k-fold leave-classes-out evaluation with bootstrap CIs. For each fold, the head was trained
-with that fold's categories held out; we evaluate cross-domain retrieval on exactly those
-held-out (unseen) categories. Compares the `instance` objective (learns the mapping) vs
-`class`-supcon (learns clusters) vs frozen, pooled across folds.
+"""k-fold leave-classes-out evaluation, reported HONESTLY.
 
-Metrics on held-out categories (gallery = held-out real test clips):
-  category-mAP : retrieve any same-category real clip
-  instance-R@1 : retrieve the clip's EXACT real twin
+For each fold, the head was trained with that fold's categories held out; I evaluate on exactly
+those held-out (unseen) categories. The instance-retrieval gallery is the FULL real test set (all
+34 categories as distractors) -- NOT restricted to the held-out categories -- so R@1 is not
+inflated by a small, oracle-selected, category-homogeneous pool. I report the gallery size N and
+chance = 1/N, bootstrap 95% CIs over queries, per-fold numbers, and the paired instance-vs-class
+margin. The restricted-gallery number is also shown for transparency / comparison.
+
+The folds are generated deterministically here (no external /tmp file).
 """
 from __future__ import annotations
-import csv, json
+import csv, json, random
 import numpy as np
+from config import EMB, RESULTS
 from src import metrics as M
 
-E = "/home/elliott/synthmatch_data/embeddings"
-MANI = "/home/elliott/synthmatch_data/manifest_ucs_paired.csv"
-ROWS = list(csv.DictReader(open(MANI)))
-FOLDS = json.load(open("/tmp/folds.json"))
+E = str(EMB)
+MANI = None  # set in main() from config.MANIFEST
+SEED = 1234
+K = 5
+
+
+def make_folds(events, k=K, seed=SEED):
+    """Deterministic k-fold partition of the category list (committed, reproducible)."""
+    cats = sorted(set(events))
+    random.Random(seed).shuffle(cats)
+    return [cats[i::k] for i in range(k)]
 
 
 def _vecs(npz):
@@ -23,37 +33,70 @@ def _vecs(npz):
     return {c: v for c, v in zip(d["ids"], d["emb"])}
 
 
-def fold_scores(npz, held):
-    v = _vecs(npz); held = set(held)
-    sI = [r for r in ROWS if r["split"] == "test" and r["domain"] == "synth" and r["event"] in held and r["clip_id"] in v]
-    rI = [r for r in ROWS if r["split"] == "test" and r["domain"] == "real" and r["event"] in held and r["clip_id"] in v]
-    S = np.stack([v[r["clip_id"]] for r in sI]).astype(np.float64)
-    R = np.stack([v[r["clip_id"]] for r in rI]).astype(np.float64)
-    sims = S @ R.T
-    sev = np.array([r["event"] for r in sI]); rev = np.array([r["event"] for r in rI])
-    sii = np.array([int(r["instance_id"]) for r in sI]); rii = np.array([int(r["instance_id"]) for r in rI])
-    cat = M.evaluate_retrieval(sims, sev[:, None] == rev[None, :])["mAP"]
-    ins = M.evaluate_retrieval(sims, sii[:, None] == rii[None, :])
-    return cat, ins["R@1"], ins["MRR"]
+def _per_query_hits(rows, v, held, full_gallery):
+    """Return (hit@1 array, rank array, gallery_N) for synth->real instance retrieval on the
+    held-out categories. full_gallery=True uses ALL real test clips as the gallery."""
+    held = set(held)
+    q = [r for r in rows if r["split"] == "test" and r["domain"] == "synth"
+         and r["event"] in held and r["clip_id"] in v]
+    if full_gallery:
+        g = [r for r in rows if r["split"] == "test" and r["domain"] == "real" and r["clip_id"] in v]
+    else:
+        g = [r for r in rows if r["split"] == "test" and r["domain"] == "real"
+             and r["event"] in held and r["clip_id"] in v]
+    S = np.stack([v[r["clip_id"]] for r in q]).astype(np.float64)
+    G = np.stack([v[r["clip_id"]] for r in g]).astype(np.float64)
+    sims = S @ G.T
+    qi = np.array([int(r["instance_id"]) for r in q])
+    gi = np.array([int(r["instance_id"]) for r in g])
+    order = np.argsort(-sims, axis=1)
+    ranked_gi = gi[order]
+    hit1 = (ranked_gi[:, 0] == qi).astype(float)
+    rank = np.array([int(np.where(ranked_gi[i] == qi[i])[0][0]) + 1 for i in range(len(qi))])
+    return hit1, rank, len(g)
+
+
+def _boot_ci(x, n=2000, seed=0):
+    rng = np.random.default_rng(seed)
+    means = [x[rng.integers(0, len(x), len(x))].mean() for _ in range(n)]
+    return float(np.percentile(means, 2.5)), float(np.percentile(means, 97.5))
 
 
 def main():
-    rows_out = {"frozen": [], "class": [], "instance": []}
-    for i, held in enumerate(FOLDS):
-        rows_out["frozen"].append(fold_scores(f"{E}/clap_general_ucs_paired.npz", held))
-        rows_out["class"].append(fold_scores(f"{E}/clap_general_ucs_paired_kf{i}_class.npz", held))
-        rows_out["instance"].append(fold_scores(f"{E}/clap_general_ucs_paired_kf{i}_instance.npz", held))
-    print("\n=== 5-fold leave-classes-out (held-out/unseen categories), mean +/- std over folds ===")
-    print(f"{'variant':10s} {'cat-mAP':>16s} {'inst-R@1':>16s} {'inst-MRR':>16s}")
-    for k in ("frozen", "class", "instance"):
-        a = np.array(rows_out[k])  # (folds, 3)
-        m, s = a.mean(0), a.std(0)
-        print(f"{k:10s} {m[0]:.3f} +/- {s[0]:.3f}   {m[1]:.3f} +/- {s[1]:.3f}   {m[2]:.3f} +/- {s[2]:.3f}")
-    json.dump(rows_out, open("results/kfold_scores.json", "w"), indent=2)
-    print("\nper-fold instance-R@1 (unseen):")
-    for i in range(len(FOLDS)):
-        print(f"  fold{i} ({len(FOLDS[i])} cats): frozen {rows_out['frozen'][i][1]:.3f}  "
-              f"class {rows_out['class'][i][1]:.3f}  instance {rows_out['instance'][i][1]:.3f}")
+    import config
+    rows = list(csv.DictReader(open(config.MANIFEST)))
+    folds = make_folds([r["event"] for r in rows])
+    variants = {"frozen": "clap_general_ucs_paired.npz",
+                "class": "clap_general_ucs_paired_kf%d_class",
+                "instance": "clap_general_ucs_paired_kf%d_instance"}
+    out = {"folds": folds, "gallery": "full (all real test clips)"}
+    print(f"5-fold leave-classes-out, instance R@1 on UNSEEN categories (FULL gallery)\n")
+    print(f"{'variant':9s} {'R@1 (full)':>22s} {'restricted':>10s} {'per-fold (full)':>34s}")
+    pooled = {}
+    for name, tag in variants.items():
+        ph_full, ph_restr, perfold, Ns = [], [], [], []
+        for i, held in enumerate(folds):
+            npz = f"{E}/{tag % i}.npz" if "%d" in tag else f"{E}/{tag}"
+            v = _vecs(npz)
+            hf, _, N = _per_query_hits(rows, v, held, True)
+            hr, _, _ = _per_query_hits(rows, v, held, False)
+            ph_full.append(hf); ph_restr.append(hr); perfold.append(hf.mean()); Ns.append(N)
+        allq = np.concatenate(ph_full)
+        lo, hi = _boot_ci(allq)
+        pooled[name] = allq
+        out[name] = {"R1_full": float(allq.mean()), "ci95": [lo, hi],
+                     "R1_restricted": float(np.concatenate(ph_restr).mean()),
+                     "per_fold": [float(x) for x in perfold], "gallery_N": int(np.mean(Ns))}
+        pf = " ".join(f"{x:.2f}" for x in perfold)
+        print(f"{name:9s} {allq.mean():.3f} [{lo:.3f},{hi:.3f}] {np.concatenate(ph_restr).mean():10.3f}   {pf}")
+    N = out["instance"]["gallery_N"]
+    print(f"\ngallery N = {N}  chance R@1 = {1/N:.4f}")
+    # paired margin: instance - class, instance - frozen, per fold
+    inst = np.array(out["instance"]["per_fold"]); cls = np.array(out["class"]["per_fold"])
+    frz = np.array(out["frozen"]["per_fold"])
+    print(f"paired per-fold margin  instance-class: {(inst-cls).mean():+.3f} (min {(inst-cls).min():+.3f}, all>0={(inst>cls).all()})")
+    print(f"paired per-fold margin  instance-frozen:{(inst-frz).mean():+.3f} (min {(inst-frz).min():+.3f}, all>0={(inst>frz).all()})")
+    json.dump(out, open(RESULTS / "kfold_scores.json", "w"), indent=2)
     print("DONE")
 
 

@@ -227,7 +227,11 @@ def train(encoder_name, w_supcon=1.0, w_dann=0.0, w_coral=0.0, w_irm=0.0,
             xb, yb, db, ib = Xtr[b], ytr[b], dtr[b], itr[b]
             z = head(xb)
             loss = z.new_zeros(())
-            if w_supcon:
+            if objective == "classifier":
+                # compute-matched supervised baseline: cross-entropy on category labels, no
+                # contrastive term; the retrieval embedding is the backbone output z.
+                loss = loss + nn.functional.cross_entropy(head.event_head(z), yb)
+            elif w_supcon:
                 pos, cand, wmat = _masks(yb, db, objective, parts, iidb=ib)
                 loss = loss + w_supcon * parts["masked_supcon"](z, pos, cand, weight=wmat)
             if objective != "sensitive":   # domain-invariance penalties (not for the sensitive head)
@@ -272,7 +276,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--encoder", required=True)
     ap.add_argument("--objective",
-                    choices=["invariant", "sensitive", "instance", "instance_event"],
+                    choices=["invariant", "sensitive", "instance", "instance_event", "classifier"],
                     default="invariant")
     ap.add_argument("--supcon", type=float, default=1.0)
     ap.add_argument("--dann", type=float, default=0.0)

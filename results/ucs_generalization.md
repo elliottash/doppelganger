@@ -81,3 +81,18 @@ category-appropriate, cat-mAP 0.48, but not renderings of the specific clip.)
 | instance | 0.486 | 0.945 |
 Dissociation confirmed on THREE encoders (CLAP, PANNs, AST): instance generalizes (R@1 up),
 class-supcon hurts, category doesn't transfer.
+
+## CORRECTED (post-review): full-gallery, committed folds, CIs, CE baseline
+Instance R@1 against the FULL real test gallery (N=3,065, chance 0.0003), 5-fold leave-classes-out,
+bootstrap 95% CIs. Folds generated deterministically in kfold_eval.make_folds (seed 1234).
+| variant (unseen cats) | instance-R@1 (full gallery) | per-fold |
+|---|---|---|
+| frozen | 0.611 [0.594,0.629] | — |
+| class-supcon | 0.269 [0.254,0.285] | — |
+| class-CE (classifier baseline) | 0.282 [0.266,0.297] | 0.31/0.25/0.31/0.31/0.18 |
+| **instance** | **0.800 [0.786,0.813]** | 0.83/0.71/0.83/0.85/0.73 |
+instance > frozen in all 5 folds (min +0.148); > class in all 5 (min +0.493). Both class-label
+objectives (supcon, CE) collapse equally -> the failure is class-label supervision, not the
+contrastive form. Per-encoder full-gallery instance R@1: CLAP 0.80 / PANNs 0.69 / AST 0.93 (vs
+class 0.25/0.32/0.29); PANNs+AST did not do CLAP-verification, so not a filter artifact.
+NB the headline restricted-gallery number (0.829) drops only to 0.800 on the full gallery.
