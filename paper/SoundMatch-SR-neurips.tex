@@ -57,10 +57,11 @@ the trained heads, and a reusable embedding transform.
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{fig_teaser.png}
-\caption{\textbf{SoundMatch-SR.} I pair each real recording with a synthetic twin of the same
-event and ask whether an embedding can represent the event \emph{identity} invariantly to the
-rendering. The synthetic-to-real \emph{mapping} transfers to sounds never seen in training
-(instance retrieval, right), while category identity does not.}
+\caption{\textbf{SoundMatch-SR.} I pair each real recording with an audio-conditioned synthetic
+twin of the same event and ask whether an embedding can represent the event \emph{identity}
+invariantly to the rendering. Synthetic--real \emph{instance correspondence} transfers to sound
+types never seen in training (instance retrieval, right; full-gallery R@1), while category
+structure does not.}
 \label{fig:teaser}
 \end{figure}
 
