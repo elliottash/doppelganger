@@ -1,32 +1,42 @@
-# SoundMatch-SR
+# Doppelganger
 
-**A benchmark for synthetic↔real sound-effect retrieval — and a dissociation: the rendering
-transformation is learnable, the taxonomy is not.**
+**A benchmark for synthetic↔real sound-effect retrieval — and a dissociation: instance
+correspondence generalizes across categories, category structure does not.**
 
-Can an audio embedding tell that a *synthesized* glass-break and a *recorded* glass-break are the
-same kind of sound — or does it just hear "rendered by a diffusion model" vs. "recorded with a
-microphone"? SoundMatch-SR measures exactly that: cross-domain (synthetic↔real) retrieval of short
-sound effects, with both category-level and instance-level correspondence.
+Audio-conditioned generators now produce synthetic sound effects *from* real recordings, so the real
+and synthetic versions of an event increasingly coexist in sound libraries and in the corpora used
+to train audio models. **Doppelganger** measures whether an audio embedding can match a synthetic
+clip to its real counterpart across that boundary — at both category and instance level — and
+whether the ability transfers to sound types never seen in training.
 
-📄 Paper: [`paper/PAPER_NeurIPS.pdf`](paper/) · 🤗 Data: `huggingface.co/datasets/elliottash/soundmatch-sr`
+Three things you can do with it: **cross-domain retrieval** (find the real source of a synthetic
+clip, or search a real library with a generated query), **dataset hygiene** (cluster synthetic
+derivatives with their real sources to catch leakage / near-duplicate contamination), and
+**per-instance generator evaluation** (score whether an audio-conditioned generator preserved the
+event it was given — a paired counterpart to FAD).
+
+📄 Paper: [`paper/PAPER_NeurIPS.pdf`](paper/) · 🤗 Data: `huggingface.co/datasets/elliottash/doppelganger`
 
 ## The headline result
 
-Perceptual studies find synthetic and real Foley of the same event indistinguishable to humans.
-In embedding space, I find a **dissociation** on categories *never seen in training*:
+A **dissociation** on categories *never seen in head training*, measured against the full real-test
+gallery (N = 3,065 distractors of all categories, chance R@1 = 0.0003):
 
-| objective (unseen categories) | category-mAP | **instance-R@1** |
+| objective (unseen categories) | category-mAP | **instance-R@1 (full gallery)** |
 |---|---|---|
-| frozen CLAP | 0.62 | 0.64 |
-| class-supervised | 0.46 | 0.33 (hurts) |
-| **instance-contrastive** | 0.49 | **0.83 ± 0.05** |
+| frozen CLAP | 0.61 | 0.61 |
+| class-supervised | 0.46 | 0.27 (hurts) |
+| **instance-contrastive** | 0.49 | **0.80 [0.786, 0.813]** |
 
 - **Instance matching generalizes** — trained on real↔synthetic *pairs* (a clip and its generated
-  twin), the head learns the synthetic→real *mapping* and transfers to new sound types (R@1 0.83,
+  twin), the head learns the synthetic→real *mapping* and transfers to new sound types (R@1 0.80,
   every fold, on CLAP / PANNs / AST).
 - **Category clustering does not** — no objective beats frozen on unseen-category retrieval.
 - **Class-supervised invariance fails** on unseen categories (collapses below frozen), even at 34
-  categories.
+  categories; a compute-matched cross-entropy classifier does the same, so the failure is the
+  *class-label* supervision, not the contrastive form.
+- **The effect requires audio-conditioned generation** — text-only twins (ElevenLabs, R@1 0.11)
+  break the correspondence, so it is generator-specific, not a universal rendering inverse.
 
 See [`results/ucs_generalization.md`](results/ucs_generalization.md) for all numbers.
 
@@ -88,10 +98,10 @@ Stable Audio Open (Stability AI Community License). See the datasheet in `paper/
 
 ## Citation
 ```bibtex
-@misc{ash2026soundmatchsr,
-  title  = {SoundMatch-SR: The Rendering Transformation Is Learnable, the Taxonomy Is Not},
+@misc{ash2026doppelganger,
+  title  = {Doppelganger: Sound Effects and Their Synthetic Twins},
   author = {Elliott Ash},
   year   = {2026},
-  note   = {https://github.com/elliottash/soundmatch-sr}
+  note   = {https://github.com/elliottash/doppelganger}
 }
 ```
