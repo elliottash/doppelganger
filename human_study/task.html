@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Match the sound</title>
+<style>
+  :root { --bg:#12141a; --card:#1d2129; --card2:#252a35; --acc:#5b9dff;
+          --ok:#3ecf8e; --txt:#e8eaf0; --dim:#9aa3b2; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--txt);
+         font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  .wrap { max-width:780px; margin:0 auto; padding:16px 14px 60px; }
+  h1 { font-size:1.25rem; margin:.4rem 0 .8rem; }
+  h2 { font-size:1.1rem; margin:.3rem 0 .6rem; }
+  .dim { color:var(--dim); }
+  .bar { height:8px; background:var(--card); border-radius:4px; overflow:hidden; margin:8px 0 18px; }
+  .bar>div { height:100%; background:var(--acc); width:0%; transition:width .3s; }
+  .card { background:var(--card); border-radius:12px; padding:14px; margin-bottom:14px; }
+  button { font:inherit; cursor:pointer; border:0; border-radius:10px; }
+  .play { display:flex; align-items:center; gap:10px; background:var(--card2);
+          color:var(--txt); padding:10px 14px; width:100%; text-align:left; }
+  .play .ico { width:34px; height:34px; border-radius:50%; background:var(--acc);
+               display:flex; align-items:center; justify-content:center; flex:none;
+               font-size:15px; color:#fff; }
+  .play.playing .ico { background:var(--ok); }
+  .query .play { background:#2a3040; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  @media (min-width:640px){ .grid { grid-template-columns:1fr 1fr 1fr; } }
+  .cand { background:var(--card2); border:2px solid transparent; border-radius:12px;
+          padding:10px; display:flex; flex-direction:column; gap:8px; align-items:center; }
+  .cand.sel { border-color:var(--acc); background:#243049; }
+  .cand.playing .p, .cand.playing .pbig { background:var(--ok); }
+  .cand .num { font-weight:700; color:var(--dim); }
+  .cand.sel .num { color:var(--acc); }
+  .cand .p { width:44px; height:44px; border-radius:50%; background:var(--acc);
+             color:#fff; font-size:17px; }
+  .cand .pick { width:100%; padding:6px 0; background:#333a48; color:var(--txt);
+                border-radius:8px; font-size:.85rem; }
+  .cand.sel .pick { background:var(--acc); color:#fff; }
+  .abgrid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .abgrid .cand { padding:16px 10px; }
+  .abgrid .num { font-size:1.3rem; }
+  .abgrid .pbig { width:64px; height:64px; border-radius:50%; background:var(--acc);
+                  color:#fff; font-size:24px; }
+  .submit { display:block; width:100%; margin-top:16px; padding:14px;
+            background:var(--acc); color:#fff; font-weight:700; font-size:1.05rem; }
+  .submit:disabled { background:#2c3341; color:var(--dim); cursor:not-allowed; }
+  .big { background:var(--acc); color:#fff; padding:14px 26px; font-weight:700;
+         font-size:1.05rem; }
+  .code { font:700 1.6rem/1 ui-monospace,monospace; background:var(--card2);
+          padding:14px 18px; border-radius:10px; letter-spacing:2px;
+          display:inline-block; margin:12px 0; user-select:all; }
+  ul { padding-left:1.2rem; }
+  li { margin:.35rem 0; }
+  .hint { font-size:.85rem; color:var(--dim); margin-top:10px; }
+  #err { color:#ff7a7a; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div id="intro">
+    <h1>Match the sound</h1>
+    <div class="card">
+      <p>We used an AI model to <b>re-generate real sound recordings</b>. This study
+      has <b>two short parts</b>:</p>
+      <ul>
+        <li><b>Part 1 (16 quick rounds):</b> you hear two clips, <b>A</b> and
+            <b>B</b> — one is a <b>real recording</b>, the other is the AI-generated
+            version of it. Pick the one you think is <b>real</b>.</li>
+        <li><b>Part 2 (26 rounds):</b> you hear one <b>generated</b> sound and
+            <b>6 real recordings</b> of the same kind of sound. Exactly one of the 6
+            is the recording it was generated from — it often keeps the same rhythm,
+            pitch, or overall shape. Pick that one.</li>
+      </ul>
+      <ul>
+        <li><b>Use headphones</b> in a quiet room if you can. You can replay
+            everything as often as you like.</li>
+        <li>42 rounds, about 12 minutes in total. <b>Attention checks:</b> a few
+            rounds are deliberately easy checks that anyone listening will get right.
+            Everyone who finishes is paid, but responses that fail the checks are
+            excluded from the research data — please listen before answering.</li>
+      </ul>
+      <p class="dim">By continuing you consent to take part in this short listening
+      study. We only record your Prolific ID, your choices, and response times.</p>
+      <button class="big" id="startBtn">Check audio &amp; start Part 1</button>
+      <p class="hint" id="audiocheck" style="display:none">Playing a test tone…
+        if you hear nothing, check your volume before starting.</p>
+    </div>
+    <p id="err"></p>
+  </div>
+
+  <div id="hdr" style="display:none">
+    <div class="dim" id="prog-label">Round 1 / 42</div>
+    <div class="bar"><div id="prog"></div></div>
+  </div>
+
+  <div id="afc" style="display:none">
+    <div class="dim" style="margin:2px 0 10px"><b>Part 1.</b> One of these two clips
+      is a real recording; the other is AI-generated. <b>Which one is a REAL
+      recording?</b> <span class="hint">(keys A / B or 1 / 2)</span></div>
+    <div class="abgrid">
+      <div class="cand" id="ab0">
+        <div class="num">A</div>
+        <button class="pbig" aria-label="play clip A">&#9654;</button>
+        <button class="pick">A is real</button>
+      </div>
+      <div class="cand" id="ab1">
+        <div class="num">B</div>
+        <button class="pbig" aria-label="play clip B">&#9654;</button>
+        <button class="pick">B is real</button>
+      </div>
+    </div>
+    <button class="submit" id="submitAfc" disabled>Listen to both clips first</button>
+  </div>
+
+  <div id="interstitial" style="display:none">
+    <h2>Part 1 done — now Part 2</h2>
+    <div class="card">
+      <p>From now on, each round has one <b>generated</b> sound and
+      <b>6 real recordings</b> of the same kind of sound. <b>Exactly one</b> of the 6
+      is the recording the generated sound was made from — listen for matching
+      rhythm, pitch, or overall shape.</p>
+      <p class="dim">Keyboard: <b>Q</b> plays the generated sound, <b>1–6</b> play +
+      select a candidate, <b>Enter</b> submits.</p>
+      <button class="big" id="part2Btn">Start Part 2</button>
+    </div>
+  </div>
+
+  <div id="task" style="display:none">
+    <div class="card query">
+      <div class="dim" style="margin-bottom:8px">Generated sound
+        <span class="dim">(press Q to replay)</span></div>
+      <button class="play" id="qbtn"><span class="ico">&#9654;</span>
+        <span>Play the generated sound</span></button>
+    </div>
+    <div class="dim" style="margin:10px 0 8px">Which real recording was it generated
+      from? <span class="hint">(1–6 to listen &amp; select)</span></div>
+    <div class="grid" id="cands"></div>
+    <button class="submit" id="submit" disabled>Listen to the generated sound first</button>
+  </div>
+
+  <div id="doneScreen" style="display:none">
+    <h1>All done — thank you!</h1>
+    <div class="card">
+      <p>Your completion code:</p>
+      <div class="code" id="code"></div>
+      <p><a id="prolificLink" style="color:var(--acc)" href="#">Click here to return
+        to Prolific and register your completion.</a></p>
+    </div>
+  </div>
+
+</div>
+<script>
+"use strict";
+const qs = new URLSearchParams(location.search);
+const PID = qs.get("PROLIFIC_PID") || ("debug_" + Math.random().toString(36).slice(2,10));
+const STUDY_ID = qs.get("STUDY_ID") || "";
+const SESSION_ID = qs.get("SESSION_ID") || "";
+
+let trials = [], idx = 0, sel = -1, plays = null, t0 = 0, qPlayed = false;
+let abPlayed = [false, false], interstitialShown = false;
+const audio = new Audio();
+let playingBtn = null;
+
+function stopAudio(){ audio.pause(); if (playingBtn) playingBtn.classList.remove("playing"); playingBtn = null; }
+audio.addEventListener("ended", stopAudio);
+
+function playFile(file, btn){
+  if (playingBtn === btn && !audio.paused){ stopAudio(); return; }
+  stopAudio();
+  audio.src = "audio/" + file;
+  audio.currentTime = 0;
+  audio.play().catch(()=>{});
+  playingBtn = btn; btn.classList.add("playing");
+}
+
+const $ = id => document.getElementById(id);
+function show(id){
+  ["intro","afc","interstitial","task","doneScreen"].forEach(x =>
+    $(x).style.display = (x === id ? "block" : "none"));
+  $("hdr").style.display = (id === "afc" || id === "task") ? "block" : "none";
+}
+
+async function start(){
+  // quick audio sanity beep (also unlocks autoplay on mobile)
+  try {
+    const ctx = new (window.AudioContext||window.webkitAudioContext)();
+    const o = ctx.createOscillator(), g = ctx.createGain();
+    g.gain.value = 0.08; o.frequency.value = 660;
+    o.connect(g); g.connect(ctx.destination); o.start(); o.stop(ctx.currentTime + 0.25);
+  } catch(e){}
+  $("audiocheck").style.display = "block";
+  $("startBtn").disabled = true;
+  try {
+    const r = await fetch("api/session?pid=" + encodeURIComponent(PID));
+    const s = await r.json();
+    if (s.error) throw new Error(s.error);
+    const done = new Set(s.answered || []);
+    trials = s.trials;
+    idx = trials.findIndex(t => !done.has(t.trial_id));
+    if (idx < 0){ finish(s.completion_code || null); return; }
+    render();
+  } catch(e){
+    $("err").textContent = "Could not load the study (" + e.message + "). Please refresh, or return the study if this persists.";
+    $("startBtn").disabled = false;
+  }
+}
+
+function render(){
+  stopAudio();
+  const t = trials[idx];
+  sel = -1; t0 = performance.now();
+  $("prog-label").textContent = "Round " + (idx+1) + " / " + trials.length +
+    (t.block === "2afc" ? "  (Part 1)" : "  (Part 2)");
+  $("prog").style.width = (100*idx/trials.length) + "%";
+  if (t.block === "retrieval" && !interstitialShown){
+    interstitialShown = true;
+    show("interstitial");
+    return;
+  }
+  if (t.block === "2afc") renderAfc(t); else renderRetrieval(t);
+  window.scrollTo(0, 0);
+}
+
+function renderAfc(t){
+  show("afc");
+  abPlayed = [false, false];
+  plays = { a: 0, b: 0 };
+  [t.a, t.b].forEach((file, i) => {
+    const d = $("ab" + i);
+    d.classList.remove("sel");
+    d.querySelector(".pbig").onclick = () => {
+      plays[i ? "b" : "a"]++; abPlayed[i] = true; playFile(file, d); updateAfcSubmit();
+    };
+    d.querySelector(".pick").onclick = () => selectAb(i);
+  });
+  updateAfcSubmit();
+}
+
+function selectAb(i){
+  sel = i;
+  [0,1].forEach(j => $("ab"+j).classList.toggle("sel", j===i));
+  updateAfcSubmit();
+}
+
+function updateAfcSubmit(){
+  const b = $("submitAfc");
+  if (!abPlayed[0] || !abPlayed[1]){ b.disabled = true; b.textContent = "Listen to both clips first"; }
+  else if (sel < 0){ b.disabled = true; b.textContent = "Pick the REAL recording (A or B)"; }
+  else { b.disabled = false; b.textContent = "Submit answer (Enter)"; }
+}
+
+function renderRetrieval(t){
+  show("task");
+  qPlayed = false;
+  plays = { q: 0, c: [0,0,0,0,0,0] };
+  const qbtn = $("qbtn");
+  qbtn.onclick = () => { plays.q++; qPlayed = true; playFile(t.query, qbtn); updateSubmit(); };
+  const grid = $("cands"); grid.innerHTML = "";
+  t.candidates.forEach((file, i) => {
+    const d = document.createElement("div");
+    d.className = "cand"; d.id = "cand" + i;
+    d.innerHTML = '<div class="num">' + (i+1) + '</div>' +
+      '<button class="p" aria-label="play candidate ' + (i+1) + '">&#9654;</button>' +
+      '<button class="pick">Select</button>';
+    d.querySelector(".p").onclick = () => { plays.c[i]++; playFile(file, d); };
+    d.querySelector(".pick").onclick = () => select(i);
+    grid.appendChild(d);
+  });
+  updateSubmit();
+}
+
+function select(i){
+  sel = i;
+  document.querySelectorAll("#cands .cand").forEach((d,j)=>d.classList.toggle("sel", j===i));
+  updateSubmit();
+}
+
+function updateSubmit(){
+  const b = $("submit");
+  if (!qPlayed){ b.disabled = true; b.textContent = "Listen to the generated sound first"; }
+  else if (sel < 0){ b.disabled = true; b.textContent = "Pick one of the 6 recordings"; }
+  else { b.disabled = false; b.textContent = "Submit answer (Enter)"; }
+}
+
+async function submitAnswer(btn){
+  const t = trials[idx];
+  btn.disabled = true;
+  try {
+    const r = await fetch("api/answer", { method:"POST",
+      headers:{ "Content-Type":"application/json" },
+      body: JSON.stringify({ pid: PID, trial_id: t.trial_id, choice: sel,
+        position: idx, rt_ms: Math.round(performance.now()-t0), plays,
+        study_id: STUDY_ID, session_id: SESSION_ID }) });
+    const res = await r.json();
+    if (!res.ok) throw new Error(res.error || "save failed");
+    if (res.completion_code){ finish(res.completion_code); return; }
+    idx++;
+    if (idx >= trials.length){ finish(null); return; }
+    render();
+  } catch(e){
+    alert("Could not save your answer (" + e.message + "). Please try again.");
+    btn.disabled = false;
+  }
+}
+
+$("submit").onclick = () => { if (sel >= 0 && qPlayed) submitAnswer($("submit")); };
+$("submitAfc").onclick = () => { if (sel >= 0 && abPlayed[0] && abPlayed[1]) submitAnswer($("submitAfc")); };
+$("part2Btn").onclick = () => { const t = trials[idx]; renderRetrieval(t); window.scrollTo(0,0); };
+
+function finish(code){
+  stopAudio();
+  show("doneScreen");
+  $("code").textContent = code || "(already completed — contact the researcher)";
+  if (code) $("prolificLink").href = "https://app.prolific.com/submissions/complete?cc=" + code;
+}
+
+document.addEventListener("keydown", e => {
+  if ($("afc").style.display !== "none"){
+    const t = trials[idx];
+    const k = e.key.toLowerCase();
+    if (k === "a" || k === "1"){ plays.a++; abPlayed[0] = true; playFile(t.a, $("ab0")); selectAb(0); }
+    else if (k === "b" || k === "2"){ plays.b++; abPlayed[1] = true; playFile(t.b, $("ab1")); selectAb(1); }
+    else if (e.key === "Enter"){ $("submitAfc").click(); }
+  } else if ($("task").style.display !== "none"){
+    if (e.key === "q" || e.key === "Q"){ $("qbtn").click(); }
+    else if (e.key >= "1" && e.key <= "6"){
+      const i = +e.key - 1, t = trials[idx];
+      plays.c[i]++; playFile(t.candidates[i], $("cand"+i)); select(i);
+    } else if (e.key === "Enter"){ $("submit").click(); }
+  }
+});
+
+$("startBtn").onclick = start;
+</script>
+</body>
+</html>

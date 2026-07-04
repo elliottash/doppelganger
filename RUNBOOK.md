@@ -7,7 +7,7 @@ code tree via `SMSR_DATA` (data root) and `SMSR_RAW` (extracted-corpora root).
 ## 0. One-time
 ```bash
 M=~/.venv-modal/bin/modal
-export SMSR_DATA=/home/elliott/synthmatch_data            # local analysis paths
+export SMSR_DATA=/home/elliott/data/doppelganger            # local analysis paths
 ```
 
 ## 1. Stage the corpus onto the Modal volume (downloads Zenodo 8091972, ~4 GB, ~5 min)
@@ -54,6 +54,23 @@ python -m src.analyze --encoder clap_general \
   --variant sensitive=$E/clap_general_sensitive.npz
 python -m src.ablation_e6          # Table 2 + Table 4
 # -> results/leaderboard.md, ablation_e6.md, summary.json, fig_umap.png, fig_probes.png, fig_morphology.png
+```
+
+## 6. SSL encoders (BEATs / M2D / AudioMAE) -> six-encoder dissociation
+All in `modal_ssl.py` (separate file/app from `modal_app.py`; same volume + env conventions).
+```bash
+$M run modal_ssl.py::fetch_ckpts                     # one-time: ckpts -> /data/ckpts, HF cache
+$M run modal_ssl.py::smoke --encoder beats           # sanity gate (pairs beat cross-category)
+for e in beats m2d audiomae; do
+  $M run --detach modal_ssl.py::embed --encoder $e --corpus dcase
+  $M run --detach modal_ssl.py::embed --encoder $e --corpus ucs \
+      --manifest /data/manifest_ucs_paired.csv --suffix _ucs_paired
+done
+# 5-fold leave-classes-out heads (class-supcon + instance), tags match src/kfold_eval.py
+for e in beats m2d audiomae panns_cnn14 ast; do $M run modal_ssl.py::kfold_heads --encoder $e; done
+# pull npz/heads, then assemble the 6-encoder table locally (CPU)
+SMSR_DATA=~/data/doppelganger SMSR_MANIFEST=~/data/doppelganger/manifest_ucs_paired.csv \
+  python -m scripts.ssl_dissociation      # -> results/ssl_dissociation.{json,md}
 ```
 
 ## Notes

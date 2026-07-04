@@ -1,107 +1,79 @@
-# Doppelganger
+# Doppelganger: Sound Effects and Their Synthetic Twins
 
-**A benchmark for synthetic↔real sound-effect retrieval — and a dissociation: instance
-correspondence generalizes across categories, category structure does not.**
+A benchmark for matching a **synthetic** sound effect to the **real** recording it was generated
+from. Audio-conditioned generators now produce a synthetic twin for a real clip, so real and
+synthetic versions of an event increasingly coexist in sound libraries and training corpora.
+Doppelganger measures whether an audio representation can recover the specific real source of a
+synthetic clip across that boundary, and separates two capabilities that are usually conflated:
+recognizing the *same specific event* across the synthetic–real boundary, and recognizing the
+*same kind of event*.
 
-Audio-conditioned generators now produce synthetic sound effects *from* real recordings, so the real
-and synthetic versions of an event increasingly coexist in sound libraries and in the corpora used
-to train audio models. **Doppelganger** measures whether an audio embedding can match a synthetic
-clip to its real counterpart across that boundary — at both category and instance level — and
-whether the ability transfers to sound types never seen in training.
+Headline finding — a **dissociation**: training a head on instance *pairs* (a real clip and its own
+audio-conditioned twin) generalizes to sound events unseen in head training (full-gallery R@1 ≈
+0.80, chance 0.0003), while training on class *labels* collapses below the frozen encoder. Category
+structure transfers for no objective. The effect requires audio-conditioned generation and is
+specific to a generator family.
 
-Three things you can do with it: **cross-domain retrieval** (find the real source of a synthetic
-clip, or search a real library with a generated query), **dataset hygiene** (cluster synthetic
-derivatives with their real sources to catch leakage / near-duplicate contamination), and
-**per-instance generator evaluation** (score whether an audio-conditioned generator preserved the
-event it was given — a paired counterpart to FAD).
+Paper: [`paper/doppelganger.pdf`](paper/doppelganger.pdf) · datasheet: [`paper/DATASHEET.md`](paper/DATASHEET.md).
 
-📄 Paper: [`paper/PAPER_NeurIPS.pdf`](paper/) · 🤗 Data: `huggingface.co/datasets/elliottash/doppelganger`
+## Where the artifacts live
 
-## The headline result
+This repo holds **code, the paper, and small results**. Large derived artifacts are hosted
+separately:
 
-A **dissociation** on categories *never seen in head training*, measured against the full real-test
-gallery (N = 3,065 distractors of all categories, chance R@1 = 0.0003):
+| Artifact | Home |
+|---|---|
+| Code, paper, results JSON, figures, corpus manifests | **this repo** |
+| Precomputed embeddings (`.npz`) and generated twin audio | HuggingFace **dataset** `elliottash/doppelganger` |
+| Trained heads (`*.head.pt`) and fine-tuned encoders (`ckpts/`) | HuggingFace **model** repo |
 
-| objective (unseen categories) | category-mAP | **instance-R@1 (full gallery)** |
-|---|---|---|
-| frozen CLAP | 0.61 | 0.61 |
-| class-supervised | 0.46 | 0.27 (hurts) |
-| **instance-contrastive** | 0.49 | **0.80 [0.786, 0.813]** |
+Embeddings and checkpoints are intentionally **not** in git — they are large binaries and are
+reproducible from the code plus the manifests.
 
-- **Instance matching generalizes** — trained on real↔synthetic *pairs* (a clip and its generated
-  twin), the head learns the synthetic→real *mapping* and transfers to new sound types (R@1 0.80,
-  every fold, on CLAP / PANNs / AST).
-- **Category clustering does not** — no objective beats frozen on unseen-category retrieval.
-- **Class-supervised invariance fails** on unseen categories (collapses below frozen), even at 34
-  categories; a compute-matched cross-entropy classifier does the same, so the failure is the
-  *class-label* supervision, not the contrastive form.
-- **The effect requires audio-conditioned generation** — text-only twins (ElevenLabs, R@1 0.11)
-  break the correspondence, so it is generator-specific, not a universal rendering inverse.
-
-See [`results/ucs_generalization.md`](results/ucs_generalization.md) for all numbers.
-
-## What's in the benchmark
-
-- **DCASE-T7 core** (controlled): 7 classes, 5,550 real + 25,900 synthetic clips from 37 generators.
-- **UCS corpus** (diverse): 34 Universal-Category-System categories, FSD50K real audio
-  (CLAP-verified), 10,420 instance-level Stable-Audio-Open twins (audio-init).
-- Leakage-safe splits, a generation recipe, and trained embedding heads + a reusable transform.
-
-## Quickstart
-
+## Install
 ```bash
+python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-python tests/test_metrics.py            # retrieval math
-python tests/test_pipeline_synthetic.py # end-to-end on synthetic embeddings
 ```
 
-GPU work (embedding, generation, head training) runs on [Modal](https://modal.com) via
-`modal_app.py`; analysis is CPU. See [`RUNBOOK.md`](RUNBOOK.md) for the full pipeline and
-[`BENCHMARK_BLUEPRINT.md`](BENCHMARK_BLUEPRINT.md) for the design.
+## Validate the install (no data, no GPU)
+```bash
+python tests/test_metrics.py             # retrieval math vs hand-computed values
+python tests/test_pipeline_synthetic.py  # whole pipeline on synthetic embeddings
+```
+
+## Reproduce
+GPU work runs on Modal (`modal_app.py`, `modal_ssl.py`, `modal_baselines.py`).
 
 ```bash
-M=~/.venv-modal/bin/modal
-$M run modal_app.py::stage                       # download DCASE-T7 to the volume
-$M run modal_app.py --encoder clap_general       # embed
-$M run modal_app.py::bridge --encoder clap_general --objective instance --supcon 1 --dann .3
-python -m src.kfold_eval                          # the dissociation
-```
-
-## Use the adjusted embeddings on your own audio
-
-```python
-from src.apply_head import load_head, transform
-from src.encoders import load_encoder
-from src.utils import load_audio
-from config import TARGET_SR
-
-head, meta, dev = load_head("clap_general_ucs_paired_instance.head.pt")  # from the HF dataset
-clap = load_encoder("clap_general")
-adjusted = transform(head, dev, clap.embed([load_audio("my.wav")], sr=TARGET_SR))
+# 1. Corpora: DCASE-2023 Task-7 (ready-made core) + the UCS corpus built from FSD50K
+#    via src/ingest_fsd50k.py -> src/taxonomy_ucs.py -> src/clap_verify.py.
+#    Manifests (one row per clip, leakage-safe splits) are in data/manifests/.
+# 2. Twins: src/generate_synthetic.py / src/gen_pairs.py (Stable-Audio-Open audio-init).
+# 3. Embed with a frozen encoder (src/embed.py, src/encoders.py).
+# 4. Frozen-gap diagnostics: src/evaluate.py, src/domain_probe.py.
+# 5. Heads (invariant / sensitive / instance / classifier): src/bridge.py --objective ...
+# 6. The dissociation (5-fold leave-classes-out): src/kfold_eval.py, scripts/ssl_dissociation.py.
+# 7. Extra analyses: src/extra_metrics.py, src/validate_sensitive.py,
+#    src/cross_generator_eval.py, src/spectrum_eval.py; figures via src/make_figs.py.
 ```
 
 ## Layout
 ```
-src/            metrics, manifest builders, encoders, embed, evaluate, domain_probe,
-                bridge (the heads), taxonomy_ucs, clap_verify, gen_pairs, gen_elevenlabs,
-                kfold_eval, spectrum_eval, apply_head
-modal_app.py    Modal app: stage / embed / verify / bridge / generate
-paper/          LaTeX (NeurIPS format) + bib + compiled PDF
-data/manifests/ the manifests (one row per clip; provenance + leakage-safe splits)
-results/        figures + result tables
+config.py                  taxonomy, encoder registry, generation prompts, paths (env-driven)
+src/                       pipeline: manifests, encoders, embedding, heads, evaluation, figures
+modal_*.py                 Modal apps for GPU embedding / SSL encoders / baselines / data stats
+data/manifests/            corpus manifests (one row per clip; the reproducibility source of truth)
+results/                   metrics JSON + paper figures
+paper/                     doppelganger.tex/.pdf, references.bib, DATASHEET.md, style file
+arxiv/                     flat arXiv package (pdflatex-only) + tarball
+human_study/               human annotation baseline: task, trial builder, analysis, aggregates
+                           (raw participant responses are NOT redistributed)
+tests/                     metric + end-to-end synthetic tests
 ```
 
-## License
-Code: MIT. Audio: CC-licensed sources redistributed where permitted; restricted audio (e.g. BBC)
-shipped as a fetch manifest + generation recipe rather than files. Synthetic audio generated with
-Stable Audio Open (Stability AI Community License). See the datasheet in `paper/DATASHEET.md`.
-
-## Citation
-```bibtex
-@misc{ash2026doppelganger,
-  title  = {Doppelganger: Sound Effects and Their Synthetic Twins},
-  author = {Elliott Ash},
-  year   = {2026},
-  note   = {https://github.com/elliottash/doppelganger}
-}
-```
+## License and data notes
+Code is **MIT** (see `LICENSE`). Real audio is redistributed only where the source license permits;
+restricted sources (e.g. BBC) are referenced by ID, not redistributed. Synthetic twins are generated
+with Stable Audio Open (Stability AI Community License). The human annotation baseline redistributes
+the task, trial definitions, and aggregated results only — never raw participant data.

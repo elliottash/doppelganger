@@ -1,0 +1,52 @@
+{
+ "score_by_cond": {
+  "real": {
+   "axis_mean": 0.6304550414836473,
+   "axis_sd": 0.11390141804012771,
+   "logit_mean": -0.453594897959984,
+   "n": 1360
+  },
+  "n06": {
+   "axis_mean": -0.6319845534984351,
+   "axis_sd": 0.08586407201361614,
+   "logit_mean": 0.23039586611694712,
+   "n": 1360
+  },
+  "n09": {
+   "axis_mean": -0.6469516018241206,
+   "axis_sd": 0.08034720966595718,
+   "logit_mean": 0.2772253430996309,
+   "n": 1360
+  },
+  "n12": {
+   "axis_mean": -0.6418241291402784,
+   "axis_sd": 0.07932674116384389,
+   "logit_mean": 0.309231353062205,
+   "n": 1360
+  },
+  "text": {
+   "axis_mean": -0.5609792167389327,
+   "axis_sd": 0.12672289633635545,
+   "logit_mean": 0.2490215733729522,
+   "n": 1360
+  },
+  "elevenlabs": {
+   "axis_mean": 0.40922726032449236,
+   "axis_sd": 0.32931456812591925,
+   "logit_mean": -0.27480784692843235,
+   "n": 670
+  }
+ },
+ "spearman_axis_vs_twin_fidelity": -0.09665631411263392,
+ "n_fidelity_pairs": 4080,
+ "auc": {
+  "real_vs_n06": 0.9998291522491349,
+  "real_vs_n09": 0.9998907871972318,
+  "real_vs_n12": 0.9998832179930796,
+  "real_vs_text": 0.9990489835640138,
+  "real_vs_elevenlabs": 0.7468964003511852,
+  "n06_vs_elevenlabs": 0.007463784021071115
+ },
+ "head": "/home/elliott/data/doppelganger/heads_only/clap_general_ucs_paired_sensitive.head.pt",
+ "axis": "real-minus-synth centroid, train split"
+}

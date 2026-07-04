@@ -1,0 +1,10377 @@
+{
+ "summary": {
+  "clap_frozen": {
+   "correct": 276,
+   "n": 300,
+   "accuracy": 0.92,
+   "block": "retrieval",
+   "chance": 0.1667
+  },
+  "clap_instance": {
+   "correct": 297,
+   "n": 300,
+   "accuracy": 0.99,
+   "block": "retrieval",
+   "chance": 0.1667
+  },
+  "sensitive_axis": {
+   "correct": 150,
+   "n": 150,
+   "accuracy": 1.0,
+   "block": "2afc",
+   "chance": 0.5
+  }
+ },
+ "trials": {
+  "t000": {
+   "block": "retrieval",
+   "category": "ALRM",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.2348,
+     0.2978,
+     0.4039,
+     0.4754,
+     0.8479,
+     0.1458
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.0485,
+     0.0403,
+     0.0636,
+     0.1753,
+     0.7865,
+     -0.0578
+    ]
+   }
+  },
+  "t001": {
+   "block": "retrieval",
+   "category": "ALRM",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7792,
+     0.2772,
+     0.1179,
+     0.3325,
+     0.2003,
+     0.1435
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7701,
+     0.1424,
+     0.2227,
+     0.0058,
+     0.0496,
+     0.0273
+    ]
+   }
+  },
+  "t002": {
+   "block": "retrieval",
+   "category": "ALRM",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.121,
+     0.1955,
+     0.1219,
+     0.1836,
+     0.8082,
+     0.2144
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     -0.0387,
+     0.1568,
+     0.052,
+     0.0727,
+     0.8251,
+     0.0198
+    ]
+   }
+  },
+  "t003": {
+   "block": "retrieval",
+   "category": "ALRM",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.0773,
+     0.2462,
+     0.8465,
+     0.681,
+     0.7292,
+     0.9242
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.0846,
+     0.0354,
+     0.3173,
+     0.2692,
+     0.3843,
+     0.8588
+    ]
+   }
+  },
+  "t004": {
+   "block": "retrieval",
+   "category": "ALRM",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8098,
+     0.4832,
+     0.5964,
+     0.4091,
+     0.5543,
+     0.2358
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.715,
+     -0.0607,
+     0.2022,
+     -0.1202,
+     0.0801,
+     0.0013
+    ]
+   }
+  },
+  "t005": {
+   "block": "retrieval",
+   "category": "ALRM",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.3577,
+     0.2986,
+     0.5563,
+     0.7331,
+     0.3482,
+     0.3811
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.0292,
+     0.138,
+     0.193,
+     0.8189,
+     -0.1539,
+     0.0501
+    ]
+   }
+  },
+  "t006": {
+   "block": "retrieval",
+   "category": "ALRM",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.3491,
+     0.2368,
+     0.1145,
+     0.1737,
+     0.6059,
+     0.0784
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.1496,
+     0.132,
+     -0.0793,
+     -0.2046,
+     0.7224,
+     0.1317
+    ]
+   }
+  },
+  "t007": {
+   "block": "retrieval",
+   "category": "ALRM",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.2786,
+     0.6672,
+     0.892,
+     0.3457,
+     0.5623,
+     0.0936
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.0706,
+     0.2088,
+     0.8253,
+     -0.2586,
+     0.0475,
+     -0.0703
+    ]
+   }
+  },
+  "t008": {
+   "block": "retrieval",
+   "category": "ALRM",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.3221,
+     0.4917,
+     0.1896,
+     0.878,
+     0.6667,
+     0.4242
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.2813,
+     0.1324,
+     -0.0125,
+     0.9096,
+     0.2795,
+     0.1547
+    ]
+   }
+  },
+  "t009": {
+   "block": "retrieval",
+   "category": "AMB",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.3396,
+     0.2577,
+     -0.0275,
+     0.4232,
+     0.1835,
+     0.2408
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     -0.1388,
+     0.2564,
+     -0.1369,
+     0.6067,
+     -0.093,
+     0.2874
+    ]
+   }
+  },
+  "t010": {
+   "block": "retrieval",
+   "category": "AMB",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.2405,
+     0.3255,
+     0.3512,
+     0.3281,
+     0.7026,
+     0.2941
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.0968,
+     -0.0447,
+     0.3133,
+     0.1339,
+     0.8485,
+     0.2455
+    ]
+   }
+  },
+  "t011": {
+   "block": "retrieval",
+   "category": "AMB",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": false,
+    "sims": [
+     0.1434,
+     0.1885,
+     0.2555,
+     0.2514,
+     0.1286,
+     0.1679
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.0616,
+     0.1147,
+     0.2148,
+     0.5818,
+     0.3534,
+     0.1967
+    ]
+   }
+  },
+  "t012": {
+   "block": "retrieval",
+   "category": "AMB",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.0868,
+     0.6315,
+     0.1753,
+     -0.0246,
+     0.2806,
+     0.1452
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     -0.038,
+     0.7085,
+     -0.0291,
+     0.1539,
+     0.0608,
+     -0.0477
+    ]
+   }
+  },
+  "t013": {
+   "block": "retrieval",
+   "category": "AMB",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.2949,
+     0.1608,
+     0.1737,
+     0.1633,
+     0.1041,
+     0.3072
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.1614,
+     0.0206,
+     0.3797,
+     0.1154,
+     0.0643,
+     0.6194
+    ]
+   }
+  },
+  "t014": {
+   "block": "retrieval",
+   "category": "AMB",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.9341,
+     0.102,
+     0.2933,
+     0.2101,
+     0.2424,
+     0.3254
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.881,
+     0.1522,
+     0.1049,
+     0.0831,
+     0.061,
+     0.0604
+    ]
+   }
+  },
+  "t015": {
+   "block": "retrieval",
+   "category": "AMB",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": false,
+    "sims": [
+     0.15,
+     0.2752,
+     0.2292,
+     0.1611,
+     0.2666,
+     0.2932
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.0343,
+     0.493,
+     0.3472,
+     0.7534,
+     0.338,
+     0.4263
+    ]
+   }
+  },
+  "t016": {
+   "block": "retrieval",
+   "category": "AMB",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.2442,
+     0.3717,
+     0.1389,
+     0.1639,
+     0.1748,
+     -0.1584
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.1408,
+     0.653,
+     -0.1946,
+     0.2598,
+     -0.222,
+     -0.2849
+    ]
+   }
+  },
+  "t017": {
+   "block": "retrieval",
+   "category": "ANML",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.4332,
+     0.0849,
+     0.3666,
+     0.323,
+     0.6591,
+     0.4823
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.3081,
+     0.0395,
+     0.1606,
+     0.1327,
+     0.6449,
+     0.2164
+    ]
+   }
+  },
+  "t018": {
+   "block": "retrieval",
+   "category": "ANML",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.5846,
+     0.7395,
+     0.1261,
+     0.2233,
+     0.1732,
+     0.5571
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.413,
+     0.7696,
+     -0.0185,
+     -0.0057,
+     -0.055,
+     0.4017
+    ]
+   }
+  },
+  "t019": {
+   "block": "retrieval",
+   "category": "ANML",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.1747,
+     0.9135,
+     0.298,
+     0.5422,
+     0.6068,
+     0.4769
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     -0.1499,
+     0.8865,
+     0.1766,
+     0.1768,
+     0.4814,
+     0.1661
+    ]
+   }
+  },
+  "t020": {
+   "block": "retrieval",
+   "category": "ANML",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.5075,
+     0.4027,
+     0.5372,
+     0.8611,
+     0.4027,
+     0.6907
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.053,
+     0.1817,
+     0.1531,
+     0.8481,
+     0.1278,
+     0.4647
+    ]
+   }
+  },
+  "t021": {
+   "block": "retrieval",
+   "category": "ANML",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.189,
+     0.2467,
+     0.4217,
+     0.2689,
+     0.1922,
+     0.8862
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.0769,
+     0.1216,
+     0.1292,
+     0.3391,
+     0.1306,
+     0.8864
+    ]
+   }
+  },
+  "t022": {
+   "block": "retrieval",
+   "category": "ANML",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.1624,
+     0.3322,
+     0.8773,
+     0.089,
+     0.3148,
+     0.3394
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.1081,
+     0.0442,
+     0.7967,
+     -0.0442,
+     0.02,
+     0.1314
+    ]
+   }
+  },
+  "t023": {
+   "block": "retrieval",
+   "category": "ANML",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.3711,
+     0.7249,
+     0.2757,
+     0.3564,
+     0.1692,
+     0.7061
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.006,
+     0.8012,
+     0.2838,
+     0.0315,
+     -0.0218,
+     0.4919
+    ]
+   }
+  },
+  "t024": {
+   "block": "retrieval",
+   "category": "ANML",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.0045,
+     0.5174,
+     0.2913,
+     0.0628,
+     -0.1411,
+     0.1821
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     -0.1636,
+     0.3831,
+     0.2355,
+     -0.0194,
+     0.0237,
+     0.123
+    ]
+   }
+  },
+  "t025": {
+   "block": "retrieval",
+   "category": "ANML",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     -0.0597,
+     0.2054,
+     0.6701,
+     0.1849,
+     0.9006,
+     0.7397
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.013,
+     -0.0382,
+     0.5671,
+     0.1371,
+     0.8743,
+     0.5502
+    ]
+   }
+  },
+  "t026": {
+   "block": "retrieval",
+   "category": "BELL",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.588,
+     0.8604,
+     0.1799,
+     0.222,
+     0.4282,
+     0.4481
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.2649,
+     0.8521,
+     0.1494,
+     0.0618,
+     -0.0057,
+     0.1893
+    ]
+   }
+  },
+  "t027": {
+   "block": "retrieval",
+   "category": "BELL",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.1189,
+     0.9433,
+     0.3252,
+     0.2026,
+     0.7343,
+     0.3603
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.0003,
+     0.8752,
+     0.103,
+     -0.0206,
+     0.5958,
+     0.192
+    ]
+   }
+  },
+  "t028": {
+   "block": "retrieval",
+   "category": "BELL",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.3915,
+     0.5406,
+     0.241,
+     0.8644,
+     0.3429,
+     0.3612
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.0624,
+     0.3058,
+     0.1551,
+     0.8987,
+     0.0174,
+     0.0247
+    ]
+   }
+  },
+  "t029": {
+   "block": "retrieval",
+   "category": "BELL",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.374,
+     0.2092,
+     0.1093,
+     0.4066,
+     0.7463,
+     0.3337
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.0243,
+     0.1017,
+     0.2196,
+     0.4088,
+     0.7575,
+     0.2196
+    ]
+   }
+  },
+  "t030": {
+   "block": "retrieval",
+   "category": "BELL",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.1007,
+     0.3376,
+     0.2005,
+     0.3379,
+     0.7639,
+     0.3473
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.0034,
+     -0.0656,
+     0.172,
+     0.0063,
+     0.7578,
+     0.3731
+    ]
+   }
+  },
+  "t031": {
+   "block": "retrieval",
+   "category": "BELL",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.1713,
+     0.1465,
+     0.1454,
+     0.2594,
+     0.5767,
+     0.183
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     -0.0651,
+     0.0672,
+     0.075,
+     0.1107,
+     0.6356,
+     0.1731
+    ]
+   }
+  },
+  "t032": {
+   "block": "retrieval",
+   "category": "BELL",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.3639,
+     0.6855,
+     0.4815,
+     0.2045,
+     0.224,
+     0.2097
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.0132,
+     0.8347,
+     0.2408,
+     -0.1576,
+     0.1503,
+     0.236
+    ]
+   }
+  },
+  "t033": {
+   "block": "retrieval",
+   "category": "BELL",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.4099,
+     0.345,
+     0.2706,
+     0.5195,
+     0.1306,
+     0.7089
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.2617,
+     0.0967,
+     0.0048,
+     0.3577,
+     -0.0766,
+     0.6066
+    ]
+   }
+  },
+  "t034": {
+   "block": "retrieval",
+   "category": "BELL",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.3376,
+     0.4085,
+     0.1683,
+     0.418,
+     0.3862,
+     0.7936
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     -0.1981,
+     -0.1849,
+     -0.0301,
+     0.2134,
+     0.2659,
+     0.8141
+    ]
+   }
+  },
+  "t035": {
+   "block": "retrieval",
+   "category": "BIRD",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.3142,
+     0.4133,
+     0.3284,
+     0.8092,
+     0.3148,
+     0.3353
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.2965,
+     -0.073,
+     0.1526,
+     0.7799,
+     0.0437,
+     0.0181
+    ]
+   }
+  },
+  "t036": {
+   "block": "retrieval",
+   "category": "BIRD",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.3153,
+     0.6682,
+     0.4508,
+     0.2883,
+     0.3715,
+     0.3745
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.2066,
+     0.8115,
+     -0.0322,
+     -0.0204,
+     0.0017,
+     0.3203
+    ]
+   }
+  },
+  "t037": {
+   "block": "retrieval",
+   "category": "BIRD",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": false,
+    "sims": [
+     0.4653,
+     0.8068,
+     0.7718,
+     0.4939,
+     0.7111,
+     0.4224
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     -0.0817,
+     0.5156,
+     0.877,
+     -0.0409,
+     0.175,
+     -0.0974
+    ]
+   }
+  },
+  "t038": {
+   "block": "retrieval",
+   "category": "BIRD",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.2657,
+     0.3196,
+     0.1214,
+     0.3977,
+     0.7034,
+     0.3232
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.0914,
+     -0.1023,
+     0.1273,
+     0.2129,
+     0.7057,
+     -0.1059
+    ]
+   }
+  },
+  "t039": {
+   "block": "retrieval",
+   "category": "BIRD",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.5759,
+     0.1265,
+     0.2822,
+     0.4731,
+     0.6886,
+     0.3553
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.2261,
+     -0.1506,
+     -0.0582,
+     0.0299,
+     0.8098,
+     -0.1231
+    ]
+   }
+  },
+  "t040": {
+   "block": "retrieval",
+   "category": "BIRD",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.2662,
+     0.3114,
+     0.3737,
+     0.3004,
+     0.4968,
+     0.6627
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.012,
+     -0.1416,
+     0.1669,
+     0.3378,
+     0.3201,
+     0.7734
+    ]
+   }
+  },
+  "t041": {
+   "block": "retrieval",
+   "category": "BIRD",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7849,
+     0.364,
+     0.337,
+     0.3833,
+     0.4322,
+     0.4077
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.768,
+     0.1783,
+     0.028,
+     0.0643,
+     0.15,
+     0.3353
+    ]
+   }
+  },
+  "t042": {
+   "block": "retrieval",
+   "category": "BIRD",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": false,
+    "sims": [
+     0.4731,
+     0.4116,
+     0.419,
+     0.3715,
+     0.4926,
+     0.4092
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.2783,
+     0.1113,
+     0.6537,
+     0.1938,
+     -0.0257,
+     0.2289
+    ]
+   }
+  },
+  "t043": {
+   "block": "retrieval",
+   "category": "BIRD",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": false,
+    "sims": [
+     0.4873,
+     0.689,
+     0.566,
+     0.0372,
+     0.4775,
+     0.6799
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.184,
+     0.2335,
+     0.081,
+     -0.0463,
+     0.4064,
+     0.7387
+    ]
+   }
+  },
+  "t044": {
+   "block": "retrieval",
+   "category": "BODY",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.9165,
+     0.7977,
+     0.4025,
+     0.2921,
+     0.4906,
+     0.3021
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7781,
+     0.3678,
+     -0.0137,
+     0.1646,
+     0.1887,
+     0.0444
+    ]
+   }
+  },
+  "t045": {
+   "block": "retrieval",
+   "category": "BODY",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.4378,
+     0.2286,
+     0.7141,
+     0.0739,
+     0.4131,
+     0.3993
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     -0.0562,
+     0.0291,
+     0.5595,
+     0.0173,
+     0.1938,
+     0.1773
+    ]
+   }
+  },
+  "t046": {
+   "block": "retrieval",
+   "category": "BODY",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.0829,
+     0.4819,
+     0.7789,
+     0.2524,
+     0.1253,
+     0.1594
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     -0.0355,
+     -0.1576,
+     0.6135,
+     -0.0456,
+     0.0623,
+     0.1426
+    ]
+   }
+  },
+  "t047": {
+   "block": "retrieval",
+   "category": "BODY",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.6449,
+     0.4631,
+     0.4068,
+     0.3966,
+     0.2554,
+     0.4201
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.5486,
+     -0.0691,
+     0.1393,
+     0.3223,
+     0.1268,
+     -0.0866
+    ]
+   }
+  },
+  "t048": {
+   "block": "retrieval",
+   "category": "BODY",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.026,
+     0.1553,
+     0.177,
+     0.2383,
+     0.8936,
+     0.0264
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.046,
+     0.0195,
+     0.0759,
+     0.246,
+     0.8503,
+     -0.0276
+    ]
+   }
+  },
+  "t049": {
+   "block": "retrieval",
+   "category": "BODY",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.2582,
+     0.4287,
+     0.8669,
+     0.3319,
+     0.2304,
+     0.4362
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     -0.0821,
+     0.0757,
+     0.6792,
+     -0.0038,
+     -0.0242,
+     0.1514
+    ]
+   }
+  },
+  "t050": {
+   "block": "retrieval",
+   "category": "BODY",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     -0.0035,
+     0.3768,
+     0.9393,
+     0.8033,
+     0.3081,
+     0.2999
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     -0.0284,
+     0.0057,
+     0.8574,
+     0.3131,
+     -0.1206,
+     -0.2106
+    ]
+   }
+  },
+  "t051": {
+   "block": "retrieval",
+   "category": "BODY",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.9074,
+     0.2571,
+     0.8274,
+     0.4097,
+     0.717,
+     0.7314
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8556,
+     -0.082,
+     0.4882,
+     -0.0787,
+     0.29,
+     0.1223
+    ]
+   }
+  },
+  "t052": {
+   "block": "retrieval",
+   "category": "BODY",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.3682,
+     0.963,
+     0.6575,
+     0.2155,
+     0.187,
+     0.243
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.0815,
+     0.9297,
+     0.3119,
+     -0.0233,
+     -0.0508,
+     -0.0111
+    ]
+   }
+  },
+  "t053": {
+   "block": "retrieval",
+   "category": "CLCK",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.1863,
+     0.0848,
+     0.0205,
+     0.1457,
+     0.2762,
+     0.3513
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.1381,
+     -0.0625,
+     -0.0529,
+     0.0064,
+     0.0665,
+     0.6197
+    ]
+   }
+  },
+  "t054": {
+   "block": "retrieval",
+   "category": "CLCK",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.4277,
+     0.8431,
+     0.5597,
+     0.5312,
+     0.5198,
+     0.2304
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.1288,
+     0.8341,
+     0.1289,
+     0.3523,
+     0.5035,
+     0.1085
+    ]
+   }
+  },
+  "t055": {
+   "block": "retrieval",
+   "category": "CLCK",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.732,
+     0.3168,
+     0.3106,
+     0.8216,
+     0.7742,
+     0.6
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.3122,
+     -0.0507,
+     -0.0381,
+     0.7529,
+     0.4355,
+     0.2074
+    ]
+   }
+  },
+  "t056": {
+   "block": "retrieval",
+   "category": "CLCK",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": false,
+    "sims": [
+     0.5958,
+     0.4555,
+     0.6284,
+     0.5889,
+     0.6216,
+     0.5469
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.4198,
+     0.1533,
+     0.4259,
+     0.5355,
+     0.8179,
+     0.1894
+    ]
+   }
+  },
+  "t057": {
+   "block": "retrieval",
+   "category": "CLCK",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": false,
+    "sims": [
+     0.4578,
+     0.5265,
+     0.4512,
+     0.3673,
+     0.472,
+     0.3847
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.1079,
+     0.252,
+     0.5819,
+     -0.0239,
+     0.0983,
+     -0.1078
+    ]
+   }
+  },
+  "t058": {
+   "block": "retrieval",
+   "category": "CLCK",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.5074,
+     0.2482,
+     0.1595,
+     0.5309,
+     0.5209,
+     0.8038
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.2969,
+     -0.0893,
+     0.0652,
+     0.1143,
+     0.3522,
+     0.8906
+    ]
+   }
+  },
+  "t059": {
+   "block": "retrieval",
+   "category": "CLCK",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.3348,
+     0.5977,
+     0.6087,
+     0.7402,
+     0.0835,
+     0.4973
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     -0.0195,
+     0.3095,
+     0.4432,
+     0.752,
+     -0.0375,
+     0.3502
+    ]
+   }
+  },
+  "t060": {
+   "block": "retrieval",
+   "category": "CLCK",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.2274,
+     0.687,
+     0.4418,
+     -0.0846,
+     0.0145,
+     0.3924
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     -0.1416,
+     0.7249,
+     0.1809,
+     -0.0986,
+     0.0374,
+     0.2157
+    ]
+   }
+  },
+  "t061": {
+   "block": "retrieval",
+   "category": "CLCK",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.4787,
+     0.2625,
+     0.5892,
+     0.2699,
+     0.2716,
+     0.2051
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.3137,
+     0.1297,
+     0.5028,
+     0.1312,
+     0.1085,
+     0.1308
+    ]
+   }
+  },
+  "t062": {
+   "block": "retrieval",
+   "category": "CLTH",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.5557,
+     0.1707,
+     0.8807,
+     0.4465,
+     0.6791,
+     0.3475
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.297,
+     -0.0336,
+     0.9244,
+     0.2209,
+     0.4958,
+     -0.0033
+    ]
+   }
+  },
+  "t063": {
+   "block": "retrieval",
+   "category": "CLTH",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.0795,
+     0.4878,
+     0.7146,
+     0.5585,
+     0.3913,
+     0.3469
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     -0.0474,
+     0.3365,
+     0.7794,
+     0.1942,
+     0.1116,
+     -0.0437
+    ]
+   }
+  },
+  "t064": {
+   "block": "retrieval",
+   "category": "CLTH",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.6282,
+     0.2116,
+     0.5218,
+     0.2316,
+     0.2926,
+     0.4087
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8061,
+     0.2384,
+     0.5486,
+     0.064,
+     -0.0116,
+     0.1059
+    ]
+   }
+  },
+  "t065": {
+   "block": "retrieval",
+   "category": "CLTH",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.6986,
+     0.5634,
+     0.0556,
+     0.545,
+     0.5764,
+     0.5744
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7062,
+     0.045,
+     -0.0309,
+     0.416,
+     0.4249,
+     0.4774
+    ]
+   }
+  },
+  "t066": {
+   "block": "retrieval",
+   "category": "CLTH",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.2949,
+     0.7085,
+     0.8305,
+     0.4186,
+     0.0699,
+     0.6222
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.0768,
+     0.5919,
+     0.7986,
+     0.0675,
+     -0.0092,
+     0.4577
+    ]
+   }
+  },
+  "t067": {
+   "block": "retrieval",
+   "category": "CLTH",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.4801,
+     0.2592,
+     0.8499,
+     0.3841,
+     0.3617,
+     0.3424
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     -0.0194,
+     -0.0212,
+     0.6437,
+     -0.0891,
+     0.0997,
+     0.2301
+    ]
+   }
+  },
+  "t068": {
+   "block": "retrieval",
+   "category": "CLTH",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.211,
+     0.633,
+     0.7097,
+     0.2063,
+     0.8308,
+     0.2507
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.136,
+     0.5434,
+     0.6188,
+     -0.0642,
+     0.8514,
+     0.1897
+    ]
+   }
+  },
+  "t069": {
+   "block": "retrieval",
+   "category": "CLTH",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.4574,
+     0.5663,
+     0.1557,
+     0.2653,
+     0.8429,
+     0.6743
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.0761,
+     -0.0344,
+     0.1111,
+     0.1842,
+     0.8176,
+     0.2329
+    ]
+   }
+  },
+  "t070": {
+   "block": "retrieval",
+   "category": "CLTH",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.2901,
+     0.8744,
+     0.2487,
+     0.5296,
+     0.4206,
+     0.2404
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.282,
+     0.8319,
+     0.0905,
+     0.0896,
+     0.2085,
+     0.0263
+    ]
+   }
+  },
+  "t071": {
+   "block": "retrieval",
+   "category": "COMP",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.5021,
+     0.8836,
+     0.6332,
+     0.4512,
+     0.7199,
+     0.6521
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.0097,
+     0.8307,
+     -0.0396,
+     0.0041,
+     0.2264,
+     0.1622
+    ]
+   }
+  },
+  "t072": {
+   "block": "retrieval",
+   "category": "COMP",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.193,
+     0.3345,
+     0.3484,
+     0.1994,
+     0.2101,
+     0.8698
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     -0.1461,
+     -0.05,
+     0.0214,
+     -0.0943,
+     -0.0753,
+     0.7799
+    ]
+   }
+  },
+  "t073": {
+   "block": "retrieval",
+   "category": "COMP",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.1379,
+     0.2804,
+     0.1528,
+     0.1236,
+     0.1086,
+     0.1448
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.0378,
+     0.5129,
+     -0.0765,
+     0.2081,
+     -0.1597,
+     0.0005
+    ]
+   }
+  },
+  "t074": {
+   "block": "retrieval",
+   "category": "COMP",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.5773,
+     0.4138,
+     0.3233,
+     0.2427,
+     0.3539,
+     0.7939
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.5624,
+     0.4575,
+     0.1496,
+     -0.1296,
+     -0.0206,
+     0.8339
+    ]
+   }
+  },
+  "t075": {
+   "block": "retrieval",
+   "category": "COMP",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.7226,
+     0.8085,
+     0.4106,
+     0.3701,
+     0.7462,
+     0.9088
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.2451,
+     0.21,
+     0.1629,
+     0.0951,
+     0.2491,
+     0.8647
+    ]
+   }
+  },
+  "t076": {
+   "block": "retrieval",
+   "category": "COMP",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7943,
+     0.266,
+     0.2331,
+     -0.2043,
+     0.1875,
+     0.2806
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8548,
+     0.3083,
+     0.2107,
+     -0.2328,
+     -0.0722,
+     0.0647
+    ]
+   }
+  },
+  "t077": {
+   "block": "retrieval",
+   "category": "COMP",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.4491,
+     0.3937,
+     0.459,
+     0.3569,
+     0.3631,
+     0.8413
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.0615,
+     0.3564,
+     0.0991,
+     0.0188,
+     0.2057,
+     0.8471
+    ]
+   }
+  },
+  "t078": {
+   "block": "retrieval",
+   "category": "COMP",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.2656,
+     0.2658,
+     0.2749,
+     0.2166,
+     0.3268,
+     0.7091
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.2227,
+     0.1766,
+     0.3442,
+     0.0496,
+     0.0686,
+     0.8222
+    ]
+   }
+  },
+  "t079": {
+   "block": "retrieval",
+   "category": "COMP",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.6433,
+     0.5517,
+     0.5954,
+     0.6561,
+     0.5344,
+     0.7865
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.3547,
+     0.0164,
+     0.2403,
+     0.195,
+     0.0191,
+     0.784
+    ]
+   }
+  },
+  "t080": {
+   "block": "retrieval",
+   "category": "CREA",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.149,
+     0.0944,
+     0.7674,
+     0.3305,
+     0.3548,
+     0.2673
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.1062,
+     0.1161,
+     0.7875,
+     -0.0697,
+     0.0472,
+     0.518
+    ]
+   }
+  },
+  "t081": {
+   "block": "retrieval",
+   "category": "CREA",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": false,
+    "sims": [
+     0.3279,
+     0.3608,
+     0.2918,
+     0.0254,
+     0.3854,
+     0.528
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.09,
+     0.5565,
+     -0.1198,
+     0.0685,
+     0.0216,
+     0.2094
+    ]
+   }
+  },
+  "t082": {
+   "block": "retrieval",
+   "category": "CREA",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.3004,
+     0.5231,
+     0.2134,
+     -0.0754,
+     -0.0421,
+     -0.1751
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.0913,
+     0.5504,
+     0.001,
+     0.0023,
+     0.0332,
+     -0.0662
+    ]
+   }
+  },
+  "t083": {
+   "block": "retrieval",
+   "category": "CREA",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.2542,
+     0.4097,
+     0.1478,
+     0.5379,
+     0.6883,
+     0.1822
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     -0.1391,
+     -0.0723,
+     -0.0441,
+     0.4789,
+     0.7365,
+     0.0197
+    ]
+   }
+  },
+  "t084": {
+   "block": "retrieval",
+   "category": "CREA",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8219,
+     0.2742,
+     0.3236,
+     0.1875,
+     0.3304,
+     0.0874
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8229,
+     -0.1262,
+     -0.0212,
+     -0.1328,
+     -0.049,
+     -0.2082
+    ]
+   }
+  },
+  "t085": {
+   "block": "retrieval",
+   "category": "CREA",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.483,
+     0.4252,
+     0.4088,
+     0.6849,
+     0.4135,
+     0.2613
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     -0.0048,
+     0.3637,
+     0.2498,
+     0.7436,
+     0.1211,
+     0.1603
+    ]
+   }
+  },
+  "t086": {
+   "block": "retrieval",
+   "category": "CREA",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.3057,
+     0.7985,
+     0.7198,
+     0.1958,
+     0.6739,
+     0.5563
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.2956,
+     0.9105,
+     0.273,
+     -0.171,
+     0.4437,
+     -0.0178
+    ]
+   }
+  },
+  "t087": {
+   "block": "retrieval",
+   "category": "CREA",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7091,
+     0.3657,
+     0.458,
+     0.3207,
+     0.5155,
+     0.4959
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7581,
+     0.2982,
+     -0.0477,
+     0.0171,
+     0.5279,
+     0.5142
+    ]
+   }
+  },
+  "t088": {
+   "block": "retrieval",
+   "category": "CRSH",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.6234,
+     0.4139,
+     0.4391,
+     0.4225,
+     0.8526,
+     0.2173
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.1111,
+     -0.1014,
+     0.1064,
+     0.1848,
+     0.7725,
+     0.0404
+    ]
+   }
+  },
+  "t089": {
+   "block": "retrieval",
+   "category": "CRSH",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.5515,
+     0.2277,
+     0.4163,
+     0.7752,
+     0.8252,
+     0.452
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.1819,
+     -0.0142,
+     0.1804,
+     0.5626,
+     0.7248,
+     -0.0166
+    ]
+   }
+  },
+  "t090": {
+   "block": "retrieval",
+   "category": "CRSH",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.5195,
+     0.5627,
+     0.6167,
+     0.8319,
+     0.6794,
+     0.2911
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.1996,
+     0.2611,
+     0.2584,
+     0.8727,
+     0.4028,
+     0.1043
+    ]
+   }
+  },
+  "t091": {
+   "block": "retrieval",
+   "category": "CRSH",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.3961,
+     0.4136,
+     0.1591,
+     0.5106,
+     0.2129,
+     0.7838
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.4012,
+     -0.0756,
+     -0.2188,
+     0.3027,
+     0.2052,
+     0.8258
+    ]
+   }
+  },
+  "t092": {
+   "block": "retrieval",
+   "category": "CRSH",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.2838,
+     0.5788,
+     0.8895,
+     0.3708,
+     0.2872,
+     0.6961
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.1284,
+     0.1525,
+     0.8049,
+     0.3049,
+     0.0713,
+     0.2862
+    ]
+   }
+  },
+  "t093": {
+   "block": "retrieval",
+   "category": "CRSH",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.6861,
+     0.4152,
+     0.5153,
+     0.5025,
+     0.7943,
+     0.3453
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.0225,
+     -0.1417,
+     0.2745,
+     -0.0874,
+     0.8128,
+     0.009
+    ]
+   }
+  },
+  "t094": {
+   "block": "retrieval",
+   "category": "CRSH",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.5527,
+     0.4131,
+     0.5027,
+     0.9204,
+     0.3849,
+     0.4587
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.3733,
+     0.1633,
+     0.0195,
+     0.8726,
+     0.01,
+     0.2116
+    ]
+   }
+  },
+  "t095": {
+   "block": "retrieval",
+   "category": "CRSH",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.4282,
+     0.4115,
+     0.7832,
+     0.3758,
+     0.1546,
+     0.2018
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     -0.1354,
+     -0.2134,
+     0.7474,
+     0.0277,
+     0.0051,
+     0.2449
+    ]
+   }
+  },
+  "t096": {
+   "block": "retrieval",
+   "category": "CRWD",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.3861,
+     0.4491,
+     0.3417,
+     0.7006,
+     0.2239,
+     0.2211
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.3905,
+     0.3487,
+     -0.0918,
+     0.7569,
+     -0.088,
+     0.0664
+    ]
+   }
+  },
+  "t097": {
+   "block": "retrieval",
+   "category": "CRWD",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": false,
+    "sims": [
+     0.4731,
+     0.0658,
+     0.3209,
+     0.4245,
+     0.4758,
+     -0.003
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.6086,
+     0.1076,
+     0.2449,
+     0.3204,
+     0.3832,
+     -0.0708
+    ]
+   }
+  },
+  "t098": {
+   "block": "retrieval",
+   "category": "CRWD",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.6346,
+     0.3983,
+     0.1455,
+     0.1285,
+     0.2987,
+     0.1239
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.6368,
+     0.1715,
+     0.069,
+     -0.0805,
+     0.1605,
+     0.0309
+    ]
+   }
+  },
+  "t099": {
+   "block": "retrieval",
+   "category": "CRWD",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.1542,
+     0.121,
+     0.2235,
+     0.2042,
+     0.0374,
+     0.727
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     -0.0607,
+     0.0353,
+     0.1686,
+     0.029,
+     -0.1007,
+     0.6513
+    ]
+   }
+  },
+  "t100": {
+   "block": "retrieval",
+   "category": "CRWD",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.1952,
+     0.1212,
+     0.7553,
+     0.2768,
+     0.2502,
+     0.3974
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     -0.0773,
+     -0.0124,
+     0.7922,
+     0.0248,
+     0.0261,
+     0.1844
+    ]
+   }
+  },
+  "t101": {
+   "block": "retrieval",
+   "category": "CRWD",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.6676,
+     0.7202,
+     0.3748,
+     0.5799,
+     0.508,
+     0.2066
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.1649,
+     0.7737,
+     0.1543,
+     0.1906,
+     0.0477,
+     0.0038
+    ]
+   }
+  },
+  "t102": {
+   "block": "retrieval",
+   "category": "CRWD",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7818,
+     0.0659,
+     0.1933,
+     0.1266,
+     -0.0497,
+     0.003
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8277,
+     -0.0987,
+     0.066,
+     0.0016,
+     -0.0069,
+     0.1414
+    ]
+   }
+  },
+  "t103": {
+   "block": "retrieval",
+   "category": "CRWD",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8071,
+     -0.0267,
+     0.0352,
+     0.0358,
+     0.0263,
+     0.095
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7666,
+     -0.0602,
+     0.1433,
+     -0.0358,
+     -0.2013,
+     -0.1337
+    ]
+   }
+  },
+  "t104": {
+   "block": "retrieval",
+   "category": "CRWD",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.1585,
+     0.1463,
+     0.5572,
+     0.406,
+     0.6099,
+     0.4962
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     -0.1817,
+     -0.1841,
+     0.4841,
+     -0.066,
+     0.6069,
+     0.1826
+    ]
+   }
+  },
+  "t105": {
+   "block": "retrieval",
+   "category": "DOOR",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.0826,
+     0.1195,
+     0.3336,
+     0.8441,
+     0.928,
+     0.199
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     -0.0289,
+     -0.0574,
+     0.0999,
+     0.5059,
+     0.8543,
+     -0.014
+    ]
+   }
+  },
+  "t106": {
+   "block": "retrieval",
+   "category": "DOOR",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.0542,
+     0.6698,
+     0.3428,
+     0.3125,
+     0.1346,
+     0.1829
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.0427,
+     0.73,
+     0.1957,
+     -0.0648,
+     0.0222,
+     -0.1381
+    ]
+   }
+  },
+  "t107": {
+   "block": "retrieval",
+   "category": "DOOR",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8097,
+     0.2198,
+     0.1759,
+     -0.0051,
+     0.4639,
+     0.3689
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7166,
+     -0.1918,
+     -0.0598,
+     -0.1743,
+     0.1232,
+     -0.0518
+    ]
+   }
+  },
+  "t108": {
+   "block": "retrieval",
+   "category": "DOOR",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.841,
+     0.2572,
+     0.3971,
+     0.2951,
+     0.2353,
+     0.2796
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8508,
+     0.1461,
+     0.2207,
+     0.1381,
+     -0.2273,
+     -0.1063
+    ]
+   }
+  },
+  "t109": {
+   "block": "retrieval",
+   "category": "DOOR",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.5217,
+     0.155,
+     0.9148,
+     0.308,
+     0.3854,
+     0.3587
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.1826,
+     -0.0416,
+     0.8736,
+     -0.0048,
+     -0.1372,
+     0.094
+    ]
+   }
+  },
+  "t110": {
+   "block": "retrieval",
+   "category": "DOOR",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.4702,
+     0.451,
+     0.5443,
+     0.5294,
+     0.7046,
+     0.4241
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.2264,
+     0.2485,
+     0.1784,
+     0.265,
+     0.7002,
+     0.094
+    ]
+   }
+  },
+  "t111": {
+   "block": "retrieval",
+   "category": "DOOR",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.3035,
+     0.2911,
+     0.5194,
+     0.3392,
+     0.8814,
+     0.3986
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.1798,
+     -0.1485,
+     0.1396,
+     0.043,
+     0.7986,
+     -0.2718
+    ]
+   }
+  },
+  "t112": {
+   "block": "retrieval",
+   "category": "DOOR",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.3639,
+     0.1838,
+     0.6,
+     0.1319,
+     0.3975,
+     0.2768
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.1382,
+     0.0788,
+     0.7227,
+     0.0181,
+     0.4091,
+     0.1302
+    ]
+   }
+  },
+  "t113": {
+   "block": "retrieval",
+   "category": "DOOR",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.3098,
+     0.468,
+     0.4894,
+     0.4082,
+     0.2837,
+     0.8056
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     -0.1395,
+     0.3445,
+     0.0793,
+     0.211,
+     -0.0896,
+     0.7565
+    ]
+   }
+  },
+  "t114": {
+   "block": "retrieval",
+   "category": "DSHS",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.4771,
+     0.5705,
+     0.8562,
+     0.2904,
+     0.3101,
+     0.2647
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     -0.02,
+     0.2503,
+     0.684,
+     -0.1439,
+     -0.0052,
+     -0.1357
+    ]
+   }
+  },
+  "t115": {
+   "block": "retrieval",
+   "category": "DSHS",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.3032,
+     0.7168,
+     0.2446,
+     0.2721,
+     0.3187,
+     0.1263
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.1429,
+     0.7475,
+     -0.0627,
+     -0.0077,
+     0.163,
+     -0.1911
+    ]
+   }
+  },
+  "t116": {
+   "block": "retrieval",
+   "category": "DSHS",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.534,
+     0.523,
+     0.8266,
+     0.2554,
+     0.3332,
+     0.3293
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.0624,
+     0.1835,
+     0.7214,
+     -0.1599,
+     0.0597,
+     -0.0324
+    ]
+   }
+  },
+  "t117": {
+   "block": "retrieval",
+   "category": "DSHS",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.3644,
+     0.517,
+     0.2869,
+     0.2932,
+     0.7036,
+     0.4056
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     -0.0958,
+     -0.0559,
+     -0.0769,
+     0.0953,
+     0.6699,
+     0.1256
+    ]
+   }
+  },
+  "t118": {
+   "block": "retrieval",
+   "category": "DSHS",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8524,
+     0.6314,
+     0.4289,
+     0.2579,
+     0.2007,
+     0.3232
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.772,
+     0.3535,
+     0.138,
+     -0.2651,
+     0.0306,
+     0.1436
+    ]
+   }
+  },
+  "t119": {
+   "block": "retrieval",
+   "category": "DSHS",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8873,
+     0.4424,
+     0.4652,
+     0.5783,
+     0.2584,
+     0.1781
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8808,
+     -0.0311,
+     0.032,
+     -0.0236,
+     0.1304,
+     -0.0499
+    ]
+   }
+  },
+  "t120": {
+   "block": "retrieval",
+   "category": "DSHS",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.4295,
+     0.4334,
+     0.5682,
+     0.8999,
+     0.0267,
+     0.608
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.1292,
+     0.0776,
+     0.1019,
+     0.8338,
+     0.0143,
+     0.2113
+    ]
+   }
+  },
+  "t121": {
+   "block": "retrieval",
+   "category": "DSHS",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.2384,
+     0.5794,
+     0.9099,
+     0.4505,
+     0.4052,
+     0.2701
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     -0.2209,
+     0.191,
+     0.8515,
+     0.0831,
+     0.0823,
+     -0.0564
+    ]
+   }
+  },
+  "t122": {
+   "block": "retrieval",
+   "category": "DSHS",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     -0.0026,
+     0.8714,
+     0.0625,
+     0.316,
+     -0.0868,
+     0.0585
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     -0.018,
+     0.8291,
+     0.0599,
+     0.1028,
+     0.04,
+     -0.0757
+    ]
+   }
+  },
+  "t123": {
+   "block": "retrieval",
+   "category": "ELEC",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.287,
+     0.3818,
+     0.144,
+     0.1632,
+     0.357,
+     0.6962
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.0746,
+     0.1759,
+     0.1193,
+     0.1417,
+     0.2267,
+     0.6398
+    ]
+   }
+  },
+  "t124": {
+   "block": "retrieval",
+   "category": "ELEC",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.0482,
+     0.7147,
+     0.4081,
+     0.1617,
+     0.2126,
+     0.4319
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     -0.035,
+     0.5181,
+     0.0018,
+     -0.1357,
+     -0.02,
+     0.2955
+    ]
+   }
+  },
+  "t125": {
+   "block": "retrieval",
+   "category": "ELEC",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.3929,
+     0.2194,
+     0.2436,
+     0.3403,
+     0.3741,
+     0.1477
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.6015,
+     0.2104,
+     0.0566,
+     0.3812,
+     0.1433,
+     0.0477
+    ]
+   }
+  },
+  "t126": {
+   "block": "retrieval",
+   "category": "ELEC",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7314,
+     -0.0213,
+     -0.0631,
+     -0.0212,
+     -0.0136,
+     0.1403
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.6819,
+     0.0508,
+     0.0416,
+     -0.0533,
+     -0.1575,
+     -0.0422
+    ]
+   }
+  },
+  "t127": {
+   "block": "retrieval",
+   "category": "ELEC",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.3357,
+     0.2452,
+     0.4698,
+     0.4782,
+     0.0398,
+     0.9125
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.0499,
+     0.1557,
+     0.2594,
+     0.3444,
+     -0.0736,
+     0.8506
+    ]
+   }
+  },
+  "t128": {
+   "block": "retrieval",
+   "category": "ELEC",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.6197,
+     0.2918,
+     0.4167,
+     -0.0326,
+     0.5023,
+     0.3799
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7311,
+     -0.1703,
+     0.1876,
+     -0.0279,
+     0.2293,
+     0.2206
+    ]
+   }
+  },
+  "t129": {
+   "block": "retrieval",
+   "category": "ELEC",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.1802,
+     0.6002,
+     0.1699,
+     0.4522,
+     0.2345,
+     0.2015
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.0245,
+     0.4496,
+     -0.1444,
+     0.0152,
+     -0.0706,
+     0.0119
+    ]
+   }
+  },
+  "t130": {
+   "block": "retrieval",
+   "category": "ELEC",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.5591,
+     0.2404,
+     0.315,
+     0.2481,
+     0.3913,
+     0.4537
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7231,
+     -0.0444,
+     -0.112,
+     0.0035,
+     0.3083,
+     0.538
+    ]
+   }
+  },
+  "t131": {
+   "block": "retrieval",
+   "category": "EXPL",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8353,
+     0.2861,
+     0.3235,
+     0.4289,
+     0.5736,
+     0.3157
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8438,
+     -0.0948,
+     -0.0828,
+     0.1153,
+     0.1892,
+     -0.0579
+    ]
+   }
+  },
+  "t132": {
+   "block": "retrieval",
+   "category": "EXPL",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.857,
+     0.7018,
+     0.6714,
+     0.3662,
+     0.5378,
+     0.5214
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8273,
+     0.5433,
+     0.544,
+     0.217,
+     0.1626,
+     0.4031
+    ]
+   }
+  },
+  "t133": {
+   "block": "retrieval",
+   "category": "EXPL",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.6511,
+     0.6161,
+     0.3391,
+     0.8096,
+     0.2677,
+     0.6007
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.4267,
+     0.1611,
+     0.2093,
+     0.8188,
+     -0.044,
+     0.123
+    ]
+   }
+  },
+  "t134": {
+   "block": "retrieval",
+   "category": "EXPL",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.495,
+     0.3465,
+     0.3383,
+     0.6918,
+     0.3347,
+     0.81
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     -0.0001,
+     -0.0213,
+     0.1393,
+     0.5928,
+     -0.0357,
+     0.7367
+    ]
+   }
+  },
+  "t135": {
+   "block": "retrieval",
+   "category": "EXPL",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.2911,
+     0.456,
+     0.6489,
+     0.3222,
+     0.4186,
+     0.4093
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     -0.0796,
+     0.4237,
+     0.6599,
+     0.0755,
+     0.1408,
+     0.0868
+    ]
+   }
+  },
+  "t136": {
+   "block": "retrieval",
+   "category": "EXPL",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.1958,
+     0.4241,
+     0.1982,
+     0.6219,
+     0.8377,
+     0.1982
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     -0.0263,
+     0.1278,
+     -0.0471,
+     0.1937,
+     0.8502,
+     0.196
+    ]
+   }
+  },
+  "t137": {
+   "block": "retrieval",
+   "category": "EXPL",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.2099,
+     0.132,
+     0.2658,
+     0.2707,
+     0.2025,
+     0.8271
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     -0.1064,
+     -0.0065,
+     0.0365,
+     -0.0184,
+     -0.1654,
+     0.8895
+    ]
+   }
+  },
+  "t138": {
+   "block": "retrieval",
+   "category": "EXPL",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.6883,
+     0.4019,
+     0.6017,
+     0.7176,
+     0.6667,
+     0.8895
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.2,
+     -0.027,
+     0.3589,
+     0.4168,
+     0.3982,
+     0.8535
+    ]
+   }
+  },
+  "t139": {
+   "block": "retrieval",
+   "category": "EXPL",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.6742,
+     0.4692,
+     0.6109,
+     0.546,
+     0.6194,
+     0.3437
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7263,
+     0.0867,
+     0.5606,
+     0.4402,
+     0.0837,
+     -0.1561
+    ]
+   }
+  },
+  "t140": {
+   "block": "retrieval",
+   "category": "FIRE",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.1752,
+     0.8313,
+     0.3627,
+     0.7892,
+     0.7867,
+     0.3669
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     -0.0085,
+     0.8261,
+     -0.0486,
+     0.6807,
+     0.73,
+     0.2058
+    ]
+   }
+  },
+  "t141": {
+   "block": "retrieval",
+   "category": "FIRE",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.3247,
+     0.2104,
+     0.0223,
+     0.1279,
+     0.0779,
+     0.9263
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     -0.1111,
+     -0.1435,
+     -0.0768,
+     0.0251,
+     -0.0264,
+     0.89
+    ]
+   }
+  },
+  "t142": {
+   "block": "retrieval",
+   "category": "FIRE",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.3158,
+     0.4711,
+     0.8186,
+     0.2875,
+     0.6733,
+     0.6833
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     -0.1838,
+     0.3557,
+     0.8574,
+     0.0961,
+     0.4972,
+     0.3872
+    ]
+   }
+  },
+  "t143": {
+   "block": "retrieval",
+   "category": "FIRE",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.1765,
+     0.6162,
+     0.4814,
+     -0.0139,
+     0.2667,
+     0.748
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     -0.1225,
+     0.6582,
+     0.3737,
+     -0.0336,
+     0.0341,
+     0.8158
+    ]
+   }
+  },
+  "t144": {
+   "block": "retrieval",
+   "category": "FIRE",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.4933,
+     0.5259,
+     0.4983,
+     0.5339,
+     0.5546,
+     0.7717
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.1896,
+     0.4743,
+     0.1145,
+     0.5247,
+     0.1201,
+     0.8187
+    ]
+   }
+  },
+  "t145": {
+   "block": "retrieval",
+   "category": "FIRE",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.3379,
+     0.3544,
+     0.8319,
+     0.3289,
+     0.0854,
+     0.2009
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.0294,
+     0.2434,
+     0.8231,
+     0.1609,
+     -0.1896,
+     0.0119
+    ]
+   }
+  },
+  "t146": {
+   "block": "retrieval",
+   "category": "FIRE",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.2579,
+     0.2281,
+     0.8103,
+     0.1686,
+     0.3422,
+     0.1129
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     -0.0009,
+     0.0523,
+     0.8179,
+     0.0991,
+     0.0694,
+     -0.0327
+    ]
+   }
+  },
+  "t147": {
+   "block": "retrieval",
+   "category": "FIRE",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7678,
+     0.0504,
+     0.1418,
+     0.3727,
+     0.3642,
+     -0.0175
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8113,
+     -0.076,
+     0.0013,
+     0.1101,
+     -0.0462,
+     -0.1254
+    ]
+   }
+  },
+  "t148": {
+   "block": "retrieval",
+   "category": "FIRE",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.4091,
+     0.0688,
+     0.5148,
+     0.1501,
+     0.6501,
+     0.0835
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     -0.0332,
+     -0.1208,
+     0.2902,
+     -0.1389,
+     0.5527,
+     -0.0424
+    ]
+   }
+  },
+  "t149": {
+   "block": "retrieval",
+   "category": "FOOT",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.1657,
+     0.0921,
+     0.3881,
+     0.3153,
+     0.6057,
+     0.2721
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.0065,
+     0.016,
+     0.2504,
+     -0.0698,
+     0.6427,
+     0.1282
+    ]
+   }
+  },
+  "t150": {
+   "block": "retrieval",
+   "category": "FOOT",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.5044,
+     0.1825,
+     0.1473,
+     0.331,
+     0.3282,
+     0.2579
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.6061,
+     -0.181,
+     -0.0806,
+     0.2826,
+     0.2108,
+     0.0387
+    ]
+   }
+  },
+  "t151": {
+   "block": "retrieval",
+   "category": "FOOT",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.1473,
+     0.5036,
+     0.0632,
+     0.3392,
+     0.0646,
+     -0.0147
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.2075,
+     0.6205,
+     0.016,
+     0.3474,
+     0.1434,
+     -0.1281
+    ]
+   }
+  },
+  "t152": {
+   "block": "retrieval",
+   "category": "FOOT",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.4391,
+     0.363,
+     0.4194,
+     0.2066,
+     0.3444,
+     0.6065
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.1916,
+     0.0007,
+     0.0115,
+     -0.1338,
+     0.062,
+     0.71
+    ]
+   }
+  },
+  "t153": {
+   "block": "retrieval",
+   "category": "FOOT",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.6906,
+     0.2693,
+     0.0118,
+     0.1494,
+     0.1374,
+     0.2597
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7492,
+     0.1164,
+     -0.146,
+     -0.0583,
+     -0.0726,
+     0.0243
+    ]
+   }
+  },
+  "t154": {
+   "block": "retrieval",
+   "category": "FOOT",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": false,
+    "sims": [
+     0.2047,
+     0.2346,
+     0.3095,
+     0.2181,
+     -0.0728,
+     0.1096
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.4229,
+     0.2118,
+     0.1331,
+     0.1362,
+     -0.0674,
+     0.0721
+    ]
+   }
+  },
+  "t155": {
+   "block": "retrieval",
+   "category": "FOOT",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.1021,
+     0.8145,
+     0.4628,
+     0.4113,
+     0.2588,
+     0.437
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     -0.1389,
+     0.8731,
+     0.0438,
+     -0.006,
+     0.0666,
+     0.2264
+    ]
+   }
+  },
+  "t156": {
+   "block": "retrieval",
+   "category": "FOOT",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.2611,
+     0.3889,
+     0.2578,
+     0.5471,
+     0.3993,
+     0.7695
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     -0.1273,
+     0.0325,
+     -0.0921,
+     0.014,
+     0.0457,
+     0.7719
+    ]
+   }
+  },
+  "t157": {
+   "block": "retrieval",
+   "category": "FOOT",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8735,
+     0.1343,
+     0.6616,
+     0.4642,
+     0.3693,
+     0.5256
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8771,
+     0.0214,
+     0.2335,
+     0.1731,
+     -0.0958,
+     -0.0748
+    ]
+   }
+  },
+  "t158": {
+   "block": "retrieval",
+   "category": "GLAS",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     -0.0735,
+     0.14,
+     0.0956,
+     0.0727,
+     0.1482,
+     0.678
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     -0.0864,
+     0.0092,
+     0.0921,
+     -0.1361,
+     -0.1177,
+     0.7636
+    ]
+   }
+  },
+  "t159": {
+   "block": "retrieval",
+   "category": "GLAS",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     -0.0459,
+     -0.063,
+     0.2664,
+     0.8712,
+     0.35,
+     0.1097
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     -0.1635,
+     0.0687,
+     0.1056,
+     0.8702,
+     -0.0516,
+     -0.0639
+    ]
+   }
+  },
+  "t160": {
+   "block": "retrieval",
+   "category": "GLAS",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.3914,
+     -0.019,
+     0.3989,
+     0.7311,
+     0.5114,
+     0.4131
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.2708,
+     -0.2298,
+     0.2269,
+     0.5632,
+     0.3948,
+     0.4735
+    ]
+   }
+  },
+  "t161": {
+   "block": "retrieval",
+   "category": "GLAS",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.6194,
+     0.2224,
+     0.443,
+     0.4636,
+     0.4462,
+     0.52
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.4711,
+     -0.0117,
+     0.2606,
+     -0.02,
+     0.076,
+     0.3492
+    ]
+   }
+  },
+  "t162": {
+   "block": "retrieval",
+   "category": "GLAS",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.2284,
+     0.7145,
+     0.3663,
+     0.3487,
+     0.4806,
+     0.8699
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     -0.0928,
+     0.3466,
+     0.039,
+     -0.0922,
+     0.1776,
+     0.7821
+    ]
+   }
+  },
+  "t163": {
+   "block": "retrieval",
+   "category": "GLAS",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.1114,
+     0.7766,
+     0.3018,
+     0.198,
+     0.0832,
+     0.0944
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.0746,
+     0.8237,
+     0.0979,
+     -0.0657,
+     0.1695,
+     -0.1187
+    ]
+   }
+  },
+  "t164": {
+   "block": "retrieval",
+   "category": "GLAS",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.4848,
+     0.4521,
+     0.6197,
+     0.526,
+     0.3232,
+     0.6213
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.194,
+     0.3288,
+     0.4245,
+     0.2958,
+     -0.0469,
+     0.6235
+    ]
+   }
+  },
+  "t165": {
+   "block": "retrieval",
+   "category": "GLAS",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.1643,
+     0.6095,
+     0.7625,
+     0.3012,
+     0.438,
+     0.1328
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     -0.1141,
+     0.1054,
+     0.709,
+     -0.1462,
+     0.3481,
+     -0.1174
+    ]
+   }
+  },
+  "t166": {
+   "block": "retrieval",
+   "category": "GLAS",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.6139,
+     0.3672,
+     0.9085,
+     -0.0203,
+     0.2164,
+     0.4822
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.2607,
+     -0.0598,
+     0.7813,
+     -0.2031,
+     0.0709,
+     0.3459
+    ]
+   }
+  },
+  "t167": {
+   "block": "retrieval",
+   "category": "GUN",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7593,
+     0.2671,
+     0.4395,
+     0.4118,
+     0.3289,
+     0.3922
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8731,
+     -0.0703,
+     0.2423,
+     0.1407,
+     0.1504,
+     -0.0591
+    ]
+   }
+  },
+  "t168": {
+   "block": "retrieval",
+   "category": "GUN",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.6474,
+     0.6656,
+     0.6459,
+     0.8464,
+     0.401,
+     0.6131
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.1978,
+     0.3602,
+     0.3246,
+     0.799,
+     0.1777,
+     0.196
+    ]
+   }
+  },
+  "t169": {
+   "block": "retrieval",
+   "category": "GUN",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.5252,
+     0.5173,
+     0.8726,
+     0.5507,
+     0.7984,
+     0.6893
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.1239,
+     0.0731,
+     0.6877,
+     -0.0234,
+     0.5561,
+     0.2306
+    ]
+   }
+  },
+  "t170": {
+   "block": "retrieval",
+   "category": "GUN",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.3006,
+     0.5411,
+     0.6307,
+     0.6969,
+     0.4049,
+     0.3978
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.0465,
+     0.4234,
+     0.2289,
+     0.7296,
+     0.1179,
+     -0.0705
+    ]
+   }
+  },
+  "t171": {
+   "block": "retrieval",
+   "category": "GUN",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.4332,
+     0.2479,
+     0.3807,
+     0.7768,
+     0.5824,
+     0.363
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.0978,
+     -0.1465,
+     0.0419,
+     0.7422,
+     0.1193,
+     0.1021
+    ]
+   }
+  },
+  "t172": {
+   "block": "retrieval",
+   "category": "GUN",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.9265,
+     0.6176,
+     0.5646,
+     0.5348,
+     0.2902,
+     0.6056
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.9069,
+     0.4017,
+     0.2771,
+     0.1611,
+     -0.0806,
+     0.2053
+    ]
+   }
+  },
+  "t173": {
+   "block": "retrieval",
+   "category": "GUN",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.7565,
+     0.4901,
+     0.544,
+     0.687,
+     0.5267,
+     0.7791
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.62,
+     0.2113,
+     -0.0645,
+     0.3956,
+     0.2417,
+     0.8043
+    ]
+   }
+  },
+  "t174": {
+   "block": "retrieval",
+   "category": "GUN",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7613,
+     0.2179,
+     0.2688,
+     0.2662,
+     0.2811,
+     0.2333
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7332,
+     0.0097,
+     0.1586,
+     0.3085,
+     0.125,
+     -0.0333
+    ]
+   }
+  },
+  "t175": {
+   "block": "retrieval",
+   "category": "GUN",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.9019,
+     0.772,
+     0.6439,
+     0.4352,
+     0.3649,
+     0.6046
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8568,
+     0.3893,
+     0.2543,
+     0.0887,
+     0.0411,
+     0.1197
+    ]
+   }
+  },
+  "t176": {
+   "block": "retrieval",
+   "category": "IMPT",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.2107,
+     0.232,
+     0.1425,
+     0.673,
+     0.3434,
+     0.3062
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     -0.1513,
+     -0.0624,
+     -0.2409,
+     0.7593,
+     -0.0114,
+     -0.106
+    ]
+   }
+  },
+  "t177": {
+   "block": "retrieval",
+   "category": "IMPT",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.5672,
+     0.4679,
+     0.2323,
+     0.321,
+     0.431,
+     0.4202
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.525,
+     0.2114,
+     -0.0282,
+     0.1271,
+     -0.0564,
+     0.0998
+    ]
+   }
+  },
+  "t178": {
+   "block": "retrieval",
+   "category": "IMPT",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.7855,
+     0.4349,
+     0.3462,
+     0.8824,
+     0.3206,
+     0.3451
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.4841,
+     0.15,
+     -0.0551,
+     0.8148,
+     0.3411,
+     0.2604
+    ]
+   }
+  },
+  "t179": {
+   "block": "retrieval",
+   "category": "IMPT",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.533,
+     0.1258,
+     0.6934,
+     0.3576,
+     0.2978,
+     0.5468
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.3337,
+     -0.0648,
+     0.6065,
+     0.2937,
+     -0.1069,
+     0.2089
+    ]
+   }
+  },
+  "t180": {
+   "block": "retrieval",
+   "category": "IMPT",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.5384,
+     0.2646,
+     0.4823,
+     0.1084,
+     0.2648,
+     0.5612
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.3571,
+     -0.2089,
+     -0.01,
+     -0.1196,
+     -0.0905,
+     0.6938
+    ]
+   }
+  },
+  "t181": {
+   "block": "retrieval",
+   "category": "IMPT",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.2014,
+     0.8368,
+     0.1709,
+     0.2291,
+     0.3657,
+     0.2297
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.1588,
+     0.7317,
+     0.0852,
+     -0.0214,
+     -0.0217,
+     -0.0863
+    ]
+   }
+  },
+  "t182": {
+   "block": "retrieval",
+   "category": "IMPT",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.2359,
+     0.365,
+     0.8614,
+     0.4028,
+     0.2491,
+     0.6427
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.0107,
+     0.0066,
+     0.8035,
+     -0.1661,
+     -0.1508,
+     0.3187
+    ]
+   }
+  },
+  "t183": {
+   "block": "retrieval",
+   "category": "IMPT",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.9064,
+     -0.0108,
+     0.1393,
+     0.2959,
+     0.3143,
+     0.1703
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8315,
+     -0.1973,
+     -0.1248,
+     -0.0027,
+     -0.1787,
+     -0.249
+    ]
+   }
+  },
+  "t184": {
+   "block": "retrieval",
+   "category": "IMPT",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.3432,
+     0.3482,
+     0.8814,
+     0.4145,
+     0.6049,
+     0.3324
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.067,
+     0.0382,
+     0.8913,
+     0.1217,
+     0.3644,
+     -0.0428
+    ]
+   }
+  },
+  "t185": {
+   "block": "retrieval",
+   "category": "KEYS",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.0898,
+     0.0109,
+     0.0787,
+     0.5757,
+     0.1893,
+     0.0446
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     -0.0649,
+     -0.0428,
+     -0.053,
+     0.6408,
+     0.1033,
+     -0.0487
+    ]
+   }
+  },
+  "t186": {
+   "block": "retrieval",
+   "category": "KEYS",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.5873,
+     0.3255,
+     0.3807,
+     0.1007,
+     0.4272,
+     0.4001
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7224,
+     -0.0644,
+     0.0822,
+     0.01,
+     0.1489,
+     0.1426
+    ]
+   }
+  },
+  "t187": {
+   "block": "retrieval",
+   "category": "KEYS",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.3621,
+     0.5249,
+     0.4533,
+     0.3777,
+     0.6339,
+     0.5228
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.022,
+     0.2173,
+     0.2526,
+     0.0569,
+     0.6312,
+     0.2537
+    ]
+   }
+  },
+  "t188": {
+   "block": "retrieval",
+   "category": "KEYS",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.0721,
+     0.1422,
+     0.1529,
+     0.3451,
+     0.219,
+     0.7121
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.0659,
+     0.0319,
+     0.0778,
+     0.3788,
+     0.1098,
+     0.6747
+    ]
+   }
+  },
+  "t189": {
+   "block": "retrieval",
+   "category": "KEYS",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.3536,
+     0.5754,
+     0.658,
+     0.812,
+     0.632,
+     0.1241
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     -0.0847,
+     0.4005,
+     0.3992,
+     0.8122,
+     0.5912,
+     0.0919
+    ]
+   }
+  },
+  "t190": {
+   "block": "retrieval",
+   "category": "KEYS",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.5017,
+     0.9105,
+     0.7347,
+     0.5929,
+     0.255,
+     0.1379
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     -0.2271,
+     0.8454,
+     0.6139,
+     0.1369,
+     0.0042,
+     0.161
+    ]
+   }
+  },
+  "t191": {
+   "block": "retrieval",
+   "category": "KEYS",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.2465,
+     0.2712,
+     0.079,
+     0.2266,
+     0.8187,
+     0.518
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     -0.2734,
+     -0.1923,
+     -0.0796,
+     -0.2523,
+     0.5592,
+     -0.0167
+    ]
+   }
+  },
+  "t192": {
+   "block": "retrieval",
+   "category": "KEYS",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.3582,
+     0.5534,
+     0.5216,
+     0.5725,
+     0.4246,
+     0.8406
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.1294,
+     -0.0768,
+     0.0536,
+     -0.0613,
+     0.0689,
+     0.6071
+    ]
+   }
+  },
+  "t193": {
+   "block": "retrieval",
+   "category": "KEYS",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.0367,
+     0.2506,
+     0.2371,
+     0.4128,
+     0.134,
+     0.2541
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     -0.0693,
+     0.2597,
+     0.0414,
+     0.7105,
+     0.2033,
+     0.2757
+    ]
+   }
+  },
+  "t194": {
+   "block": "retrieval",
+   "category": "MECH",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.6499,
+     0.1674,
+     0.1008,
+     0.0598,
+     0.2535,
+     -0.1316
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.6493,
+     0.0514,
+     -0.177,
+     -0.0685,
+     0.0266,
+     -0.0723
+    ]
+   }
+  },
+  "t195": {
+   "block": "retrieval",
+   "category": "MECH",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.3487,
+     0.0835,
+     0.7488,
+     0.3446,
+     0.1607,
+     0.0904
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.358,
+     -0.0669,
+     0.6717,
+     0.0901,
+     0.0658,
+     -0.0613
+    ]
+   }
+  },
+  "t196": {
+   "block": "retrieval",
+   "category": "MECH",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.1245,
+     0.3545,
+     0.1005,
+     0.7256,
+     0.0595,
+     0.1881
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.0333,
+     0.1818,
+     -0.1643,
+     0.8732,
+     -0.2367,
+     -0.0697
+    ]
+   }
+  },
+  "t197": {
+   "block": "retrieval",
+   "category": "MECH",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.3694,
+     0.4349,
+     0.2064,
+     0.2267,
+     0.1344,
+     0.0648
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.0199,
+     0.6657,
+     -0.0602,
+     -0.0599,
+     -0.1153,
+     0.0915
+    ]
+   }
+  },
+  "t198": {
+   "block": "retrieval",
+   "category": "MECH",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.0858,
+     0.6905,
+     -0.0108,
+     -0.0009,
+     0.2705,
+     0.2285
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     -0.0557,
+     0.578,
+     -0.0892,
+     -0.0728,
+     -0.043,
+     0.0485
+    ]
+   }
+  },
+  "t199": {
+   "block": "retrieval",
+   "category": "MECH",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.3993,
+     0.2142,
+     0.3575,
+     0.025,
+     0.5471,
+     0.0693
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.4315,
+     0.2367,
+     0.1905,
+     -0.0294,
+     0.697,
+     0.0791
+    ]
+   }
+  },
+  "t200": {
+   "block": "retrieval",
+   "category": "MECH",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.3823,
+     -0.1036,
+     0.1494,
+     -0.0079,
+     0.2812,
+     0.1907
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.6055,
+     -0.1133,
+     0.0528,
+     0.0481,
+     0.3633,
+     0.2812
+    ]
+   }
+  },
+  "t201": {
+   "block": "retrieval",
+   "category": "MECH",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.0254,
+     0.3263,
+     0.2554,
+     0.0338,
+     0.2325,
+     0.057
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     -0.1145,
+     0.4819,
+     0.0744,
+     -0.0561,
+     -0.035,
+     0.014
+    ]
+   }
+  },
+  "t202": {
+   "block": "retrieval",
+   "category": "MECH",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.3565,
+     0.0494,
+     0.277,
+     0.0662,
+     0.2582,
+     0.3208
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.6057,
+     -0.0093,
+     0.357,
+     0.1131,
+     -0.029,
+     0.3739
+    ]
+   }
+  },
+  "t203": {
+   "block": "retrieval",
+   "category": "MUSC",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.1951,
+     0.1226,
+     0.4231,
+     0.254,
+     0.3048,
+     0.7378
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     -0.024,
+     0.2221,
+     0.2697,
+     0.2735,
+     0.3456,
+     0.8242
+    ]
+   }
+  },
+  "t204": {
+   "block": "retrieval",
+   "category": "MUSC",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.872,
+     0.2912,
+     0.9302,
+     0.1015,
+     0.3148,
+     0.3888
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.7633,
+     0.2002,
+     0.9527,
+     0.235,
+     0.2416,
+     0.379
+    ]
+   }
+  },
+  "t205": {
+   "block": "retrieval",
+   "category": "MUSC",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.375,
+     0.8549,
+     0.1326,
+     0.8612,
+     0.4525,
+     0.0476
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.3023,
+     0.6798,
+     0.1697,
+     0.8109,
+     0.3802,
+     0.0877
+    ]
+   }
+  },
+  "t206": {
+   "block": "retrieval",
+   "category": "MUSC",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.3213,
+     0.4521,
+     0.3914,
+     0.1272,
+     0.7664,
+     0.0418
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.1582,
+     0.3784,
+     0.1522,
+     0.0485,
+     0.7331,
+     0.0937
+    ]
+   }
+  },
+  "t207": {
+   "block": "retrieval",
+   "category": "MUSC",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.1739,
+     0.2326,
+     0.8165,
+     0.4798,
+     0.2362,
+     0.3901
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.2806,
+     0.1195,
+     0.8078,
+     0.3534,
+     0.083,
+     0.2227
+    ]
+   }
+  },
+  "t208": {
+   "block": "retrieval",
+   "category": "MUSC",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": false,
+    "sims": [
+     0.1538,
+     0.3128,
+     0.7244,
+     0.7067,
+     0.2886,
+     0.4731
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     -0.1375,
+     0.193,
+     0.3356,
+     0.566,
+     -0.0169,
+     0.2633
+    ]
+   }
+  },
+  "t209": {
+   "block": "retrieval",
+   "category": "MUSC",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.284,
+     0.2674,
+     0.7901,
+     0.2123,
+     0.2049,
+     0.4814
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.2277,
+     0.246,
+     0.804,
+     0.0939,
+     0.2571,
+     0.2424
+    ]
+   }
+  },
+  "t210": {
+   "block": "retrieval",
+   "category": "MUSC",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": false,
+    "sims": [
+     0.3085,
+     0.022,
+     0.6319,
+     0.3251,
+     0.6683,
+     0.2773
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.2679,
+     -0.0407,
+     0.5745,
+     0.3151,
+     0.3049,
+     0.0676
+    ]
+   }
+  },
+  "t211": {
+   "block": "retrieval",
+   "category": "MUSC",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.268,
+     0.0548,
+     0.1698,
+     0.7014,
+     -0.0565,
+     0.2172
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.2227,
+     0.0293,
+     0.1541,
+     0.835,
+     -0.169,
+     0.0212
+    ]
+   }
+  },
+  "t212": {
+   "block": "retrieval",
+   "category": "PHON",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.7606,
+     0.5305,
+     0.7892,
+     0.1994,
+     0.9395,
+     0.3058
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.2383,
+     -0.0111,
+     0.3026,
+     -0.0187,
+     0.8738,
+     -0.1498
+    ]
+   }
+  },
+  "t213": {
+   "block": "retrieval",
+   "category": "PHON",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8977,
+     0.3641,
+     0.3274,
+     0.4941,
+     0.4191,
+     0.3063
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8749,
+     0.0937,
+     -0.0465,
+     0.0936,
+     0.221,
+     -0.028
+    ]
+   }
+  },
+  "t214": {
+   "block": "retrieval",
+   "category": "PHON",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.763,
+     0.2718,
+     0.445,
+     0.982,
+     0.7879,
+     0.3851
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.172,
+     -0.0908,
+     -0.0119,
+     0.9357,
+     0.3532,
+     -0.0893
+    ]
+   }
+  },
+  "t215": {
+   "block": "retrieval",
+   "category": "PHON",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.8497,
+     0.748,
+     0.9754,
+     0.4596,
+     0.3935,
+     0.4007
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.4919,
+     0.1655,
+     0.9509,
+     -0.0396,
+     -0.1019,
+     0.2124
+    ]
+   }
+  },
+  "t216": {
+   "block": "retrieval",
+   "category": "PHON",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.1151,
+     0.0984,
+     0.2156,
+     0.6319,
+     0.0708,
+     0.4596
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.0059,
+     -0.061,
+     -0.0778,
+     0.5849,
+     0.0141,
+     0.2806
+    ]
+   }
+  },
+  "t217": {
+   "block": "retrieval",
+   "category": "PHON",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": false,
+    "sims": [
+     0.7525,
+     0.8655,
+     0.208,
+     0.8878,
+     0.6153,
+     0.8253
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": false,
+    "sims": [
+     0.4173,
+     0.738,
+     0.1009,
+     0.5629,
+     0.073,
+     0.7127
+    ]
+   }
+  },
+  "t218": {
+   "block": "retrieval",
+   "category": "PHON",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.2436,
+     0.2388,
+     0.5059,
+     0.3661,
+     0.8872,
+     0.5629
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     -0.0375,
+     -0.0006,
+     0.1174,
+     0.0448,
+     0.8321,
+     -0.0172
+    ]
+   }
+  },
+  "t219": {
+   "block": "retrieval",
+   "category": "PHON",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.5225,
+     0.1497,
+     0.2714,
+     0.0806,
+     0.0149,
+     0.6711
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.317,
+     -0.0507,
+     0.1092,
+     0.237,
+     -0.072,
+     0.6097
+    ]
+   }
+  },
+  "t220": {
+   "block": "retrieval",
+   "category": "PHON",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.1747,
+     0.569,
+     0.2318,
+     0.7353,
+     0.2837,
+     0.1856
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.0172,
+     0.3919,
+     0.1279,
+     0.75,
+     0.0875,
+     0.0059
+    ]
+   }
+  },
+  "t221": {
+   "block": "retrieval",
+   "category": "RAIN",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.4175,
+     0.4222,
+     0.098,
+     0.4802,
+     0.4181,
+     0.3866
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     -0.1148,
+     0.0238,
+     0.0468,
+     0.6043,
+     0.3506,
+     0.1375
+    ]
+   }
+  },
+  "t222": {
+   "block": "retrieval",
+   "category": "RAIN",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": false,
+    "sims": [
+     0.0333,
+     0.3892,
+     0.3903,
+     0.1769,
+     0.274,
+     0.2822
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     -0.1626,
+     0.5741,
+     0.2181,
+     0.0743,
+     -0.1519,
+     -0.0463
+    ]
+   }
+  },
+  "t223": {
+   "block": "retrieval",
+   "category": "RAIN",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.4514,
+     0.0989,
+     0.5243,
+     0.6136,
+     0.4111,
+     0.3392
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.2978,
+     -0.2161,
+     0.2455,
+     0.7768,
+     0.3922,
+     0.1905
+    ]
+   }
+  },
+  "t224": {
+   "block": "retrieval",
+   "category": "RAIN",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.1581,
+     0.3064,
+     0.8178,
+     0.3327,
+     0.5654,
+     0.2716
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.0301,
+     0.0021,
+     0.8121,
+     -0.0009,
+     0.2193,
+     0.116
+    ]
+   }
+  },
+  "t225": {
+   "block": "retrieval",
+   "category": "RAIN",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": false,
+    "sims": [
+     0.2459,
+     0.0854,
+     0.3405,
+     0.3263,
+     0.3309,
+     0.3525
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.1509,
+     -0.1274,
+     0.1079,
+     0.0119,
+     0.5471,
+     0.0979
+    ]
+   }
+  },
+  "t226": {
+   "block": "retrieval",
+   "category": "RAIN",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.0056,
+     0.2536,
+     0.1268,
+     0.2164,
+     0.3467,
+     0.5212
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     -0.1509,
+     0.0286,
+     0.0313,
+     0.0076,
+     0.399,
+     0.6777
+    ]
+   }
+  },
+  "t227": {
+   "block": "retrieval",
+   "category": "RAIN",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.2073,
+     0.7639,
+     0.1592,
+     0.2175,
+     0.1753,
+     0.1664
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.1282,
+     0.655,
+     -0.0413,
+     -0.0183,
+     -0.0959,
+     -0.008
+    ]
+   }
+  },
+  "t228": {
+   "block": "retrieval",
+   "category": "RAIN",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.2055,
+     0.3216,
+     0.2103,
+     0.3636,
+     0.3145,
+     0.0833
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.1154,
+     -0.1828,
+     0.2801,
+     0.7087,
+     0.0922,
+     0.16
+    ]
+   }
+  },
+  "t229": {
+   "block": "retrieval",
+   "category": "RAIN",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.7189,
+     0.4725,
+     0.2721,
+     0.7627,
+     0.5325,
+     0.4915
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.7218,
+     0.2966,
+     -0.1026,
+     0.849,
+     0.1544,
+     0.1984
+    ]
+   }
+  },
+  "t230": {
+   "block": "retrieval",
+   "category": "TOOL",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": false,
+    "sims": [
+     0.526,
+     0.3129,
+     0.4773,
+     0.5516,
+     0.3017,
+     0.4813
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.6283,
+     0.2473,
+     0.3779,
+     0.3719,
+     0.2613,
+     0.2796
+    ]
+   }
+  },
+  "t231": {
+   "block": "retrieval",
+   "category": "TOOL",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.2176,
+     0.8911,
+     0.5182,
+     -0.088,
+     0.4546,
+     0.1712
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.0161,
+     0.8761,
+     0.058,
+     0.002,
+     0.1359,
+     -0.0433
+    ]
+   }
+  },
+  "t232": {
+   "block": "retrieval",
+   "category": "TOOL",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.2772,
+     0.0963,
+     0.1104,
+     0.1007,
+     0.5203,
+     0.0542
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.1535,
+     0.1606,
+     0.3823,
+     0.0741,
+     0.4698,
+     0.1328
+    ]
+   }
+  },
+  "t233": {
+   "block": "retrieval",
+   "category": "TOOL",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     -0.0366,
+     -0.0193,
+     -0.0713,
+     0.0491,
+     0.7961,
+     0.4874
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     -0.0822,
+     0.0387,
+     0.1444,
+     0.0513,
+     0.7889,
+     0.179
+    ]
+   }
+  },
+  "t234": {
+   "block": "retrieval",
+   "category": "TOOL",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.0777,
+     0.0674,
+     0.1168,
+     0.9041,
+     0.0159,
+     0.1176
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.0849,
+     -0.098,
+     0.0156,
+     0.8376,
+     -0.0652,
+     -0.0878
+    ]
+   }
+  },
+  "t235": {
+   "block": "retrieval",
+   "category": "TOOL",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.2304,
+     0.2216,
+     0.1519,
+     -0.0407,
+     0.2535,
+     0.5923
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.147,
+     0.1022,
+     0.1148,
+     -0.0405,
+     0.0312,
+     0.6559
+    ]
+   }
+  },
+  "t236": {
+   "block": "retrieval",
+   "category": "TOOL",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": false,
+    "sims": [
+     0.6355,
+     0.527,
+     0.6062,
+     0.3181,
+     0.036,
+     0.3997
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.389,
+     0.5994,
+     0.7002,
+     -0.2266,
+     0.0945,
+     0.2608
+    ]
+   }
+  },
+  "t237": {
+   "block": "retrieval",
+   "category": "TOOL",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": false,
+    "sims": [
+     0.1038,
+     0.4353,
+     0.1971,
+     0.4741,
+     0.6009,
+     0.5478
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.1259,
+     0.4765,
+     0.0594,
+     -0.0183,
+     0.5253,
+     0.7715
+    ]
+   }
+  },
+  "t238": {
+   "block": "retrieval",
+   "category": "VEH",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.0227,
+     0.0573,
+     0.3267,
+     0.0915,
+     0.3804,
+     0.3907
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.0267,
+     0.0084,
+     0.1242,
+     0.0815,
+     0.4927,
+     0.6486
+    ]
+   }
+  },
+  "t239": {
+   "block": "retrieval",
+   "category": "VEH",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.664,
+     0.2425,
+     0.1697,
+     0.2408,
+     0.2291,
+     0.0661
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7754,
+     -0.171,
+     0.0259,
+     0.25,
+     -0.0157,
+     0.0753
+    ]
+   }
+  },
+  "t240": {
+   "block": "retrieval",
+   "category": "VEH",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": false,
+    "sims": [
+     0.3893,
+     0.2716,
+     0.0196,
+     0.1714,
+     0.2935,
+     0.322
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": false,
+    "sims": [
+     0.3059,
+     0.0328,
+     -0.0242,
+     -0.0449,
+     0.0116,
+     0.302
+    ]
+   }
+  },
+  "t241": {
+   "block": "retrieval",
+   "category": "VEH",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.2221,
+     0.3126,
+     0.5655,
+     0.4684,
+     0.1228,
+     0.0727
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.3362,
+     0.1162,
+     0.5585,
+     -0.0055,
+     0.1456,
+     -0.0616
+    ]
+   }
+  },
+  "t242": {
+   "block": "retrieval",
+   "category": "VEH",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.1094,
+     0.3364,
+     0.3106,
+     0.6198,
+     0.3759,
+     0.5045
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     -0.0972,
+     0.096,
+     0.0324,
+     0.7719,
+     0.0307,
+     0.1977
+    ]
+   }
+  },
+  "t243": {
+   "block": "retrieval",
+   "category": "VEH",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.4486,
+     0.1893,
+     0.0675,
+     0.231,
+     0.7218,
+     0.261
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.4,
+     0.093,
+     0.0161,
+     0.117,
+     0.712,
+     0.0392
+    ]
+   }
+  },
+  "t244": {
+   "block": "retrieval",
+   "category": "VEH",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.3136,
+     0.6798,
+     0.2519,
+     0.2353,
+     0.3402,
+     0.3253
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     -0.1326,
+     0.8485,
+     -0.019,
+     0.0713,
+     -0.2255,
+     -0.0055
+    ]
+   }
+  },
+  "t245": {
+   "block": "retrieval",
+   "category": "VEH",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.0471,
+     0.1983,
+     0.2177,
+     0.4127,
+     0.2406,
+     0.2246
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     -0.2294,
+     -0.1801,
+     -0.089,
+     0.6645,
+     -0.0342,
+     0.1366
+    ]
+   }
+  },
+  "t246": {
+   "block": "retrieval",
+   "category": "VEH",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.3358,
+     0.2275,
+     0.2262,
+     0.3936,
+     0.3722,
+     0.4311
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.1106,
+     0.1978,
+     0.3016,
+     0.1601,
+     0.3045,
+     0.6426
+    ]
+   }
+  },
+  "t247": {
+   "block": "retrieval",
+   "category": "VOX",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.2752,
+     0.1662,
+     0.7864,
+     0.1685,
+     0.4364,
+     0.259
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.0988,
+     -0.0163,
+     0.752,
+     -0.0026,
+     -0.0508,
+     0.0114
+    ]
+   }
+  },
+  "t248": {
+   "block": "retrieval",
+   "category": "VOX",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.4661,
+     0.8643,
+     0.4854,
+     0.6378,
+     0.1201,
+     0.1931
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.2093,
+     0.7839,
+     0.251,
+     0.1417,
+     -0.0824,
+     -0.1542
+    ]
+   }
+  },
+  "t249": {
+   "block": "retrieval",
+   "category": "VOX",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.1102,
+     0.9066,
+     0.4169,
+     0.5232,
+     0.3064,
+     0.3219
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.0297,
+     0.8634,
+     0.0978,
+     0.2816,
+     0.0407,
+     -0.185
+    ]
+   }
+  },
+  "t250": {
+   "block": "retrieval",
+   "category": "VOX",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.2722,
+     0.844,
+     0.1901,
+     0.4521,
+     0.2469,
+     0.2758
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.1205,
+     0.8086,
+     0.0167,
+     -0.0963,
+     0.1134,
+     0.0214
+    ]
+   }
+  },
+  "t251": {
+   "block": "retrieval",
+   "category": "VOX",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.5901,
+     0.3086,
+     0.7451,
+     0.2822,
+     0.3155,
+     0.1864
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.2457,
+     -0.1833,
+     0.8044,
+     0.0625,
+     0.0743,
+     -0.0723
+    ]
+   }
+  },
+  "t252": {
+   "block": "retrieval",
+   "category": "VOX",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.4004,
+     0.4083,
+     0.7655,
+     0.4726,
+     0.0774,
+     0.5065
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.0298,
+     0.1665,
+     0.7329,
+     -0.0716,
+     0.1396,
+     0.288
+    ]
+   }
+  },
+  "t253": {
+   "block": "retrieval",
+   "category": "VOX",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.719,
+     0.9528,
+     0.5209,
+     0.4732,
+     0.2386,
+     0.393
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.2661,
+     0.8624,
+     -0.0086,
+     -0.193,
+     -0.0327,
+     -0.116
+    ]
+   }
+  },
+  "t254": {
+   "block": "retrieval",
+   "category": "VOX",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     -0.051,
+     0.875,
+     -0.0172,
+     0.2423,
+     0.1556,
+     0.3569
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     -0.174,
+     0.8713,
+     -0.0903,
+     -0.0296,
+     0.036,
+     0.1399
+    ]
+   }
+  },
+  "t255": {
+   "block": "retrieval",
+   "category": "VOX",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.1521,
+     0.64,
+     0.4386,
+     0.5268,
+     0.0533,
+     0.4036
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.1071,
+     0.6827,
+     -0.1271,
+     0.1863,
+     -0.0804,
+     0.0518
+    ]
+   }
+  },
+  "t256": {
+   "block": "retrieval",
+   "category": "WATR",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.1716,
+     0.2946,
+     0.4208,
+     0.6345,
+     0.0551,
+     0.3648
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     -0.1603,
+     -0.045,
+     0.4392,
+     0.7519,
+     -0.2947,
+     0.0931
+    ]
+   }
+  },
+  "t257": {
+   "block": "retrieval",
+   "category": "WATR",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.5136,
+     0.0227,
+     0.1506,
+     -0.0157,
+     -0.0342,
+     0.12
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.6162,
+     0.1798,
+     0.0862,
+     0.2246,
+     -0.0464,
+     0.076
+    ]
+   }
+  },
+  "t258": {
+   "block": "retrieval",
+   "category": "WATR",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.3807,
+     0.353,
+     0.5593,
+     0.1257,
+     0.7439,
+     0.1708
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.2106,
+     0.0143,
+     0.4929,
+     0.0403,
+     0.7314,
+     -0.0967
+    ]
+   }
+  },
+  "t259": {
+   "block": "retrieval",
+   "category": "WATR",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.4423,
+     0.3289,
+     0.1467,
+     0.1548,
+     0.4928,
+     0.1926
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.0078,
+     -0.0406,
+     0.1286,
+     0.2259,
+     0.6508,
+     0.11
+    ]
+   }
+  },
+  "t260": {
+   "block": "retrieval",
+   "category": "WATR",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.0643,
+     0.0578,
+     0.139,
+     0.1661,
+     0.2334,
+     0.6778
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     -0.0687,
+     0.0272,
+     0.1959,
+     -0.0649,
+     -0.0157,
+     0.7857
+    ]
+   }
+  },
+  "t261": {
+   "block": "retrieval",
+   "category": "WATR",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.2008,
+     0.2997,
+     0.1558,
+     0.1497,
+     0.8683,
+     0.1518
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.1065,
+     0.0226,
+     0.0224,
+     0.1754,
+     0.847,
+     -0.1298
+    ]
+   }
+  },
+  "t262": {
+   "block": "retrieval",
+   "category": "WATR",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.0243,
+     -0.0935,
+     0.2266,
+     0.12,
+     0.3617,
+     0.0443
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     -0.1265,
+     0.0845,
+     0.0983,
+     0.0195,
+     0.7418,
+     0.0183
+    ]
+   }
+  },
+  "t263": {
+   "block": "retrieval",
+   "category": "WATR",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.3492,
+     0.0895,
+     0.1368,
+     0.1349,
+     0.6014,
+     0.2562
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.3359,
+     -0.0182,
+     0.0734,
+     -0.1402,
+     0.7354,
+     0.0923
+    ]
+   }
+  },
+  "t264": {
+   "block": "retrieval",
+   "category": "WATR",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.0708,
+     0.0692,
+     0.4432,
+     -0.011,
+     0.0962,
+     0.4005
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     -0.0928,
+     -0.209,
+     0.711,
+     0.1196,
+     -0.081,
+     0.0408
+    ]
+   }
+  },
+  "t265": {
+   "block": "retrieval",
+   "category": "WHSH",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.1161,
+     0.5997,
+     0.7533,
+     0.6535,
+     0.8312,
+     0.907
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     -0.049,
+     -0.1691,
+     0.0701,
+     -0.1158,
+     0.165,
+     0.7311
+    ]
+   }
+  },
+  "t266": {
+   "block": "retrieval",
+   "category": "WHSH",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.4548,
+     0.3303,
+     0.3757,
+     0.7769,
+     0.1498,
+     0.4259
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.1852,
+     -0.0916,
+     -0.1456,
+     0.6887,
+     0.1404,
+     0.0009
+    ]
+   }
+  },
+  "t267": {
+   "block": "retrieval",
+   "category": "WHSH",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.6562,
+     0.8324,
+     0.5461,
+     0.5457,
+     0.7773,
+     0.486
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.2091,
+     0.7478,
+     0.21,
+     -0.1383,
+     0.2967,
+     -0.0187
+    ]
+   }
+  },
+  "t268": {
+   "block": "retrieval",
+   "category": "WHSH",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8943,
+     0.7104,
+     0.8599,
+     0.733,
+     0.6553,
+     0.5992
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7692,
+     -0.1179,
+     0.3253,
+     0.1016,
+     -0.1157,
+     -0.0468
+    ]
+   }
+  },
+  "t269": {
+   "block": "retrieval",
+   "category": "WHSH",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.6641,
+     0.0891,
+     0.7278,
+     0.859,
+     0.4311,
+     0.5674
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.2902,
+     -0.102,
+     0.3739,
+     0.7129,
+     0.0645,
+     0.0596
+    ]
+   }
+  },
+  "t270": {
+   "block": "retrieval",
+   "category": "WHSH",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.7184,
+     0.7114,
+     0.9119,
+     0.5826,
+     0.8154,
+     0.5765
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.0122,
+     0.032,
+     0.8199,
+     0.0194,
+     0.2762,
+     0.0141
+    ]
+   }
+  },
+  "t271": {
+   "block": "retrieval",
+   "category": "WHSH",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.7033,
+     0.6185,
+     0.6983,
+     0.7828,
+     0.9135,
+     0.7211
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     -0.3714,
+     0.0769,
+     -0.0751,
+     -0.0522,
+     0.8501,
+     0.2011
+    ]
+   }
+  },
+  "t272": {
+   "block": "retrieval",
+   "category": "WHSH",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.4402,
+     0.4841,
+     0.4379,
+     0.8041,
+     0.2598,
+     0.3788
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.0778,
+     0.0272,
+     0.2573,
+     0.7917,
+     -0.1997,
+     0.2532
+    ]
+   }
+  },
+  "t273": {
+   "block": "retrieval",
+   "category": "WHSH",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.5285,
+     0.7312,
+     0.7445,
+     0.8806,
+     0.7109,
+     0.6277
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     -0.1309,
+     0.0628,
+     0.117,
+     0.7415,
+     0.1201,
+     0.0501
+    ]
+   }
+  },
+  "t274": {
+   "block": "retrieval",
+   "category": "WIND",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": false,
+    "sims": [
+     0.1971,
+     0.351,
+     0.5977,
+     0.2593,
+     0.7285,
+     0.6608
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     -0.1181,
+     -0.034,
+     0.0181,
+     0.1679,
+     0.5229,
+     0.7036
+    ]
+   }
+  },
+  "t275": {
+   "block": "retrieval",
+   "category": "WIND",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.5201,
+     0.5595,
+     0.7448,
+     0.4284,
+     0.5149,
+     0.782
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     -0.0177,
+     0.7227,
+     0.8622,
+     -0.1767,
+     0.0583,
+     0.8632
+    ]
+   }
+  },
+  "t276": {
+   "block": "retrieval",
+   "category": "WIND",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.5222,
+     0.3883,
+     0.4107,
+     0.9,
+     0.4667,
+     0.3731
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     -0.0614,
+     -0.0823,
+     -0.0563,
+     0.8444,
+     0.1082,
+     -0.1584
+    ]
+   }
+  },
+  "t277": {
+   "block": "retrieval",
+   "category": "WIND",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7589,
+     0.3885,
+     0.3711,
+     0.5222,
+     0.7546,
+     0.505
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8471,
+     -0.032,
+     0.2464,
+     -0.0109,
+     0.7233,
+     0.0804
+    ]
+   }
+  },
+  "t278": {
+   "block": "retrieval",
+   "category": "WIND",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.4764,
+     0.2361,
+     0.2827,
+     0.2375,
+     0.4968,
+     0.3881
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.2784,
+     0.2145,
+     0.1188,
+     0.3472,
+     0.693,
+     0.1792
+    ]
+   }
+  },
+  "t279": {
+   "block": "retrieval",
+   "category": "WIND",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.4997,
+     0.473,
+     0.7525,
+     0.1605,
+     0.3127,
+     0.4077
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     -0.0109,
+     0.0792,
+     0.8355,
+     -0.4077,
+     -0.0144,
+     0.0023
+    ]
+   }
+  },
+  "t280": {
+   "block": "retrieval",
+   "category": "WIND",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.2037,
+     0.5877,
+     0.4347,
+     0.2479,
+     0.7625,
+     0.4405
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     -0.1422,
+     0.0776,
+     0.0247,
+     -0.2142,
+     0.7102,
+     0.2815
+    ]
+   }
+  },
+  "t281": {
+   "block": "retrieval",
+   "category": "WIND",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.5263,
+     0.3211,
+     0.309,
+     0.7352,
+     0.3348,
+     0.186
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.0778,
+     -0.0808,
+     0.1199,
+     0.6501,
+     0.1971,
+     0.0372
+    ]
+   }
+  },
+  "t282": {
+   "block": "retrieval",
+   "category": "WOOD",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.1854,
+     0.1611,
+     0.417,
+     0.7744,
+     0.1638,
+     0.4325
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     -0.0793,
+     0.0361,
+     -0.0467,
+     0.6894,
+     0.163,
+     0.2065
+    ]
+   }
+  },
+  "t283": {
+   "block": "retrieval",
+   "category": "WOOD",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.9137,
+     -0.1041,
+     0.1897,
+     0.207,
+     0.1199,
+     0.4848
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8468,
+     0.1605,
+     -0.0549,
+     0.042,
+     0.0204,
+     0.1682
+    ]
+   }
+  },
+  "t284": {
+   "block": "retrieval",
+   "category": "WOOD",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.882,
+     0.1921,
+     0.3384,
+     0.482,
+     0.4107,
+     0.4868
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8869,
+     -0.0864,
+     -0.0136,
+     0.033,
+     0.0005,
+     0.122
+    ]
+   }
+  },
+  "t285": {
+   "block": "retrieval",
+   "category": "WOOD",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.1463,
+     0.3774,
+     0.0821,
+     0.1885,
+     0.4456,
+     0.8788
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     -0.0393,
+     0.1401,
+     0.0684,
+     -0.0184,
+     0.3417,
+     0.816
+    ]
+   }
+  },
+  "t286": {
+   "block": "retrieval",
+   "category": "WOOD",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.2904,
+     0.2771,
+     0.2148,
+     0.1217,
+     0.4434,
+     0.8302
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.017,
+     -0.1942,
+     -0.1016,
+     0.0431,
+     0.08,
+     0.7007
+    ]
+   }
+  },
+  "t287": {
+   "block": "retrieval",
+   "category": "WOOD",
+   "answer": 1,
+   "clap_frozen": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     0.3426,
+     0.8201,
+     0.4376,
+     0.4137,
+     0.4381,
+     0.174
+    ]
+   },
+   "clap_instance": {
+    "pick": 1,
+    "correct": true,
+    "sims": [
+     -0.0906,
+     0.7458,
+     -0.1138,
+     0.1646,
+     0.2442,
+     0.1827
+    ]
+   }
+  },
+  "t288": {
+   "block": "retrieval",
+   "category": "WOOD",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.872,
+     0.2128,
+     0.1747,
+     0.3691,
+     0.1802,
+     0.421
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8136,
+     -0.0204,
+     0.0397,
+     -0.0468,
+     0.0168,
+     0.0601
+    ]
+   }
+  },
+  "t289": {
+   "block": "retrieval",
+   "category": "WOOD",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.1921,
+     0.2483,
+     0.1564,
+     0.6804,
+     0.2696,
+     0.0751
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     -0.1477,
+     -0.1851,
+     -0.0634,
+     0.6258,
+     -0.0621,
+     -0.1153
+    ]
+   }
+  },
+  "t290": {
+   "block": "retrieval",
+   "category": "WOOD",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.6636,
+     0.1349,
+     0.217,
+     0.265,
+     0.1131,
+     -0.0804
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.8176,
+     0.1321,
+     0.0852,
+     -0.1305,
+     -0.0073,
+     -0.0199
+    ]
+   }
+  },
+  "t291": {
+   "block": "retrieval",
+   "category": "WTHR",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     0.219,
+     0.332,
+     0.4191,
+     0.0391,
+     0.0937,
+     0.1869
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     -0.1077,
+     0.0443,
+     0.4275,
+     0.1221,
+     -0.036,
+     0.0288
+    ]
+   }
+  },
+  "t292": {
+   "block": "retrieval",
+   "category": "WTHR",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.2993,
+     0.2578,
+     0.2957,
+     0.1814,
+     0.478,
+     0.3058
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.1532,
+     0.0317,
+     -0.0731,
+     -0.0025,
+     0.6968,
+     -0.3495
+    ]
+   }
+  },
+  "t293": {
+   "block": "retrieval",
+   "category": "WTHR",
+   "answer": 5,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.6384,
+     0.6014,
+     0.6162,
+     0.6179,
+     0.6395,
+     0.8002
+    ]
+   },
+   "clap_instance": {
+    "pick": 5,
+    "correct": true,
+    "sims": [
+     0.2215,
+     0.0852,
+     -0.1388,
+     0.1205,
+     0.1107,
+     0.7736
+    ]
+   }
+  },
+  "t294": {
+   "block": "retrieval",
+   "category": "WTHR",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 5,
+    "correct": false,
+    "sims": [
+     0.5197,
+     0.4771,
+     0.4816,
+     0.5431,
+     0.5067,
+     0.6171
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     -0.0249,
+     0.185,
+     -0.1853,
+     0.582,
+     0.2412,
+     0.1789
+    ]
+   }
+  },
+  "t295": {
+   "block": "retrieval",
+   "category": "WTHR",
+   "answer": 0,
+   "clap_frozen": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.811,
+     0.586,
+     0.5805,
+     0.7124,
+     0.7847,
+     0.7781
+    ]
+   },
+   "clap_instance": {
+    "pick": 0,
+    "correct": true,
+    "sims": [
+     0.7995,
+     -0.1872,
+     -0.2044,
+     0.3375,
+     0.3814,
+     -0.1314
+    ]
+   }
+  },
+  "t296": {
+   "block": "retrieval",
+   "category": "WTHR",
+   "answer": 2,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": false,
+    "sims": [
+     0.0918,
+     0.1528,
+     0.1161,
+     0.2421,
+     0.0562,
+     0.0539
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": true,
+    "sims": [
+     -0.0359,
+     0.0217,
+     0.6178,
+     -0.1525,
+     -0.047,
+     -0.1052
+    ]
+   }
+  },
+  "t297": {
+   "block": "retrieval",
+   "category": "WTHR",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.5647,
+     0.4324,
+     0.3486,
+     0.6309,
+     0.3477,
+     0.4336
+    ]
+   },
+   "clap_instance": {
+    "pick": 3,
+    "correct": true,
+    "sims": [
+     0.321,
+     -0.038,
+     0.0686,
+     0.6707,
+     0.1806,
+     0.3015
+    ]
+   }
+  },
+  "t298": {
+   "block": "retrieval",
+   "category": "WTHR",
+   "answer": 4,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": false,
+    "sims": [
+     0.2814,
+     0.3452,
+     0.456,
+     0.3515,
+     0.3804,
+     0.3346
+    ]
+   },
+   "clap_instance": {
+    "pick": 4,
+    "correct": true,
+    "sims": [
+     0.267,
+     0.4601,
+     -0.2697,
+     0.2281,
+     0.4858,
+     -0.0126
+    ]
+   }
+  },
+  "t299": {
+   "block": "retrieval",
+   "category": "WTHR",
+   "answer": 3,
+   "clap_frozen": {
+    "pick": 2,
+    "correct": false,
+    "sims": [
+     0.6271,
+     0.519,
+     0.6924,
+     0.6802,
+     0.6631,
+     0.608
+    ]
+   },
+   "clap_instance": {
+    "pick": 2,
+    "correct": false,
+    "sims": [
+     0.1288,
+     0.0777,
+     0.5686,
+     0.4662,
+     0.0114,
+     0.5414
+    ]
+   }
+  },
+  "p000": {
+   "block": "2afc",
+   "category": "ALRM",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.7315,
+    "score_b": -0.5432
+   }
+  },
+  "p001": {
+   "block": "2afc",
+   "category": "ALRM",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": -0.5427,
+    "score_b": -0.6579
+   }
+  },
+  "p002": {
+   "block": "2afc",
+   "category": "ALRM",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.4255,
+    "score_b": 0.0376
+   }
+  },
+  "p003": {
+   "block": "2afc",
+   "category": "ALRM",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6157,
+    "score_b": -0.6794
+   }
+  },
+  "p004": {
+   "block": "2afc",
+   "category": "ALRM",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.5933,
+    "score_b": -0.4533
+   }
+  },
+  "p005": {
+   "block": "2afc",
+   "category": "AMB",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6153,
+    "score_b": -0.6261
+   }
+  },
+  "p006": {
+   "block": "2afc",
+   "category": "AMB",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.7072,
+    "score_b": 0.5938
+   }
+  },
+  "p007": {
+   "block": "2afc",
+   "category": "AMB",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.0163,
+    "score_b": 0.566
+   }
+  },
+  "p008": {
+   "block": "2afc",
+   "category": "AMB",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6049,
+    "score_b": 0.6689
+   }
+  },
+  "p009": {
+   "block": "2afc",
+   "category": "AMB",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6359,
+    "score_b": -0.7158
+   }
+  },
+  "p010": {
+   "block": "2afc",
+   "category": "ANML",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.5356,
+    "score_b": -0.3447
+   }
+  },
+  "p011": {
+   "block": "2afc",
+   "category": "ANML",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.1391,
+    "score_b": -0.7027
+   }
+  },
+  "p012": {
+   "block": "2afc",
+   "category": "ANML",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.7301,
+    "score_b": 0.5528
+   }
+  },
+  "p013": {
+   "block": "2afc",
+   "category": "ANML",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.4289,
+    "score_b": -0.6301
+   }
+  },
+  "p014": {
+   "block": "2afc",
+   "category": "BELL",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": -0.1512,
+    "score_b": -0.6591
+   }
+  },
+  "p015": {
+   "block": "2afc",
+   "category": "BELL",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.4891,
+    "score_b": -0.5737
+   }
+  },
+  "p016": {
+   "block": "2afc",
+   "category": "BELL",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6488,
+    "score_b": 0.5661
+   }
+  },
+  "p017": {
+   "block": "2afc",
+   "category": "BELL",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.5877,
+    "score_b": -0.6139
+   }
+  },
+  "p018": {
+   "block": "2afc",
+   "category": "BELL",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6718,
+    "score_b": -0.7845
+   }
+  },
+  "p019": {
+   "block": "2afc",
+   "category": "BIRD",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": -0.2493,
+    "score_b": -0.6589
+   }
+  },
+  "p020": {
+   "block": "2afc",
+   "category": "BIRD",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.4966,
+    "score_b": 0.7156
+   }
+  },
+  "p021": {
+   "block": "2afc",
+   "category": "BIRD",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.7105,
+    "score_b": -0.5747
+   }
+  },
+  "p022": {
+   "block": "2afc",
+   "category": "BIRD",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.603,
+    "score_b": -0.61
+   }
+  },
+  "p023": {
+   "block": "2afc",
+   "category": "BIRD",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.352,
+    "score_b": 0.6922
+   }
+  },
+  "p024": {
+   "block": "2afc",
+   "category": "BODY",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6084,
+    "score_b": 0.6441
+   }
+  },
+  "p025": {
+   "block": "2afc",
+   "category": "BODY",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.4647,
+    "score_b": -0.6015
+   }
+  },
+  "p026": {
+   "block": "2afc",
+   "category": "BODY",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6178,
+    "score_b": -0.6733
+   }
+  },
+  "p027": {
+   "block": "2afc",
+   "category": "BODY",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6652,
+    "score_b": 0.5736
+   }
+  },
+  "p028": {
+   "block": "2afc",
+   "category": "CLCK",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6944,
+    "score_b": 0.664
+   }
+  },
+  "p029": {
+   "block": "2afc",
+   "category": "CLCK",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.7048,
+    "score_b": 0.6485
+   }
+  },
+  "p030": {
+   "block": "2afc",
+   "category": "CLCK",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6245,
+    "score_b": -0.7153
+   }
+  },
+  "p031": {
+   "block": "2afc",
+   "category": "CLCK",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.5992,
+    "score_b": -0.7198
+   }
+  },
+  "p032": {
+   "block": "2afc",
+   "category": "CLTH",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.5898,
+    "score_b": 0.6231
+   }
+  },
+  "p033": {
+   "block": "2afc",
+   "category": "CLTH",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6399,
+    "score_b": 0.6234
+   }
+  },
+  "p034": {
+   "block": "2afc",
+   "category": "CLTH",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6886,
+    "score_b": 0.2692
+   }
+  },
+  "p035": {
+   "block": "2afc",
+   "category": "CLTH",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.2835,
+    "score_b": 0.6224
+   }
+  },
+  "p036": {
+   "block": "2afc",
+   "category": "COMP",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.7559,
+    "score_b": 0.2257
+   }
+  },
+  "p037": {
+   "block": "2afc",
+   "category": "COMP",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6384,
+    "score_b": -0.6435
+   }
+  },
+  "p038": {
+   "block": "2afc",
+   "category": "COMP",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.7029,
+    "score_b": 0.6011
+   }
+  },
+  "p039": {
+   "block": "2afc",
+   "category": "COMP",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6557,
+    "score_b": 0.3076
+   }
+  },
+  "p040": {
+   "block": "2afc",
+   "category": "COMP",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6268,
+    "score_b": -0.7181
+   }
+  },
+  "p041": {
+   "block": "2afc",
+   "category": "CREA",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.476,
+    "score_b": 0.6399
+   }
+  },
+  "p042": {
+   "block": "2afc",
+   "category": "CREA",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.1784,
+    "score_b": -0.693
+   }
+  },
+  "p043": {
+   "block": "2afc",
+   "category": "CREA",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.7073,
+    "score_b": -0.7042
+   }
+  },
+  "p044": {
+   "block": "2afc",
+   "category": "CREA",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.7103,
+    "score_b": 0.5763
+   }
+  },
+  "p045": {
+   "block": "2afc",
+   "category": "CRSH",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.325,
+    "score_b": 0.8082
+   }
+  },
+  "p046": {
+   "block": "2afc",
+   "category": "CRSH",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6175,
+    "score_b": 0.5737
+   }
+  },
+  "p047": {
+   "block": "2afc",
+   "category": "CRSH",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.7129,
+    "score_b": -0.647
+   }
+  },
+  "p048": {
+   "block": "2afc",
+   "category": "CRSH",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6108,
+    "score_b": -0.6547
+   }
+  },
+  "p049": {
+   "block": "2afc",
+   "category": "CRWD",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.4248,
+    "score_b": 0.7496
+   }
+  },
+  "p050": {
+   "block": "2afc",
+   "category": "CRWD",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.8013,
+    "score_b": -0.6733
+   }
+  },
+  "p051": {
+   "block": "2afc",
+   "category": "CRWD",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6197,
+    "score_b": 0.7849
+   }
+  },
+  "p052": {
+   "block": "2afc",
+   "category": "CRWD",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.256,
+    "score_b": 0.7233
+   }
+  },
+  "p053": {
+   "block": "2afc",
+   "category": "DOOR",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.7494,
+    "score_b": -0.374
+   }
+  },
+  "p054": {
+   "block": "2afc",
+   "category": "DOOR",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.5415,
+    "score_b": -0.6429
+   }
+  },
+  "p055": {
+   "block": "2afc",
+   "category": "DOOR",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6717,
+    "score_b": 0.4179
+   }
+  },
+  "p056": {
+   "block": "2afc",
+   "category": "DOOR",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6652,
+    "score_b": 0.6691
+   }
+  },
+  "p057": {
+   "block": "2afc",
+   "category": "DSHS",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6094,
+    "score_b": -0.7083
+   }
+  },
+  "p058": {
+   "block": "2afc",
+   "category": "DSHS",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.7132,
+    "score_b": -0.6694
+   }
+  },
+  "p059": {
+   "block": "2afc",
+   "category": "DSHS",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.7359,
+    "score_b": -0.0447
+   }
+  },
+  "p060": {
+   "block": "2afc",
+   "category": "DSHS",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.7006,
+    "score_b": -0.3254
+   }
+  },
+  "p061": {
+   "block": "2afc",
+   "category": "ELEC",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.4703,
+    "score_b": -0.4513
+   }
+  },
+  "p062": {
+   "block": "2afc",
+   "category": "ELEC",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.2335,
+    "score_b": -0.556
+   }
+  },
+  "p063": {
+   "block": "2afc",
+   "category": "ELEC",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.7217,
+    "score_b": -0.7184
+   }
+  },
+  "p064": {
+   "block": "2afc",
+   "category": "ELEC",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.4957,
+    "score_b": -0.6372
+   }
+  },
+  "p065": {
+   "block": "2afc",
+   "category": "EXPL",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.3343,
+    "score_b": -0.5491
+   }
+  },
+  "p066": {
+   "block": "2afc",
+   "category": "EXPL",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.7183,
+    "score_b": 0.7536
+   }
+  },
+  "p067": {
+   "block": "2afc",
+   "category": "EXPL",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.7289,
+    "score_b": -0.712
+   }
+  },
+  "p068": {
+   "block": "2afc",
+   "category": "EXPL",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6641,
+    "score_b": 0.7127
+   }
+  },
+  "p069": {
+   "block": "2afc",
+   "category": "FIRE",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.4911,
+    "score_b": 0.546
+   }
+  },
+  "p070": {
+   "block": "2afc",
+   "category": "FIRE",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6036,
+    "score_b": 0.584
+   }
+  },
+  "p071": {
+   "block": "2afc",
+   "category": "FIRE",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.8171,
+    "score_b": -0.7048
+   }
+  },
+  "p072": {
+   "block": "2afc",
+   "category": "FIRE",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6404,
+    "score_b": 0.7205
+   }
+  },
+  "p073": {
+   "block": "2afc",
+   "category": "FOOT",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.716,
+    "score_b": -0.6713
+   }
+  },
+  "p074": {
+   "block": "2afc",
+   "category": "FOOT",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6848,
+    "score_b": 0.6724
+   }
+  },
+  "p075": {
+   "block": "2afc",
+   "category": "FOOT",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6376,
+    "score_b": -0.5645
+   }
+  },
+  "p076": {
+   "block": "2afc",
+   "category": "FOOT",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6267,
+    "score_b": 0.6121
+   }
+  },
+  "p077": {
+   "block": "2afc",
+   "category": "FOOT",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6314,
+    "score_b": -0.5466
+   }
+  },
+  "p078": {
+   "block": "2afc",
+   "category": "GLAS",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": -0.249,
+    "score_b": -0.7229
+   }
+  },
+  "p079": {
+   "block": "2afc",
+   "category": "GLAS",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.7272,
+    "score_b": -0.1892
+   }
+  },
+  "p080": {
+   "block": "2afc",
+   "category": "GLAS",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6384,
+    "score_b": 0.237
+   }
+  },
+  "p081": {
+   "block": "2afc",
+   "category": "GLAS",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": -0.1252,
+    "score_b": -0.5433
+   }
+  },
+  "p082": {
+   "block": "2afc",
+   "category": "GUN",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.5723,
+    "score_b": -0.6721
+   }
+  },
+  "p083": {
+   "block": "2afc",
+   "category": "GUN",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.7022,
+    "score_b": 0.5586
+   }
+  },
+  "p084": {
+   "block": "2afc",
+   "category": "GUN",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6196,
+    "score_b": 0.5712
+   }
+  },
+  "p085": {
+   "block": "2afc",
+   "category": "GUN",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.738,
+    "score_b": 0.2951
+   }
+  },
+  "p086": {
+   "block": "2afc",
+   "category": "IMPT",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.7772,
+    "score_b": -0.6157
+   }
+  },
+  "p087": {
+   "block": "2afc",
+   "category": "IMPT",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.5533,
+    "score_b": 0.1482
+   }
+  },
+  "p088": {
+   "block": "2afc",
+   "category": "IMPT",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6167,
+    "score_b": -0.7163
+   }
+  },
+  "p089": {
+   "block": "2afc",
+   "category": "IMPT",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.5865,
+    "score_b": -0.7361
+   }
+  },
+  "p090": {
+   "block": "2afc",
+   "category": "IMPT",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.5224,
+    "score_b": -0.6078
+   }
+  },
+  "p091": {
+   "block": "2afc",
+   "category": "KEYS",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6153,
+    "score_b": -0.66
+   }
+  },
+  "p092": {
+   "block": "2afc",
+   "category": "KEYS",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.5828,
+    "score_b": 0.6222
+   }
+  },
+  "p093": {
+   "block": "2afc",
+   "category": "KEYS",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.7238,
+    "score_b": 0.5562
+   }
+  },
+  "p094": {
+   "block": "2afc",
+   "category": "KEYS",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.671,
+    "score_b": -0.5831
+   }
+  },
+  "p095": {
+   "block": "2afc",
+   "category": "MECH",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.4315,
+    "score_b": 0.7151
+   }
+  },
+  "p096": {
+   "block": "2afc",
+   "category": "MECH",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.626,
+    "score_b": 0.7085
+   }
+  },
+  "p097": {
+   "block": "2afc",
+   "category": "MECH",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.7135,
+    "score_b": 0.6552
+   }
+  },
+  "p098": {
+   "block": "2afc",
+   "category": "MECH",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.7274,
+    "score_b": -0.6443
+   }
+  },
+  "p099": {
+   "block": "2afc",
+   "category": "MECH",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6743,
+    "score_b": 0.6882
+   }
+  },
+  "p100": {
+   "block": "2afc",
+   "category": "MUSC",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6371,
+    "score_b": 0.6276
+   }
+  },
+  "p101": {
+   "block": "2afc",
+   "category": "MUSC",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6494,
+    "score_b": 0.5445
+   }
+  },
+  "p102": {
+   "block": "2afc",
+   "category": "MUSC",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6853,
+    "score_b": -0.4956
+   }
+  },
+  "p103": {
+   "block": "2afc",
+   "category": "MUSC",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.4129,
+    "score_b": -0.2792
+   }
+  },
+  "p104": {
+   "block": "2afc",
+   "category": "PHON",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6429,
+    "score_b": -0.645
+   }
+  },
+  "p105": {
+   "block": "2afc",
+   "category": "PHON",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.446,
+    "score_b": -0.6596
+   }
+  },
+  "p106": {
+   "block": "2afc",
+   "category": "PHON",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.7244,
+    "score_b": -0.6771
+   }
+  },
+  "p107": {
+   "block": "2afc",
+   "category": "PHON",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6773,
+    "score_b": -0.608
+   }
+  },
+  "p108": {
+   "block": "2afc",
+   "category": "RAIN",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6077,
+    "score_b": 0.6635
+   }
+  },
+  "p109": {
+   "block": "2afc",
+   "category": "RAIN",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.612,
+    "score_b": -0.7139
+   }
+  },
+  "p110": {
+   "block": "2afc",
+   "category": "RAIN",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6514,
+    "score_b": 0.6766
+   }
+  },
+  "p111": {
+   "block": "2afc",
+   "category": "RAIN",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.4579,
+    "score_b": 0.6896
+   }
+  },
+  "p112": {
+   "block": "2afc",
+   "category": "TOOL",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.4725,
+    "score_b": 0.2133
+   }
+  },
+  "p113": {
+   "block": "2afc",
+   "category": "TOOL",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6179,
+    "score_b": 0.7112
+   }
+  },
+  "p114": {
+   "block": "2afc",
+   "category": "TOOL",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.5862,
+    "score_b": 0.7104
+   }
+  },
+  "p115": {
+   "block": "2afc",
+   "category": "TOOL",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.7014,
+    "score_b": -0.0177
+   }
+  },
+  "p116": {
+   "block": "2afc",
+   "category": "TOOL",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.7421,
+    "score_b": 0.6148
+   }
+  },
+  "p117": {
+   "block": "2afc",
+   "category": "VEH",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.4867,
+    "score_b": -0.6728
+   }
+  },
+  "p118": {
+   "block": "2afc",
+   "category": "VEH",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.7097,
+    "score_b": -0.5544
+   }
+  },
+  "p119": {
+   "block": "2afc",
+   "category": "VEH",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.5815,
+    "score_b": 0.5598
+   }
+  },
+  "p120": {
+   "block": "2afc",
+   "category": "VEH",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6868,
+    "score_b": 0.6047
+   }
+  },
+  "p121": {
+   "block": "2afc",
+   "category": "VOX",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.761,
+    "score_b": 0.3925
+   }
+  },
+  "p122": {
+   "block": "2afc",
+   "category": "VOX",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.0815,
+    "score_b": -0.3102
+   }
+  },
+  "p123": {
+   "block": "2afc",
+   "category": "VOX",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6421,
+    "score_b": -0.4415
+   }
+  },
+  "p124": {
+   "block": "2afc",
+   "category": "VOX",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6546,
+    "score_b": 0.4943
+   }
+  },
+  "p125": {
+   "block": "2afc",
+   "category": "VOX",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6787,
+    "score_b": -0.7361
+   }
+  },
+  "p126": {
+   "block": "2afc",
+   "category": "WATR",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.5557,
+    "score_b": 0.6592
+   }
+  },
+  "p127": {
+   "block": "2afc",
+   "category": "WATR",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6485,
+    "score_b": 0.6713
+   }
+  },
+  "p128": {
+   "block": "2afc",
+   "category": "WATR",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6377,
+    "score_b": -0.5621
+   }
+  },
+  "p129": {
+   "block": "2afc",
+   "category": "WATR",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6856,
+    "score_b": 0.2563
+   }
+  },
+  "p130": {
+   "block": "2afc",
+   "category": "WATR",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6795,
+    "score_b": 0.6481
+   }
+  },
+  "p131": {
+   "block": "2afc",
+   "category": "WATR",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6095,
+    "score_b": 0.6197
+   }
+  },
+  "p132": {
+   "block": "2afc",
+   "category": "WHSH",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.5634,
+    "score_b": -0.6684
+   }
+  },
+  "p133": {
+   "block": "2afc",
+   "category": "WHSH",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.7507,
+    "score_b": -0.3992
+   }
+  },
+  "p134": {
+   "block": "2afc",
+   "category": "WHSH",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6473,
+    "score_b": -0.7637
+   }
+  },
+  "p135": {
+   "block": "2afc",
+   "category": "WHSH",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.3483,
+    "score_b": -0.7472
+   }
+  },
+  "p136": {
+   "block": "2afc",
+   "category": "WIND",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6757,
+    "score_b": 0.6145
+   }
+  },
+  "p137": {
+   "block": "2afc",
+   "category": "WIND",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.713,
+    "score_b": 0.6376
+   }
+  },
+  "p138": {
+   "block": "2afc",
+   "category": "WIND",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.5233,
+    "score_b": 0.6973
+   }
+  },
+  "p139": {
+   "block": "2afc",
+   "category": "WIND",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.2446,
+    "score_b": -0.6315
+   }
+  },
+  "p140": {
+   "block": "2afc",
+   "category": "WIND",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6945,
+    "score_b": 0.4925
+   }
+  },
+  "p141": {
+   "block": "2afc",
+   "category": "WOOD",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.3406,
+    "score_b": 0.6359
+   }
+  },
+  "p142": {
+   "block": "2afc",
+   "category": "WOOD",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.7,
+    "score_b": 0.1189
+   }
+  },
+  "p143": {
+   "block": "2afc",
+   "category": "WOOD",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6861,
+    "score_b": 0.6158
+   }
+  },
+  "p144": {
+   "block": "2afc",
+   "category": "WOOD",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6521,
+    "score_b": -0.7643
+   }
+  },
+  "p145": {
+   "block": "2afc",
+   "category": "WTHR",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6919,
+    "score_b": -0.7126
+   }
+  },
+  "p146": {
+   "block": "2afc",
+   "category": "WTHR",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.6914,
+    "score_b": -0.6393
+   }
+  },
+  "p147": {
+   "block": "2afc",
+   "category": "WTHR",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6246,
+    "score_b": 0.6591
+   }
+  },
+  "p148": {
+   "block": "2afc",
+   "category": "WTHR",
+   "answer": 1,
+   "sensitive_axis": {
+    "pick": 1,
+    "correct": true,
+    "score_a": -0.6375,
+    "score_b": 0.6874
+   }
+  },
+  "p149": {
+   "block": "2afc",
+   "category": "WTHR",
+   "answer": 0,
+   "sensitive_axis": {
+    "pick": 0,
+    "correct": true,
+    "score_a": 0.7125,
+    "score_b": -0.6857
+   }
+  }
+ }
+}

@@ -1,0 +1,105 @@
+"""Assemble the 6-encoder dissociation table (CLAP/PANNs/AST + BEATs/M2D/AudioMAE).
+
+Runs the 5-fold leave-classes-out evaluation (src/kfold_eval.evaluate_encoder) for every
+encoder on the UCS paired corpus and writes results/ssl_dissociation.{json,md}.
+
+Needs the cached embeddings locally (pull from the Modal volume first):
+    <enc>_ucs_paired.npz and <enc>_ucs_paired_kf{0..4}_{class,instance}.npz
+under $SMSR_DATA/embeddings.
+
+Usage (from the repo root):
+    SMSR_DATA=~/data/doppelganger \
+    SMSR_MANIFEST=~/data/doppelganger/manifest_ucs_paired.csv \
+    python -m scripts.ssl_dissociation
+"""
+from __future__ import annotations
+
+import json
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from config import RESULTS  # noqa: E402
+from src.kfold_eval import evaluate_encoder  # noqa: E402
+
+# (registry name, pretty label, supervision type)
+ENCODERS = [
+    ("clap_general", "CLAP",          "audio-text contrastive"),
+    ("panns_cnn14",  "PANNs CNN14",   "supervised (AudioSet)"),
+    ("ast",          "AST",           "supervised (AudioSet)"),
+    ("beats",        "BEATs iter3+",  "self-supervised (AS2M)"),
+    ("m2d",          "M2D",           "self-supervised (AS2M)"),
+    ("audiomae",     "AudioMAE",      "self-supervised (AS2M)"),
+]
+
+
+def main():
+    out = {"protocol": "5-fold leave-classes-out on the UCS paired corpus "
+                       "(manifest_ucs_paired.csv); heads trained per fold with the fold's "
+                       "categories held out (bridge objectives: class=invariant/class-supcon, "
+                       "instance); instance R@1 evaluated synth->real on the FULL real test "
+                       "gallery; category-mAP on the unseen categories (restricted gallery = "
+                       "the paper's historical convention; full gallery also reported).",
+           "encoders": {}}
+    rows_r1, rows_map = [], []
+    for name, label, sup in ENCODERS:
+        res = evaluate_encoder(f"{name}_ucs_paired", out_name=None, verbose=False)
+        out["encoders"][name] = res
+        f, c, i = res["frozen"], res["class"], res["instance"]
+        print(f"{label:14s} frozen {f['R1_full']:.3f}  class {c['R1_full']:.3f}  "
+              f"instance {i['R1_full']:.3f}  (N={i['gallery_N']})")
+        rows_r1.append(
+            f"| {label} | {sup} | "
+            f"{f['R1_full']:.3f} [{f['ci95'][0]:.3f},{f['ci95'][1]:.3f}] | "
+            f"{c['R1_full']:.3f} [{c['ci95'][0]:.3f},{c['ci95'][1]:.3f}] | "
+            f"**{i['R1_full']:.3f}** [{i['ci95'][0]:.3f},{i['ci95'][1]:.3f}] | "
+            f"{min(a - b for a, b in zip(i['per_fold'], f['per_fold'])):+.2f} | "
+            f"{min(a - b for a, b in zip(i['per_fold'], c['per_fold'])):+.2f} |")
+        rows_map.append(
+            f"| {label} | {f['catmAP_restricted']:.3f} / {f['catmAP_full']:.3f} | "
+            f"{c['catmAP_restricted']:.3f} / {c['catmAP_full']:.3f} | "
+            f"{i['catmAP_restricted']:.3f} / {i['catmAP_full']:.3f} |")
+
+    N = out["encoders"]["clap_general"]["instance"]["gallery_N"]
+    nq = out["encoders"]["clap_general"]["instance"]["n_queries"]
+    md = f"""# Six-encoder dissociation (instance vs class supervision, unseen categories)
+
+5-fold leave-classes-out on the UCS paired corpus (34 categories; folds committed via
+`kfold_eval.make_folds(seed=1234)`). For each fold a projection head is trained with that
+fold's categories held out (class = class-supcon, i.e. bridge objective `invariant`;
+instance = paired-twin supcon, objective `instance`; both supcon=1, dann=coral=irm=0,
+50 epochs) and evaluated on exactly those unseen categories, pooled over folds
+({nq} queries). Instance retrieval is synth->real against the FULL real test gallery
+(N = {N}, chance R@1 = {1/N:.4f}); brackets are bootstrap 95% CIs over queries.
+
+## Instance R@1 (full gallery, unseen categories)
+
+| encoder | pretraining | frozen | class head | instance head | min fold margin inst-frozen | inst-class |
+|---|---|---|---|---|---|---|
+{chr(10).join(rows_r1)}
+
+## Category-mAP on unseen categories (restricted gallery / full gallery)
+
+Restricted gallery (real test clips of the held-out categories only) is the convention used
+for the historical three-encoder numbers; the full-gallery companion is the honest all-34-
+category-distractor version. For CLAP / PANNs / AST no head beats the frozen encoder on
+unseen-category mAP (the paper's original claim). The SSL encoders start from much weaker
+frozen category structure (0.33-0.40 restricted vs 0.48-0.61), and there the heads recover a
+small amount of it (class head gains +0.02 to +0.06 restricted mAP) -- still far below frozen
+CLAP, so the qualitative dissociation is unchanged: category structure barely transfers to
+unseen classes on ANY encoder, while the instance mapping transfers almost perfectly.
+
+| encoder | frozen | class head | instance head |
+|---|---|---|---|
+{chr(10).join(rows_map)}
+
+Generated by scripts/ssl_dissociation.py; per-encoder details in results/ssl_dissociation.json.
+"""
+    json.dump(out, open(RESULTS / "ssl_dissociation.json", "w"), indent=2)
+    (RESULTS / "ssl_dissociation.md").write_text(md)
+    print(f"\nwrote {RESULTS/'ssl_dissociation.json'} and .md")
+
+
+if __name__ == "__main__":
+    main()

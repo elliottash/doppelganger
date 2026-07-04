@@ -1,0 +1,264 @@
+{
+ "per_event": {
+  "MUSC": 307,
+  "KEYS": 393,
+  "VEH": 267,
+  "AMB": 97,
+  "RAIN": 299,
+  "CRWD": 376,
+  "CREA": 135,
+  "DOOR": 410,
+  "ANML": 283,
+  "ALRM": 353,
+  "GLAS": 390,
+  "IMPT": 274,
+  "MECH": 147,
+  "DSHS": 377,
+  "TOOL": 191,
+  "CRSH": 133,
+  "WATR": 383,
+  "WTHR": 394,
+  "BIRD": 314,
+  "VOX": 409,
+  "FOOT": 398,
+  "WOOD": 231,
+  "PHON": 351,
+  "CLCK": 337,
+  "BELL": 405,
+  "WIND": 223,
+  "ELEC": 93,
+  "BODY": 277,
+  "FIRE": 399,
+  "GUN": 406,
+  "COMP": 375,
+  "EXPL": 338,
+  "CLTH": 304,
+  "WHSH": 351
+ },
+ "event_morph": {
+  "MUSC": "tonal",
+  "KEYS": "transient",
+  "VEH": "mechanical",
+  "AMB": "ambience",
+  "RAIN": "texture",
+  "CRWD": "ambience",
+  "CREA": "vocal",
+  "DOOR": "transient",
+  "ANML": "vocal",
+  "ALRM": "tonal",
+  "GLAS": "transient",
+  "IMPT": "transient",
+  "MECH": "mechanical",
+  "DSHS": "transient",
+  "TOOL": "mechanical",
+  "CRSH": "transient",
+  "WATR": "texture",
+  "WTHR": "texture",
+  "BIRD": "vocal",
+  "VOX": "vocal",
+  "FOOT": "transient",
+  "WOOD": "transient",
+  "PHON": "tonal",
+  "CLCK": "mechanical",
+  "BELL": "tonal",
+  "WIND": "texture",
+  "ELEC": "texture",
+  "BODY": "transient",
+  "FIRE": "texture",
+  "GUN": "transient",
+  "COMP": "mechanical",
+  "EXPL": "transient",
+  "CLTH": "texture",
+  "WHSH": "whoosh"
+ },
+ "morph_clips": {
+  "tonal": 1416,
+  "transient": 3627,
+  "mechanical": 1317,
+  "ambience": 473,
+  "texture": 2095,
+  "vocal": 1141,
+  "whoosh": 351
+ },
+ "morph_events": {
+  "tonal": 4,
+  "transient": 11,
+  "mechanical": 5,
+  "ambience": 2,
+  "texture": 7,
+  "vocal": 4,
+  "whoosh": 1
+ },
+ "splits": {
+  "MUSC": {
+   "test": 70,
+   "val": 5,
+   "train": 232
+  },
+  "KEYS": {
+   "test": 132,
+   "val": 33,
+   "train": 228
+  },
+  "VEH": {
+   "test": 78,
+   "train": 170,
+   "val": 19
+  },
+  "AMB": {
+   "test": 17,
+   "train": 71,
+   "val": 9
+  },
+  "RAIN": {
+   "test": 99,
+   "train": 196,
+   "val": 4
+  },
+  "CRWD": {
+   "test": 98,
+   "train": 258,
+   "val": 20
+  },
+  "CREA": {
+   "test": 30,
+   "val": 12,
+   "train": 93
+  },
+  "DOOR": {
+   "test": 141,
+   "train": 228,
+   "val": 41
+  },
+  "ANML": {
+   "test": 125,
+   "train": 153,
+   "val": 5
+  },
+  "ALRM": {
+   "test": 95,
+   "train": 252,
+   "val": 6
+  },
+  "GLAS": {
+   "test": 129,
+   "train": 233,
+   "val": 28
+  },
+  "IMPT": {
+   "test": 69,
+   "train": 178,
+   "val": 27
+  },
+  "MECH": {
+   "test": 62,
+   "train": 64,
+   "val": 21
+  },
+  "DSHS": {
+   "test": 121,
+   "val": 32,
+   "train": 224
+  },
+  "TOOL": {
+   "test": 57,
+   "train": 116,
+   "val": 18
+  },
+  "CRSH": {
+   "test": 33,
+   "train": 87,
+   "val": 13
+  },
+  "WATR": {
+   "test": 121,
+   "train": 219,
+   "val": 43
+  },
+  "WTHR": {
+   "test": 103,
+   "val": 34,
+   "train": 257
+  },
+  "BIRD": {
+   "test": 81,
+   "train": 225,
+   "val": 8
+  },
+  "VOX": {
+   "test": 121,
+   "train": 281,
+   "val": 7
+  },
+  "FOOT": {
+   "test": 116,
+   "train": 244,
+   "val": 38
+  },
+  "WOOD": {
+   "test": 62,
+   "train": 153,
+   "val": 16
+  },
+  "PHON": {
+   "test": 120,
+   "train": 221,
+   "val": 10
+  },
+  "CLCK": {
+   "test": 85,
+   "train": 236,
+   "val": 16
+  },
+  "BELL": {
+   "test": 131,
+   "val": 14,
+   "train": 260
+  },
+  "WIND": {
+   "test": 26,
+   "train": 178,
+   "val": 19
+  },
+  "ELEC": {
+   "test": 40,
+   "val": 7,
+   "train": 46
+  },
+  "BODY": {
+   "test": 80,
+   "val": 23,
+   "train": 174
+  },
+  "FIRE": {
+   "test": 134,
+   "train": 249,
+   "val": 16
+  },
+  "GUN": {
+   "test": 109,
+   "val": 43,
+   "train": 254
+  },
+  "COMP": {
+   "test": 120,
+   "train": 231,
+   "val": 24
+  },
+  "EXPL": {
+   "test": 73,
+   "train": 235,
+   "val": 30
+  },
+  "CLTH": {
+   "test": 101,
+   "train": 164,
+   "val": 39
+  },
+  "WHSH": {
+   "test": 86,
+   "val": 39,
+   "train": 226
+  }
+ }
+}

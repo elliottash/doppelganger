@@ -32,10 +32,13 @@ def instance_id_for(clip_id: str) -> int:
 
 
 def select_anchors(per_class: int | None, max_anchors: int | None, cc_only: bool,
-                   balanced_per_cat: int | None = None):
+                   balanced_per_cat: int | None = None, split: str = ""):
     rows = [r for r in csv.DictReader(open(MANIFEST)) if r["domain"] == "real"]
     if cc_only:
         rows = [r for r in rows if r.get("is_cc", "1") == "1"]
+    if split:  # BEFORE the caps, so '--split test --max-anchors 5' smokes work
+        keep = {s.strip() for s in split.split(",") if s.strip()}
+        rows = [r for r in rows if r["split"] in keep]
     rows.sort(key=lambda r: r["clip_id"])
     if balanced_per_cat:  # N per ACTUAL event present (works for UCS CatIDs, any taxonomy)
         from collections import defaultdict
@@ -56,22 +59,40 @@ def select_anchors(per_class: int | None, max_anchors: int | None, cc_only: bool
 
 
 def run(shard: int, n_shards: int, per_class=None, max_anchors=None, cc_only=False,
-        steps=60, cfg=7.0, noise=0.6, balanced_per_cat=None, out_tag="", mode="init"):
+        steps=None, cfg=None, noise=None, balanced_per_cat=None, out_tag="", mode="init",
+        generator="sao", prefix="", split=""):
     """out_tag namespaces the output (sao_pairs<out_tag>/ + sao_pairs<out_tag>_<shard>.csv) so
     the fidelity sweep's noise levels don't collide. mode='text' = text-only prompt (no init
-    audio): a category-level twin with NO instance signal, the spectrum's lower bound."""
+    audio): a category-level twin with NO instance signal, the spectrum's lower bound.
+
+    generator selects the backend family (see generate_synthetic.GENERATORS): 'sao' (default,
+    the original behavior) or 'aldm' (AudioLDM audio-to-audio) for the cross-generator
+    transfer experiment. steps/cfg/noise default to the generator's deployed operating point
+    when left None, so existing recipes stay bit-reproducible. prefix overrides the output
+    namespace (default: the generator's, e.g. sao_pairs/ or aldm/). split ('test' or
+    'train,val') restricts anchors to those splits (e.g. the extra SAO operating points are
+    test-split-only). The PROMPT construction is deliberately identical across generators so
+    the transfer comparison isn't confounded by prompt wording."""
     import soundfile as sf
-    from src.generate_synthetic import StableAudioOpen
+    from src.generate_synthetic import GENERATORS
     from config import TARGET_SR
 
-    anchors = select_anchors(per_class, max_anchors, cc_only, balanced_per_cat)
+    g = GENERATORS[generator]
+    steps = g["steps"] if steps is None else steps
+    cfg = g["cfg"] if cfg is None else cfg
+    noise = g["noise"] if noise is None else noise
+    prefix = prefix or g["prefix"]
+
+    anchors = select_anchors(per_class, max_anchors, cc_only, balanced_per_cat, split=split)
     mine = [a for i, a in enumerate(anchors) if i % n_shards == shard]
-    print(f"shard {shard}/{n_shards}: {len(mine)} of {len(anchors)} anchors (tag={out_tag} mode={mode} noise={noise})")
+    print(f"shard {shard}/{n_shards}: {len(mine)} of {len(anchors)} anchors "
+          f"(gen={generator} prefix={prefix} tag={out_tag} mode={mode} noise={noise} "
+          f"steps={steps} cfg={cfg} split={split or 'all'})")
     if not mine:
         return
 
-    be = StableAudioOpen(seconds=5.0)
-    out_csv = SYNTH / f"sao_pairs{out_tag}_{shard}.csv"
+    be = g["cls"](seconds=5.0)
+    out_csv = SYNTH / f"{prefix}{out_tag}_{shard}.csv"
     with open(out_csv, "w", newline="") as fh:
         w = csv.writer(fh)
         w.writerow(["synth_path", "real_clip_id", "instance_id", "event", "split", "seed", "noise"])
@@ -90,7 +111,7 @@ def run(shard: int, n_shards: int, per_class=None, max_anchors=None, cc_only=Fal
             except Exception as e:  # noqa: BLE001
                 print(f"  skip {a['clip_id']}: {e}")
                 continue
-            rel = Path(f"sao_pairs{out_tag}") / a["event"] / f"{iid}.wav"
+            rel = Path(f"{prefix}{out_tag}") / a["event"] / f"{iid}.wav"
             dst = SYNTH / rel
             dst.parent.mkdir(parents=True, exist_ok=True)
             sf.write(str(dst), wav, be.sr)
@@ -107,7 +128,11 @@ if __name__ == "__main__":
     ap.add_argument("--per-class", type=int, default=None)
     ap.add_argument("--max-anchors", type=int, default=None)
     ap.add_argument("--cc-only", action="store_true")
-    ap.add_argument("--steps", type=int, default=60)
-    ap.add_argument("--noise", type=float, default=0.6)
+    ap.add_argument("--steps", type=int, default=None)
+    ap.add_argument("--noise", type=float, default=None)
+    ap.add_argument("--generator", default="sao", choices=["sao", "aldm"])
+    ap.add_argument("--prefix", default="")
+    ap.add_argument("--split", default="")
     a = ap.parse_args()
-    run(a.shard, a.n_shards, a.per_class, a.max_anchors, a.cc_only, a.steps, noise=a.noise)
+    run(a.shard, a.n_shards, a.per_class, a.max_anchors, a.cc_only, a.steps, noise=a.noise,
+        generator=a.generator, prefix=a.prefix, split=a.split)

@@ -1,0 +1,16 @@
+{
+  "completion_code": "REDACTED",
+  "prolific_study_id": "REDACTED",
+  "prolific_status_at_creation": "UNPUBLISHED (draft; publish manually)",
+  "name": "Match the sound: which real recording was this generated from?",
+  "reward_minor_units": 180,
+  "currency": "GBP",
+  "places": 25,
+  "estimated_minutes": 12,
+  "cost_estimate": {
+    "reward_total_gbp": 45.0,
+    "prolific_fee_33pct_gbp": 14.85,
+    "total_gbp_approx": 59.85,
+    "note": "VAT may apply on the service fee depending on workspace billing"
+  }
+}

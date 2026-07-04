@@ -1,0 +1,137 @@
+pid                          2afc   retr catch medRT_s  excluded?
+P01                         0.625  0.958 2/2    26.8  
+P02                         0.500  0.875 2/2    18.6  
+P03                         0.875  0.792 2/2    12.1  
+P04                         0.562  0.792 2/2    18.3  
+P05                         0.688  0.833 2/2    22.6  
+P06                         0.750  0.875 2/2    16.1  
+P07                         0.438  0.625 2/2    35.5  
+P08                         0.500  1.000 0/0    19.6  
+P09                         0.812  0.750 2/2    36.1  
+P10                         0.500  0.625 2/2    11.9  
+P11                         0.750  0.875 2/2    13.6  
+P12                         0.562  1.000 2/2    12.4  
+P13                         0.500  0.417 0/2    15.0  EXCLUDED
+P14                         0.688  0.958 2/2    37.0  
+P15                         0.562  0.375 2/2     7.7  
+P16                         0.562  0.917 2/2    23.2  
+P17                         0.875  0.958 2/2    13.3  
+P18                         0.750  0.958 2/2    22.2  
+P19                         0.312  0.792 2/2    24.2  
+P20                         0.562  0.750 1/2    33.7  
+P21                         0.688  0.875 2/2    17.7  
+P22                         0.875  0.833 2/2    22.6  
+P23                         0.688  0.875 2/2    10.6  
+P24                         0.812  0.958 2/2    15.6  
+P25                         1.000  0.958 2/2    25.2  
+P26                         0.875  0.875 2/2    16.6  
+P27                         0.750  0.625 2/2    14.7  
+P28                         1.000  0.833 2/2    23.7  
+P29                         0.812  0.917 2/2    12.9  
+P30                         0.875  0.792 2/2    30.7  
+P31                         0.812  0.750 2/2    17.0  
+P32                         0.500  0.917 2/2    12.2  
+P33                         0.875  0.833 2/2    19.9  
+P34                         0.750  0.875 2/2    15.9  
+P35                         0.938  0.958 2/2    18.3  
+P36                         0.812  0.917 2/2    21.4  
+P37                         0.375  0.708 2/2    14.1  
+P38                         0.625  0.208 0/2    16.7  EXCLUDED
+P39                         1.000  0.875 2/2    16.2  
+P40                         0.875  0.833 2/2    19.6  
+P41                         1.000  0.917 2/2    12.1  
+P42                         0.625  0.292 0/2    23.4  EXCLUDED
+P43                         0.500  0.375 1/2    18.1  
+P44                         0.750  0.917 2/2    31.3  
+P45                         1.000    nan 0/0    18.3  
+P46                         0.688  0.625 1/2    30.9  
+P47                         0.750  0.917 2/2    33.9  
+P48                         0.812  0.792 2/2    12.3  
+P49                         0.438  0.750 2/2    16.8  
+P50                         0.812  0.833 2/2    11.6  
+P51                         0.625  0.750 2/2    11.7  
+P52                         0.625  0.875 2/2    18.9  
+
+HUMAN 2afc: 0.713 (550/771 judgments, 49 participants)  95% CI [0.665, 0.761]  chance 0.500
+per-category (2afc):
+  ANML  0.952  (n=21)
+  CRSH  0.900  (n=20)
+  WTHR  0.875  (n=24)
+  GLAS  0.864  (n=22)
+  CLTH  0.857  (n=21)
+  CRWD  0.857  (n=21)
+  DSHS  0.850  (n=20)
+  IMPT  0.846  (n=26)
+  WHSH  0.818  (n=22)
+  AMB   0.792  (n=24)
+  VOX   0.778  (n=27)
+  BIRD  0.778  (n=27)
+  FIRE  0.727  (n=22)
+  GUN   0.722  (n=18)
+  VEH   0.714  (n=21)
+  DOOR  0.708  (n=24)
+  KEYS  0.700  (n=20)
+  MECH  0.692  (n=26)
+  RAIN  0.684  (n=19)
+  TOOL  0.680  (n=25)
+  PHON  0.667  (n=18)
+  EXPL  0.667  (n=24)
+  FOOT  0.654  (n=26)
+  WOOD  0.650  (n=20)
+  WIND  0.640  (n=25)
+  CREA  0.636  (n=22)
+  COMP  0.615  (n=26)
+  BELL  0.607  (n=28)
+  ALRM  0.591  (n=22)
+  CLCK  0.588  (n=17)
+  MUSC  0.579  (n=19)
+  WATR  0.562  (n=32)
+  ELEC  0.526  (n=19)
+  BODY  0.522  (n=23)
+trials with >=2 raters: 150/150; strict-majority-vote accuracy 0.753; mean pairwise agreement 0.610 (chance ~0.500)
+
+HUMAN retrieval: 0.823 (929/1129 judgments, 49 participants)  95% CI [0.782, 0.858]  chance 0.167
+per-category (retrieval):
+  PHON  1.000  (n=32)
+  MECH  1.000  (n=33)
+  CLCK  0.966  (n=29)
+  BIRD  0.943  (n=35)
+  BELL  0.943  (n=35)
+  FOOT  0.941  (n=34)
+  CREA  0.929  (n=28)
+  BODY  0.914  (n=35)
+  MUSC  0.912  (n=34)
+  WIND  0.903  (n=31)
+  AMB   0.903  (n=31)
+  CLTH  0.900  (n=30)
+  CRWD  0.889  (n=36)
+  VOX   0.886  (n=35)
+  RAIN  0.882  (n=34)
+  FIRE  0.879  (n=33)
+  DOOR  0.875  (n=32)
+  ALRM  0.875  (n=32)
+  EXPL  0.871  (n=31)
+  VEH   0.867  (n=30)
+  WATR  0.857  (n=35)
+  COMP  0.848  (n=33)
+  TOOL  0.839  (n=31)
+  ELEC  0.806  (n=31)
+  CRSH  0.793  (n=29)
+  WOOD  0.737  (n=38)
+  WTHR  0.730  (n=37)
+  KEYS  0.676  (n=34)
+  GLAS  0.667  (n=36)
+  DSHS  0.639  (n=36)
+  GUN   0.636  (n=33)
+  IMPT  0.583  (n=36)
+  WHSH  0.541  (n=37)
+  ANML  0.485  (n=33)
+trials with >=2 raters: 299/300; strict-majority-vote accuracy 0.839; mean pairwise agreement 0.770 (chance ~0.167)
+
+MODEL on all study trials (humans heard the central 3.5 s of the model's 5 s window):
+  clap_frozen    [retrieval] 0.920  (276/300, chance 0.1667)
+  clap_instance  [retrieval] 0.990  (297/300, chance 0.1667)
+  sensitive_axis [2afc] 1.000  (150/150, chance 0.5)
+  clap_frozen    [retrieval] 0.920 on the 300 human-answered trials
+  clap_instance  [retrieval] 0.990 on the 300 human-answered trials
+  sensitive_axis [2afc] 1.000 on the 150 human-answered trials

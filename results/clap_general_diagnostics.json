@@ -1,0 +1,10 @@
+{
+  "encoder": "clap_general",
+  "proxy_a_distance": 1.3847504855188717,
+  "domain_cv_acc": 0.8461876213797179,
+  "event_probe_acc": 0.972313777191826,
+  "domain_probe_acc": 0.8442100637222588,
+  "identity_minus_domain": 0.12810371346956717,
+  "silhouette_event": 0.7509979260231955,
+  "silhouette_domain": -0.0019206871031587785
+}

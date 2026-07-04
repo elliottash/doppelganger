@@ -1,0 +1,10 @@
+{
+  "encoder": "panns_cnn14",
+  "proxy_a_distance": 1.3874061832788507,
+  "domain_cv_acc": 0.8468515458197127,
+  "event_probe_acc": 0.941551307404966,
+  "domain_probe_acc": 0.903537684025489,
+  "identity_minus_domain": 0.038013623379477,
+  "silhouette_event": 0.15169309385306043,
+  "silhouette_domain": 0.04772804705379359
+}

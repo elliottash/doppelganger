@@ -104,10 +104,15 @@ ENCODERS = {
     "clap_music":   {"kind": "clap_laion_ckpt",                              # music+speech+audioset ckpt
                      "amodel": "HTSAT-base",
                      "ckpt": "music_speech_audioset_epoch_15_esc_89.98.pt", "dim": 512, "sr": 48_000},
-    # --- self-supervised general audio (loaders are stubs; see encoders.py TODOs) ---
+    # --- self-supervised general audio (loaders in encoders.py; ckpts under DATA/ckpts/<name>/,
+    #     fetched once onto the Modal volume by modal_ssl.py::fetch_ckpts) ---
     "beats":    {"kind": "beats",   "ckpt": "BEATs_iter3_plus_AS2M.pt",   "dim": 768, "sr": 16_000},
     "m2d":      {"kind": "m2d",     "ckpt": "m2d_vit_base-80x608p16x16",  "dim": 768, "sr": 16_000},
-    "audiomae": {"kind": "audiomae","ckpt": "pretrained.pth",             "dim": 768, "sr": 16_000},
+    # AudioMAE ViT-B AS2M pretrain: official pretrained.pth is Google-Drive-only; we use the
+    # timm port of the same weights on the HF hub (cached in HF_HOME on the volume).
+    "audiomae": {"kind": "audiomae",
+                 "ckpt": "hf_hub:gaunernst/vit_base_patch16_1024_128.audiomae_as2m",
+                 "dim": 768, "sr": 16_000},
     # --- supervised baselines ---
     "panns_cnn14": {"kind": "panns", "ckpt": "Cnn14_mAP=0.431.pth", "dim": 2048, "sr": 32_000},
     "ast": {"kind": "ast_hf", "hf_id": "MIT/ast-finetuned-audioset-10-10-0.4593", "dim": 768, "sr": 16_000},

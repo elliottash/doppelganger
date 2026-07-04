@@ -103,6 +103,72 @@ class StableAudioOpen:
         return (out / peak).astype(np.float32)
 
 
+class AudioLDM:
+    """AudioLDM (v1, haoheliu `audioldm` pip package) audio-to-audio backend — the second
+    GENERATOR FAMILY for the cross-generator transfer experiment.
+
+    Why AudioLDM v1 and not AudioLDM2: the pip `audioldm2` CLI and diffusers'
+    AudioLDM2Pipeline are TEXT-only; v1 ships `style_transfer()`, a genuine audio-conditioned
+    mode (encode the REAL clip into the VAE latent, noise it to transfer_strength*T, denoise
+    under the text prompt) — the same shallow-diffusion construction as SAO's `init_audio`
+    path, but a different architecture (mel-VAE + UNet + HiFi-GAN vs SAO's DAC-latent DiT),
+    different training data, and 16 kHz output.
+
+    Interface matches StableAudioOpen.generate_init; here `init_noise_level` IS the
+    transfer strength in [0, 1] (fraction of the DDIM chain re-noised; higher = more
+    prompt-driven, lower = closer to the source clip).
+    """
+    def __init__(self, device: str | None = None, seconds: float = CLIP_SECONDS,
+                 model_name: str = "audioldm-m-full"):
+        from audioldm import build_model
+        self.model_name = model_name
+        self.ldm = build_model(model_name=model_name)
+        self.sr = 16_000                      # AudioLDM is a 16 kHz model
+        self.seconds = seconds
+
+    def generate_init(self, prompt: str, init_mono: np.ndarray, in_sr: int, seed: int,
+                      steps: int = 100, cfg_scale: float = 2.5,
+                      init_noise_level: float = 0.5) -> np.ndarray:
+        import os
+        import tempfile
+        import soundfile as sf
+        from audioldm.pipeline import style_transfer
+        # style_transfer reads a FILE and asserts 16-bit PCM depth.
+        fd, tmp = tempfile.mkstemp(suffix=".wav")
+        os.close(fd)
+        try:
+            sf.write(tmp, np.asarray(init_mono, dtype=np.float32), in_sr, subtype="PCM_16")
+            wav = style_transfer(self.ldm, prompt, tmp,
+                                 transfer_strength=float(init_noise_level), seed=int(seed),
+                                 duration=self.seconds, batchsize=1,
+                                 guidance_scale=float(cfg_scale), ddim_steps=int(steps))
+        finally:
+            os.unlink(tmp)
+        wav = np.asarray(wav, dtype=np.float32)
+        while wav.ndim > 1:                    # (B, 1, T) / (B, T) -> (T,)
+            wav = wav[0]
+        # audioldm bumps duration to the NEXT 2.5s multiple when duration == file duration
+        # (its check is strict '<'), rendering a 7.5s canvas whose last 2.5s continue past the
+        # source. Trim back to the source window so downstream center-cropping (load_audio)
+        # stays aligned with the real twin.
+        wav = wav[:int(self.seconds * self.sr)]
+        peak = np.max(np.abs(wav)) + 1e-9
+        return (wav / peak).astype(np.float32)
+
+
+# Registry for gen_pairs: generator name -> (backend factory, per-generator defaults).
+# Defaults are the deployed operating points; SAO 0.6 is the paper's main condition
+# (init_noise < ~0.35 underflows sigma_min and degenerates). AudioLDM's strength lives on a
+# different [0,1] scale; 0.5 was picked by the CLAP-cosine verification run (see modal_app
+# verify_new_twins): twins land in the ~0.5-0.8 cosine band, not copies, not noise.
+GENERATORS = {
+    "sao":  {"cls": StableAudioOpen, "steps": 60,  "cfg": 7.0, "noise": 0.6,
+             "prefix": "sao_pairs"},
+    "aldm": {"cls": AudioLDM,        "steps": 100, "cfg": 2.5, "noise": 0.5,
+             "prefix": "aldm"},
+}
+
+
 def _write_wav(path: Path, wav: np.ndarray, sr: int):
     import soundfile as sf
     path.parent.mkdir(parents=True, exist_ok=True)

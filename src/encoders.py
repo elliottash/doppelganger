@@ -10,9 +10,9 @@ resamples to its own expected rate) and returns one pooled, L2-normalised vector
 L2-normalising here means cosine similarity == dot product everywhere downstream.
 
 CLAP is fully implemented through HuggingFace transformers. The self-supervised encoders
-(BEATs / M2D / AudioMAE) and the PANNs baseline have loader stubs with exact checkpoint
-sources documented; fill the two marked lines per encoder to activate them. The point of
-the ABC is that evaluate.py / bridge.py never need to know which encoder produced a matrix.
+(BEATs / M2D / AudioMAE) are activated below (checkpoints under DATA/ckpts/, fetched by
+modal_ssl.py::fetch_ckpts); PANNs loads via panns_inference. The point of the ABC is that
+evaluate.py / bridge.py never need to know which encoder produced a matrix.
 """
 from __future__ import annotations
 
@@ -118,9 +118,20 @@ class ClapLaionCkpt(Encoder):
 
 
 # --------------------------------------------------------------------------------------
-# Self-supervised encoders -- loader stubs with exact sources.
+# Self-supervised encoders (BEATs / M2D / AudioMAE) -- activated.
 # Each returns frame embeddings; we mean-pool over time to a clip vector.
+# Checkpoints live under DATA/ckpts/<encoder-name>/ (on Modal: /data/ckpts/...; see
+# modal_ssl.py::fetch_ckpts which downloads them once to the volume).
 # --------------------------------------------------------------------------------------
+def _ckpt_path(name: str, ckpt: str):
+    """Resolve a registry `ckpt` entry: absolute paths pass through; otherwise look under
+    DATA/ckpts/<encoder name>/."""
+    from pathlib import Path
+    from config import DATA
+    p = Path(ckpt)
+    return p if p.is_absolute() else (DATA / "ckpts" / name / ckpt)
+
+
 class _SSLStub(Encoder):
     name = "ssl"
     def __init__(self, ckpt: str, dim: int, sr: int):
@@ -145,29 +156,116 @@ class _SSLStub(Encoder):
 
 
 class BEATs(_SSLStub):
-    """BEATs (Microsoft unilm). Checkpoint BEATs_iter3_plus_AS2M.pt from
-    github.com/microsoft/unilm/tree/master/beats . Load with the repo's BEATs class:
-        from BEATs import BEATs, BEATsConfig
-        ck = torch.load(self.ckpt); cfg = BEATsConfig(ck['cfg']); m = BEATs(cfg)
-        m.load_state_dict(ck['model']); m.eval()
-        feats, _ = m.extract_features(wav_tensor[None], padding_mask=None)  # (1,T,768)
-    """
+    """BEATs (Microsoft unilm). Checkpoint BEATs_iter3_plus_AS2M.pt (pretrained iter3+, AS2M)
+    from github.com/microsoft/unilm/tree/master/beats (OneDrive links; mirrored on the HF hub
+    at datasets/Bencr/beats-checkpoints). The repo's standalone inference code (BEATs.py,
+    backbone.py, modules.py -- no fairseq needed) must be on sys.path; set $BEATS_CODE_DIR
+    (default /opt/beats, where modal_ssl.py's image fetches it)."""
     name = "beats"
+
+    def _load(self):
+        import os, sys
+        import torch
+        code = os.environ.get("BEATS_CODE_DIR", "/opt/beats")
+        if code not in sys.path:
+            sys.path.insert(0, code)
+        from BEATs import BEATs as _BEATs, BEATsConfig  # noqa: N811
+        ck = torch.load(str(_ckpt_path(self.name, self.ckpt)), map_location="cpu",
+                        weights_only=False)
+        cfg = BEATsConfig(ck["cfg"])
+        m = _BEATs(cfg)
+        m.load_state_dict(ck["model"])
+        self.torch = torch
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self._model = m.eval().to(self.device)
+
+    def _frame_features(self, wav):
+        t = self.torch.from_numpy(np.ascontiguousarray(wav)).float()[None].to(self.device)
+        with self.torch.inference_mode():
+            feats, _ = self._model.extract_features(t, padding_mask=None)  # (1, T, 768)
+        return feats[0].float().cpu().numpy()
 
 
 class M2D(_SSLStub):
-    """M2D (nttcslab/m2d). Use the repo's portable wrapper `examples/portable_m2d.py`:
-        from portable_m2d import PortableM2D; m = PortableM2D(weight_file=self.ckpt)
-        feats = m.encode_clap_audio(...) or m.get_timestamp_embeddings(...)  # (T,768)
-    """
+    """M2D (nttcslab/m2d), BASE SSL checkpoint (NOT the CLAP variant):
+    m2d_vit_base-80x608p16x16-221006-mr7_enconly (release v0.1.0 zip). Loaded through the
+    repo's standalone wrapper examples/portable_m2d.py; the cloned repo dir is $M2D_CODE_DIR
+    (default /opt/m2d). forward(wav) -> (1, T, 3840) where 3840 = 5 freq patches x 768; we
+    average the freq patches to per-frame 768-d features (registry dim stays 768)."""
     name = "m2d"
+
+    def _load(self):
+        import glob, os, sys
+        import torch
+        code = os.environ.get("M2D_CODE_DIR", "/opt/m2d")
+        for p in (code, os.path.join(code, "examples")):
+            if p not in sys.path:
+                sys.path.insert(0, p)
+        from portable_m2d import PortableM2D
+        base = _ckpt_path(self.name, self.ckpt)
+        if base.is_file():
+            weight = str(base)
+        else:  # registry names the release prefix; find the extracted .pth under ckpts/m2d/
+            hits = sorted(glob.glob(str(base.parent / "**" / "*.pth"), recursive=True))
+            hits = [h for h in hits if "clap" not in h.lower()]
+            if not hits:
+                raise FileNotFoundError(f"no M2D .pth under {base.parent} (run fetch_ckpts)")
+            weight = hits[0]
+        self.torch = torch
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self._model = PortableM2D(weight_file=weight).eval().to(self.device)
+
+    def _frame_features(self, wav):
+        t = self.torch.from_numpy(np.ascontiguousarray(wav)).float()[None].to(self.device)
+        with self.torch.inference_mode():
+            feats = self._model(t)                    # (1, T, F*768), F freq patches
+        f = feats[0].float().cpu().numpy()
+        T, D = f.shape
+        return f.reshape(T, D // self.dim, self.dim).mean(axis=1)  # (T, 768)
 
 
 class AudioMAE(_SSLStub):
-    """AudioMAE (facebookresearch/AudioMAE). Build the ViT, load `pretrained.pth`, run the
-    encoder on a 128-mel log-spectrogram patchified to 16x16; take the patch tokens -> (T,768).
-    """
+    """AudioMAE (facebookresearch/AudioMAE) ViT-B/16, AS2M self-supervised pretrain
+    (`pretrained.pth`). The official checkpoint is behind a Google Drive link, so we load the
+    timm port of the SAME weights from the HF hub: gaunernst/vit_base_patch16_1024_128.audiomae_as2m.
+    Preprocessing per the port's model card: kaldi fbank (128 mels, hanning, htk_compat),
+    pad/trim to 1024 frames, normalise with (mean, std*2) = (-4.2677393, 4.5689974*2).
+    We take patch tokens (64 time x 8 freq), average freq, and keep only the time patches
+    covering real (non-padding) frames -> (T, 768) frame features."""
     name = "audiomae"
+    MEAN, STD = -4.2677393, 4.5689974
+    N_FRAMES, N_MELS = 1024, 128
+
+    def _load(self):
+        import timm
+        import torch
+        ref = self.ckpt if self.ckpt.startswith("hf_hub:") else f"hf_hub:{self.ckpt}"
+        self.torch = torch
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self._model = timm.create_model(ref, pretrained=True).eval().to(self.device)
+
+    def _frame_features(self, wav):
+        torch = self.torch
+        import torch.nn.functional as F
+        from torchaudio.compliance import kaldi
+        t = torch.from_numpy(np.ascontiguousarray(wav)).float()[None]
+        mel = kaldi.fbank(t, htk_compat=True, window_type="hanning",
+                          num_mel_bins=self.N_MELS, sample_frequency=float(self.sr))
+        n_frames = mel.shape[0]
+        if n_frames < self.N_FRAMES:
+            mel = F.pad(mel, (0, 0, 0, self.N_FRAMES - n_frames))
+        else:
+            mel = mel[: self.N_FRAMES]
+            n_frames = self.N_FRAMES
+        mel = (mel - self.MEAN) / (self.STD * 2)
+        x = mel.view(1, 1, self.N_FRAMES, self.N_MELS).to(self.device)
+        with torch.inference_mode():
+            tok = self._model.forward_features(x)      # (1, prefix + 64*8, 768)
+        tok = tok[0, getattr(self._model, "num_prefix_tokens", 0):].float().cpu().numpy()
+        grid_t, grid_f = self.N_FRAMES // 16, self.N_MELS // 16      # 64 x 8, row-major
+        frames = tok.reshape(grid_t, grid_f, -1).mean(axis=1)        # (64, 768)
+        n_valid = max(1, int(np.ceil(n_frames / 16)))                # drop pure-padding patches
+        return frames[:n_valid]
 
 
 class PANNs(Encoder):

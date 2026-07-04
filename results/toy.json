@@ -1,0 +1,96 @@
+{
+  "encoder": "toy",
+  "emb": "/tmp/claude-1000/-home-elliott--dropbox-container-Elliott-Ash-Projects-Dropbox-Elliott-Small--Apps--games-multiverse-docs-research-synthmatch-embeddings/ac5de4ac-f22b-43c4-9c21-456a95e5c7d1/scratchpad/toy/embeddings/toy_instance_event.npz",
+  "synth_track": null,
+  "n_real_test": 48,
+  "n_synth_test": 48,
+  "category": {
+    "synth->real": {
+      "mAP": 1.0,
+      "MRR": 1.0,
+      "median_first_hit_rank": 1.0,
+      "n_queries_scored": 48,
+      "n_queries_total": 48,
+      "R@1": 0.08333333333333333,
+      "R@5": 0.4166666666666667,
+      "R@10": 0.8333333333333334,
+      "P@1": 1.0,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "nDCG@1": 1.0,
+      "nDCG@5": 1.0,
+      "nDCG@10": 1.0,
+      "mAP_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "real->synth": {
+      "mAP": 1.0,
+      "MRR": 1.0,
+      "median_first_hit_rank": 1.0,
+      "n_queries_scored": 48,
+      "n_queries_total": 48,
+      "R@1": 0.08333333333333333,
+      "R@5": 0.4166666666666667,
+      "R@10": 0.8333333333333334,
+      "P@1": 1.0,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "nDCG@1": 1.0,
+      "nDCG@5": 1.0,
+      "nDCG@10": 1.0,
+      "mAP_ci95": [
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "per_event_synth->real_mAP": {
+    "a": 1.0,
+    "b": 1.0,
+    "c": 1.0,
+    "d": 1.0
+  },
+  "control": {
+    "real->real": {
+      "mAP": 1.0,
+      "MRR": 1.0,
+      "median_first_hit_rank": 1.0,
+      "n_queries_scored": 48,
+      "n_queries_total": 48,
+      "R@1": 0.09090909090909093,
+      "R@5": 0.45454545454545453,
+      "R@10": 0.9090909090909091,
+      "P@1": 1.0,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "nDCG@1": 1.0,
+      "nDCG@5": 1.0,
+      "nDCG@10": 1.0
+    }
+  },
+  "domain_gap_mAP": 0.0,
+  "instance": {
+    "synth->real_paired": {
+      "mAP": 1.0,
+      "MRR": 1.0,
+      "median_first_hit_rank": 1.0,
+      "n_queries_scored": 48,
+      "n_queries_total": 48,
+      "R@1": 1.0,
+      "R@5": 1.0,
+      "R@10": 1.0,
+      "P@1": 1.0,
+      "P@5": 0.19999999999999998,
+      "P@10": 0.09999999999999999,
+      "nDCG@1": 1.0,
+      "nDCG@5": 1.0,
+      "nDCG@10": 1.0,
+      "mAP_ci95": [
+        1.0,
+        1.0
+      ]
+    }
+  }
+}

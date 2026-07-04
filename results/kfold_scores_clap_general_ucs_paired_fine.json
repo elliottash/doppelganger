@@ -1,0 +1,172 @@
+{
+  "encoder": "clap_general_ucs_paired_fine",
+  "folds": [
+    [
+      "Thunder",
+      "Finger_snapping",
+      "Wood",
+      "Wind",
+      "Crowd",
+      "Crack",
+      "Typing",
+      "Growling",
+      "Buzz",
+      "Ringtone",
+      "Coin_(dropping)",
+      "Shatter",
+      "Walk_and_footsteps"
+    ],
+    [
+      "Keys_jangling",
+      "Hiss",
+      "Engine",
+      "Cutlery_and_silverware",
+      "Explosion",
+      "Computer_keyboard",
+      "Sink_(filling_or_washing)",
+      "Wind_instrument_and_woodwind_instrument",
+      "Fire",
+      "Whoosh_and_swoosh_and_swish",
+      "Crushing",
+      "Run",
+      "Bird_vocalization_and_bird_call_and_bird_song"
+    ],
+    [
+      "Zipper_(clothing)",
+      "Dishes_and_pots_and_pans",
+      "Drill",
+      "Male_speech_and_man_speaking",
+      "Cowbell",
+      "Sawing",
+      "Bird",
+      "Bowed_string_instrument",
+      "Traffic_noise_and_roadway_noise",
+      "Stream",
+      "Tap",
+      "Bark",
+      "Alarm"
+    ],
+    [
+      "Clapping",
+      "Slam",
+      "Bell",
+      "Gunshot_and_gunfire",
+      "Burping_and_eructation",
+      "Crumpling_and_crinkling",
+      "Tearing",
+      "Chink_and_clink",
+      "Fireworks",
+      "Thump_and_thud",
+      "Boom",
+      "Laughter",
+      "Clock"
+    ],
+    [
+      "Chirp_and_tweet",
+      "Knock",
+      "Chewing_and_mastication",
+      "Raindrop",
+      "Sliding_door",
+      "Crackle",
+      "Frying_(food)",
+      "Tick-tock",
+      "Rain",
+      "Applause",
+      "Wind_chime",
+      "Telephone",
+      "Typewriter"
+    ]
+  ],
+  "gallery": "full (all real test clips)",
+  "frozen": {
+    "R1_full": 0.6253175275190517,
+    "ci95": [
+      0.6058319220999153,
+      0.6448031329381879
+    ],
+    "R1_restricted": 0.6773920406435224,
+    "per_fold": [
+      0.6144578313253012,
+      0.6986301369863014,
+      0.655440414507772,
+      0.6552631578947369,
+      0.5407279029462738
+    ],
+    "catmAP_full": 0.40605213779112864,
+    "catmAP_ci95": [
+      0.3947951928511003,
+      0.4173360831066642
+    ],
+    "catmAP_restricted": 0.6533291793485697,
+    "catmAP_per_fold": [
+      0.4426184253947261,
+      0.46401118613312764,
+      0.31630911079985147,
+      0.3943538251881755,
+      0.392976038893849
+    ],
+    "n_queries": 2362,
+    "gallery_N": 2362
+  },
+  "class": {
+    "R1_full": 0.3302286198137172,
+    "ci95": [
+      0.31202370872142254,
+      0.3488569009314141
+    ],
+    "R1_restricted": 0.42379339542760375,
+    "per_fold": [
+      0.2857142857142857,
+      0.3447488584474886,
+      0.4067357512953368,
+      0.3236842105263158,
+      0.317157712305026
+    ],
+    "catmAP_full": 0.2726292627876733,
+    "catmAP_ci95": [
+      0.2625049485655003,
+      0.2828057526226077
+    ],
+    "catmAP_restricted": 0.5472015020849744,
+    "catmAP_per_fold": [
+      0.23860544323419353,
+      0.2959619255157633,
+      0.1925866932283773,
+      0.2485016481078438,
+      0.35861376593133315
+    ],
+    "n_queries": 2362,
+    "gallery_N": 2362
+  },
+  "instance": {
+    "R1_full": 0.8416596104995766,
+    "ci95": [
+      0.8264182895850973,
+      0.8560541913632514
+    ],
+    "R1_restricted": 0.8729889923793396,
+    "per_fold": [
+      0.8089500860585198,
+      0.8949771689497716,
+      0.8523316062176166,
+      0.8447368421052631,
+      0.8249566724436742
+    ],
+    "catmAP_full": 0.3232481874634907,
+    "catmAP_ci95": [
+      0.31413508443294863,
+      0.3323437878131679
+    ],
+    "catmAP_restricted": 0.5268328294718558,
+    "catmAP_per_fold": [
+      0.35767839289564235,
+      0.3055151470347456,
+      0.2803142856971818,
+      0.31299323839747467,
+      0.3375159328336668
+    ],
+    "n_queries": 2362,
+    "gallery_N": 2362
+  },
+  "chance_R1": 0.0004233700254022015
+}

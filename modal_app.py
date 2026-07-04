@@ -35,8 +35,9 @@ image = (
     )
     # mount only the code; heavy/local-only dirs stay out of the image
     .add_local_dir(str(_REPO), remote_path="/root/app",
-                   ignore=["data", "results", "__pycache__", "*.pyc", ".git",
-                           "*.zip", "SoundMatch-SR_extracted", ".venv"])
+                   ignore=["data", "results", "__pycache__", "*.pyc", ".git", "*.zip",
+                           "SoundMatch-SR_extracted", ".venv", "human_study", "arxiv",
+                           "paper", "*.wav", "*.pdf"])
 )
 
 app = modal.App("soundmatch-sr")
@@ -49,10 +50,29 @@ gen_image = (
     .pip_install("torch==2.5.1", "torchaudio==2.5.1", "numpy<2", "soundfile", "librosa",
                  "resampy", "einops", "stable-audio-tools", "huggingface_hub")
     .add_local_dir(str(_REPO), remote_path="/root/app",
-                   ignore=["data", "results", "__pycache__", "*.pyc", ".git",
-                           "*.zip", "SoundMatch-SR_extracted", ".venv"])
+                   ignore=["data", "results", "__pycache__", "*.pyc", ".git", "*.zip",
+                           "SoundMatch-SR_extracted", ".venv", "human_study", "arxiv",
+                           "paper", "*.wav", "*.pdf"])
 )
 hf_secret = modal.Secret.from_name("huggingface-soundmatch")
+
+# AudioLDM (v1) image for the cross-generator twins. The haoheliu `audioldm` package is the
+# only maintained route to genuine AUDIO-conditioned AudioLDM generation (style_transfer);
+# diffusers' AudioLDM2Pipeline is text-only. It pins numpy<=1.23.5 / librosa 0.9.2, so it gets
+# its own image. Weights (~2.6 GB) are baked into the image at build time (build_model
+# downloads to ~/.cache/audioldm) so 24-way fan-out doesn't re-download or race the volume.
+aldm_image = (
+    modal.Image.debian_slim(python_version="3.10")
+    .apt_install("libsndfile1", "ffmpeg")
+    .pip_install("torch==2.1.2", "torchaudio==2.1.2", "torchvision==0.16.2",
+                 "numpy==1.23.5", "transformers==4.30.2", "soundfile", "audioldm==0.1.1")
+    .run_commands("python -c \"from audioldm import build_model; "
+                  "build_model(model_name='audioldm-m-full')\"")
+    .add_local_dir(str(_REPO), remote_path="/root/app",
+                   ignore=["data", "results", "__pycache__", "*.pyc", ".git", "*.zip",
+                           "SoundMatch-SR_extracted", ".venv", "human_study", "arxiv",
+                           "paper", "*.wav", "*.pdf"])
+)
 
 # Light image for downloading/unpacking corpora (no torch).
 data_image = modal.Image.debian_slim().apt_install("wget", "zip", "unzip")
@@ -108,16 +128,16 @@ _FSD_FILES = [
 ]
 
 
-@app.function(image=image, volumes={VOL: vol}, secrets=[hf_secret], timeout=2 * 60 * 60)
+@app.function(image=image, volumes={VOL: vol}, secrets=[hf_secret], timeout=4 * 60 * 60)
 def upload_audio_hf(repo: str = "elliottash/soundmatch-sr"):
     """Upload the generated synthetic twins from the volume straight to the HF dataset."""
     import os
     from huggingface_hub import HfApi
-    api = HfApi(token=os.environ.get("HF_TOKEN") or os.environ.get("HUGGING_FACE_HUB_TOKEN"))
-    api.upload_folder(
-        repo_id=repo, repo_type="dataset", folder_path=f"{VOL}/synth", path_in_repo="audio",
-        allow_patterns=["sao_pairs/**", "el_pairs/**", "demo/**"],
-        commit_message="add generated synthetic twins (Stable Audio audio-init + ElevenLabs)")
+    tok = os.environ.get("HF_TOKEN") or os.environ.get("HUGGING_FACE_HUB_TOKEN")
+    # parallel + resumable; uploads sao_pairs/ el_pairs/ demo/ to the dataset root
+    HfApi(token=tok).upload_large_folder(
+        repo_id=repo, repo_type="dataset", folder_path=f"{VOL}/synth",
+        allow_patterns=["sao_pairs/**", "el_pairs/**", "demo/**"], num_workers=8)
     print("uploaded audio to", repo)
 
 
@@ -276,8 +296,9 @@ def warm_sao():
 @app.function(image=gen_image, volumes={VOL: vol}, gpu="A10G", secrets=[hf_secret],
               cpu=4.0, timeout=4 * 60 * 60)
 def gen_pairs(shard: int, n_shards: int, per_class, max_anchors, cc_only: bool,
-              steps: int, noise: float, corpus: str = "dcase", manifest: str = "",
-              balanced_per_cat=None, out_tag: str = "", mode: str = "init"):
+              steps, noise, corpus: str = "dcase", manifest: str = "",
+              balanced_per_cat=None, out_tag: str = "", mode: str = "init",
+              prefix: str = "", split: str = "", cfg=None):
     import os, sys
     env = dict(_env_for(corpus))
     if manifest:
@@ -285,8 +306,93 @@ def gen_pairs(shard: int, n_shards: int, per_class, max_anchors, cc_only: bool,
     os.environ.update(env)
     sys.path.insert(0, "/root/app")
     from src import gen_pairs as G
-    G.run(shard, n_shards, per_class, max_anchors, cc_only, steps, noise=noise,
-          balanced_per_cat=balanced_per_cat, out_tag=out_tag, mode=mode)
+    G.run(shard, n_shards, per_class, max_anchors, cc_only, steps, cfg=cfg, noise=noise,
+          balanced_per_cat=balanced_per_cat, out_tag=out_tag, mode=mode,
+          prefix=prefix, split=split)
+    vol.commit()
+
+
+# Same worker but on the AudioLDM image (generator='aldm'). Kept as a separate Modal function
+# because the image (and its numpy/librosa pins) differs; the src-level code path is shared.
+@app.function(image=aldm_image, volumes={VOL: vol}, gpu="A10G", cpu=4.0,
+              timeout=6 * 60 * 60)
+def gen_pairs_aldm(shard: int, n_shards: int, per_class, max_anchors, cc_only: bool,
+                   steps, noise, corpus: str = "ucs", manifest: str = "",
+                   balanced_per_cat=None, out_tag: str = "", mode: str = "init",
+                   prefix: str = "aldm", split: str = "", cfg=None):
+    import os, sys
+    env = dict(_env_for(corpus))
+    if manifest:
+        env["SMSR_MANIFEST"] = manifest
+    os.environ.update(env)
+    sys.path.insert(0, "/root/app")
+    from src import gen_pairs as G
+    G.run(shard, n_shards, per_class, max_anchors, cc_only, steps, cfg=cfg, noise=noise,
+          balanced_per_cat=balanced_per_cat, out_tag=out_tag, mode=mode,
+          generator="aldm", prefix=prefix, split=split)
+    vol.commit()
+
+
+@app.function(image=image, volumes={VOL: vol}, gpu="A10G", timeout=60 * 60)
+def verify_new_twins(prefix: str, n: int = 40, manifest: str = ""):
+    """Pre-flight check of a new twin set: CLAP cosine(twin, its real source) + duration/RMS.
+    Healthy audio-conditioned twins land ~0.5-0.8 cosine; ~0.99 = copies, <0.2 = noise/
+    degenerate. Reads the shard csvs under /data/synth/<prefix>_*.csv."""
+    import os, sys, csv as _csv, glob as _glob, re as _re
+    os.environ.update(ENV_UCS)
+    if manifest:
+        os.environ["SMSR_MANIFEST"] = manifest
+    sys.path.insert(0, "/root/app")
+    import numpy as np
+    import soundfile as sf
+    from config import TARGET_SR, resolve_audio_path
+    from src.utils import load_audio
+    from src.encoders import load_encoder
+    import config as C
+
+    pat = _re.compile(rf"^{_re.escape(prefix)}_\d+\.csv$")
+    pairs = []
+    for f in sorted(_glob.glob(f"{VOL}/synth/{prefix}_*.csv")):
+        if pat.match(pathlib.Path(f).name):
+            pairs.extend(list(_csv.DictReader(open(f))))
+    real_path = {r["clip_id"]: r["path"] for r in _csv.DictReader(open(C.MANIFEST))
+                 if r["domain"] == "real"}
+    pairs = pairs[:n]
+    print(f"{prefix}: verifying {len(pairs)} twins")
+    enc = load_encoder("clap_general")
+    cos, stats = [], []
+    for p in pairs:
+        sp = f"{VOL}/synth/{p['synth_path']}"
+        info = sf.info(sp)
+        s = load_audio(sp)
+        r = load_audio(str(resolve_audio_path(real_path[p["real_clip_id"]])))
+        v = enc.embed([s, r], sr=TARGET_SR)
+        c = float(np.dot(v[0], v[1]))
+        rms = float(np.sqrt(np.mean(s ** 2)))
+        cos.append(c); stats.append((p["synth_path"], info.duration, info.samplerate, rms, c))
+    cos = np.array(cos)
+    for s in stats[:20]:
+        print(f"  {s[0]:60s} dur={s[1]:.2f}s sr={s[2]} rms={s[3]:.3f} cos={s[4]:.3f}")
+    print(f"cosine: mean={cos.mean():.3f} median={np.median(cos):.3f} "
+          f"min={cos.min():.3f} max={cos.max():.3f} frac<0.2={float((cos < 0.2).mean()):.2f} "
+          f"frac>0.95={float((cos > 0.95).mean()):.2f}")
+    return {"prefix": prefix, "n": len(pairs), "cos_mean": float(cos.mean()),
+            "cos_median": float(np.median(cos)), "cos_min": float(cos.min()),
+            "cos_max": float(cos.max()), "frac_lt_02": float((cos < 0.2).mean()),
+            "frac_gt_095": float((cos > 0.95).mean())}
+
+
+@app.function(image=image, volumes={VOL: vol}, timeout=30 * 60)
+def register(prefix: str, out: str, source: str, system_id: str, is_cc: str = "1",
+             real: str = "manifest_ucs_verified.csv"):
+    """Run src.register_pairs on the volume (where the shard csvs live)."""
+    import os, sys
+    os.environ.update(ENV_UCS)
+    sys.path.insert(0, "/root/app")
+    from src import register_pairs as R
+    R.main(["--real", f"{VOL}/{real}", "--synth-dir", f"{VOL}/synth", "--out", f"{VOL}/{out}",
+            "--prefix", prefix, "--source", source, "--system-id", system_id,
+            "--is-cc", str(is_cc)])
     vol.commit()
 
 
@@ -312,6 +418,34 @@ def main(encoder: str = "clap_general", do_stage: bool = False):
     if do_stage:
         stage.remote()
     embed.remote(encoder)
+
+
+@app.local_entrypoint()
+def gen_aldm(manifest: str = "/data/manifest_ucs_verified.csv", n_shards: int = 24,
+             max_anchors: int = 0, noise: float = 0.5, steps: int = 100, cfg: float = 2.5,
+             split: str = ""):
+    """JOB 1: AudioLDM audio-to-audio twins for ALL anchors (train+test) -> /data/synth/aldm.
+    Weights are baked in the image, so no warm step. Smoke first: --max-anchors 5 --n-shards 1."""
+    ma = max_anchors or None
+    args = [(s, n_shards, None, ma, False, steps, noise, "ucs", manifest, None, "", "init",
+             "aldm", split, cfg) for s in range(n_shards)]
+    list(gen_pairs_aldm.starmap(args))
+    print(f"aldm generation done ({n_shards} shards)")
+
+
+@app.local_entrypoint()
+def gen_sao_points(manifest: str = "/data/manifest_ucs_verified.csv", n_shards: int = 16,
+                   steps: int = 60, warm: bool = True, max_anchors: int = 0):
+    """JOB 2: two extra SAO operating points (init_noise 0.45 / 0.75), FULL TEST SPLIT, for the
+    fidelity axis of the transfer matrix -> /data/synth/sao_n45, /data/synth/sao_n75."""
+    if warm:
+        warm_sao.remote()
+    ma = max_anchors or None
+    for prefix, noise in (("sao_n45", 0.45), ("sao_n75", 0.75)):
+        args = [(s, n_shards, None, ma, False, steps, noise, "ucs", manifest, None, "", "init",
+                 prefix, "test", None) for s in range(n_shards)]
+        list(gen_pairs.starmap(args))
+        print(f"{prefix} done")
 
 
 @app.local_entrypoint()

@@ -1,0 +1,239 @@
+{
+  "frozen": {
+    "eval": {
+      "encoder": "clap_general",
+      "emb": "/home/elliott/synthmatch_data/embeddings/clap_general.npz",
+      "n_real_test": 700,
+      "n_synth_test": 3851,
+      "category": {
+        "synth->real": {
+          "mAP": 0.7744208563282857,
+          "MRR": 0.8704146554057958,
+          "median_first_hit_rank": 1.0,
+          "n_queries_scored": 3851,
+          "n_queries_total": 3851,
+          "R@1": 0.008293949623474422,
+          "R@5": 0.04124642949883147,
+          "R@10": 0.08238119968839262,
+          "nDCG@1": 0.8293949623474423,
+          "nDCG@5": 0.8262775503085162,
+          "nDCG@10": 0.8251387470976547,
+          "mAP_ci95": [
+            0.7659048805431834,
+            0.7829237818542849
+          ]
+        },
+        "real->synth": {
+          "mAP": 0.8128371263744205,
+          "MRR": 0.9791508718802837,
+          "median_first_hit_rank": 1.0,
+          "n_queries_scored": 700,
+          "n_queries_total": 700,
+          "R@1": 0.0017596547393854403,
+          "R@5": 0.008824727679545867,
+          "R@10": 0.017646197841347567,
+          "nDCG@1": 0.9671428571428572,
+          "nDCG@5": 0.9696251283499646,
+          "nDCG@10": 0.9697009719676154,
+          "mAP_ci95": [
+            0.8035939608052263,
+            0.8227642570323799
+          ]
+        }
+      },
+      "per_event_synth->real_mAP": {
+        "dog_bark": 0.8086317711438853,
+        "footstep": 0.7175207779201824,
+        "gunshot": 0.8104852445993931,
+        "keyboard": 0.692491628588756,
+        "moving_motor_vehicle": 0.8523877955399443,
+        "rain": 0.7518450691009155,
+        "sneeze_cough": 0.792700651478971
+      },
+      "control": {
+        "real->real": {
+          "mAP": 0.9351056591980159,
+          "MRR": 0.997704081632653,
+          "median_first_hit_rank": 1.0,
+          "n_queries_scored": 700,
+          "n_queries_total": 700,
+          "R@1": 0.01007215007215007,
+          "R@5": 0.049826839826839824,
+          "R@10": 0.09927849927849926,
+          "nDCG@1": 0.9971428571428571,
+          "nDCG@5": 0.9887499864494652,
+          "nDCG@10": 0.9853528008289917
+        }
+      },
+      "domain_gap_mAP": 0.1606848028697302
+    },
+    "diag": {
+      "encoder": "clap_general",
+      "proxy_a_distance": 1.2679026790991665,
+      "domain_cv_acc": 0.8169756697747916,
+      "event_probe_acc": 0.9531970995385629,
+      "domain_probe_acc": 0.9022192924631949,
+      "identity_minus_domain": 0.05097780707536803,
+      "silhouette_event": 0.17603505728783952,
+      "silhouette_domain": 0.04341302772965131
+    }
+  },
+  "invariant": {
+    "eval": {
+      "encoder": "clap_general",
+      "emb": "/home/elliott/synthmatch_data/embeddings/clap_general_invariant.npz",
+      "n_real_test": 700,
+      "n_synth_test": 3851,
+      "category": {
+        "synth->real": {
+          "mAP": 0.970145190667189,
+          "MRR": 0.9681070882483163,
+          "median_first_hit_rank": 1.0,
+          "n_queries_scored": 3851,
+          "n_queries_total": 3851,
+          "R@1": 0.009633861334718255,
+          "R@5": 0.04822124123604259,
+          "R@10": 0.09646585302518826,
+          "nDCG@1": 0.9633861334718254,
+          "nDCG@5": 0.9642255735160645,
+          "nDCG@10": 0.9644631667153563,
+          "mAP_ci95": [
+            0.96612961418349,
+            0.9743138604936127
+          ]
+        },
+        "real->synth": {
+          "mAP": 0.9791277575362879,
+          "MRR": 0.9897351530676947,
+          "median_first_hit_rank": 1.0,
+          "n_queries_scored": 700,
+          "n_queries_total": 700,
+          "R@1": 0.001793457560353406,
+          "R@5": 0.008969264078808471,
+          "R@10": 0.017946310634847536,
+          "nDCG@1": 0.9857142857142858,
+          "nDCG@5": 0.9859140765113943,
+          "nDCG@10": 0.9863054091783262,
+          "mAP_ci95": [
+            0.9733125861191392,
+            0.9841254771826763
+          ]
+        }
+      },
+      "per_event_synth->real_mAP": {
+        "dog_bark": 0.980276104927613,
+        "footstep": 0.951635958808008,
+        "gunshot": 0.9683076136345095,
+        "keyboard": 0.984374764530637,
+        "moving_motor_vehicle": 0.9835417240418858,
+        "rain": 0.9523837194804704,
+        "sneeze_cough": 0.971262648082786
+      },
+      "control": {
+        "real->real": {
+          "mAP": 0.9880231024531337,
+          "MRR": 0.9901189810000914,
+          "median_first_hit_rank": 1.0,
+          "n_queries_scored": 700,
+          "n_queries_total": 700,
+          "R@1": 0.009985569985569985,
+          "R@5": 0.04981240981240981,
+          "R@10": 0.09962481962481962,
+          "nDCG@1": 0.9885714285714285,
+          "nDCG@5": 0.9866833148722104,
+          "nDCG@10": 0.9865949519119347
+        }
+      },
+      "domain_gap_mAP": 0.017877911785944778
+    },
+    "diag": {
+      "encoder": "clap_general",
+      "proxy_a_distance": 1.3847504855188717,
+      "domain_cv_acc": 0.8461876213797179,
+      "event_probe_acc": 0.972313777191826,
+      "domain_probe_acc": 0.8442100637222588,
+      "identity_minus_domain": 0.12810371346956717,
+      "silhouette_event": 0.7509979260231955,
+      "silhouette_domain": -0.0019206871031587785
+    }
+  },
+  "sensitive": {
+    "eval": {
+      "encoder": "clap_general",
+      "emb": "/home/elliott/synthmatch_data/embeddings/clap_general_sensitive.npz",
+      "n_real_test": 700,
+      "n_synth_test": 3851,
+      "category": {
+        "synth->real": {
+          "mAP": 0.15674063744271083,
+          "MRR": 0.5373822696004503,
+          "median_first_hit_rank": 2.0,
+          "n_queries_scored": 3851,
+          "n_queries_total": 3851,
+          "R@1": 0.003835367437029343,
+          "R@5": 0.01111139963645806,
+          "R@10": 0.017907037133212154,
+          "nDCG@1": 0.3835367437029343,
+          "nDCG@5": 0.2538488277517359,
+          "nDCG@10": 0.21243516940574642,
+          "mAP_ci95": [
+            0.15585387968518216,
+            0.15763617775209285
+          ]
+        },
+        "real->synth": {
+          "mAP": 0.15631833457108038,
+          "MRR": 0.4020620465827633,
+          "median_first_hit_rank": 5.0,
+          "n_queries_scored": 700,
+          "n_queries_total": 700,
+          "R@1": 0.0004885822885516336,
+          "R@5": 0.0018964594298522858,
+          "R@10": 0.0033228284008272706,
+          "nDCG@1": 0.2714285714285714,
+          "nDCG@5": 0.22130942614598487,
+          "nDCG@10": 0.19878779375740976,
+          "mAP_ci95": [
+            0.15301106722127472,
+            0.15956789728620271
+          ]
+        }
+      },
+      "per_event_synth->real_mAP": {
+        "dog_bark": 0.13094938511591372,
+        "footstep": 0.1727431954510667,
+        "gunshot": 0.16815069130352137,
+        "keyboard": 0.1414538911999605,
+        "moving_motor_vehicle": 0.20350585110188815,
+        "rain": 0.1617443525140238,
+        "sneeze_cough": 0.11933706024503234
+      },
+      "control": {
+        "real->real": {
+          "mAP": 0.20550664540303099,
+          "MRR": 0.8162140439284125,
+          "median_first_hit_rank": 1.0,
+          "n_queries_scored": 700,
+          "n_queries_total": 700,
+          "R@1": 0.007460317460317459,
+          "R@5": 0.026291486291486293,
+          "R@10": 0.0426984126984127,
+          "nDCG@1": 0.7385714285714285,
+          "nDCG@5": 0.5660767739119074,
+          "nDCG@10": 0.48194068096423465
+        }
+      },
+      "domain_gap_mAP": 0.04876600796032016
+    },
+    "diag": {
+      "encoder": "clap_general",
+      "proxy_a_distance": 1.878710268874923,
+      "domain_cv_acc": 0.9696775672187308,
+      "event_probe_acc": 0.8437705998681608,
+      "domain_probe_acc": 0.965502087453307,
+      "identity_minus_domain": -0.12173148758514618,
+      "silhouette_event": -0.03956522046505316,
+      "silhouette_domain": 0.7472910495405949
+    }
+  }
+}

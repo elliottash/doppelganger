@@ -1,13 +1,29 @@
-__pycache__/
-*.pyc
-.venv/
+# large derived artifacts -> HuggingFace, not git
+*.npz
+*.pt
+*.pth
+*.ckpt
 data/raw/
 data/embeddings/
 data/synth/
-*.npz
+embeddings/
+ckpts/
+
+# human annotation baseline: never redistribute participant data
+human_study/responses/
+human_study/sessions/
+human_study/audio/
+human_study/fetch_list.txt
+
+# latex build artifacts
 *.aux
-*.bbl
+*.log
 *.blg
 *.out
-*.log
+*.synctex*
+
+# python
+__pycache__/
+*.pyc
+.venv/
 .env
