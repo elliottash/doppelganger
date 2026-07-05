@@ -27,3 +27,10 @@ __pycache__/
 *.pyc
 .venv/
 .env
+
+# internal / private (never publish)
+OUTREACH_CONTACTS.md
+ARXIV_SUBMISSION.md
+paper/REVIEW_clarity_consistency.md
+paper/AUDIT_gpt55.md
+PAPER_FEEDBACK.md
