@@ -14,7 +14,7 @@ audio-conditioned twin) generalizes to sound events unseen in head training (ful
 structure transfers for no objective. The effect requires audio-conditioned generation and is
 specific to a generator family.
 
-Paper: [`paper/doppelganger.pdf`](paper/doppelganger.pdf) · datasheet: [`paper/DATASHEET.md`](paper/DATASHEET.md).
+Paper: [**arXiv:2607.04337**](https://arxiv.org/abs/2607.04337) · [`paper/doppelganger.pdf`](paper/doppelganger.pdf) · datasheet: [`paper/DATASHEET.md`](paper/DATASHEET.md).
 
 ## Where the artifacts live
 
